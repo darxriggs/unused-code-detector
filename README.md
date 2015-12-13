@@ -2,7 +2,7 @@
 
 Current results in summary:
 * 1114 plugins
-* 190 public, protected or package Jenkins methods are detected as not used in the latest published plugins and in core
+* 184 public, protected or package Jenkins methods are detected as not used in the latest published plugins and in core
 
 See details in this [example of output](../../blob/master/Output_example.html).
 
