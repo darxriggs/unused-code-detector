@@ -1,0 +1,74 @@
+package org.jenkinsci.unusedcode;
+
+import java.io.Closeable;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Enumeration;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipFile;
+
+public class WarReader implements Closeable {
+    private final File warFile;
+    private final ZipFile zipFile;
+    private final Enumeration<? extends ZipEntry> entries;
+    private final boolean scanOnlyJarOfPlugin;
+    private ZipEntry entry;
+    private JarReader jarReader;
+
+    public WarReader(File warFile, boolean scanOnlyJarOfPlugin) throws IOException {
+        super();
+        this.warFile = warFile;
+        this.zipFile = new ZipFile(warFile);
+        this.entries = zipFile.entries();
+        this.scanOnlyJarOfPlugin = scanOnlyJarOfPlugin;
+    }
+
+    public String nextClass() throws IOException {
+        return nextEntry(".class");
+    }
+
+    public String nextJelly() throws IOException {
+        return nextEntry(".jelly");
+    }
+
+    private String nextEntry(String extension) throws IOException {
+        if (jarReader != null) {
+            final String fileName = jarReader.nextEntry(extension);
+            if (fileName != null) {
+                return fileName;
+            } else {
+                jarReader.close();
+                jarReader = null;
+            }
+        }
+        while (entries.hasMoreElements()) {
+            entry = entries.nextElement();
+            final String fileName = entry.getName();
+            if (fileName.startsWith("WEB-INF/lib/") && fileName.endsWith(".jar")) {
+                final boolean shouldScanJar = !scanOnlyJarOfPlugin
+                        || warFile.getName().equals(
+                                fileName.replace("WEB-INF/lib/", "").replace(".jar", ".hpi"));
+                if (shouldScanJar) {
+                    jarReader = new JarReader(zipFile.getInputStream(entry));
+                    return this.nextEntry(extension);
+                }
+            } else if (fileName.startsWith("WEB-INF/classes/") && fileName.endsWith(extension)) {
+                return fileName;
+            }
+        }
+        return null;
+    }
+
+    public InputStream getInputStream() throws IOException {
+        if (jarReader != null) {
+            return jarReader.getInputStream();
+        }
+        return zipFile.getInputStream(entry);
+    }
+
+    @Override
+    public void close() throws IOException {
+        zipFile.close();
+    }
+}

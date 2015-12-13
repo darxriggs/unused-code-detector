@@ -1,0 +1,1744 @@
+<html><head><title>Unused code in Jenkins api</title><style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style></head><body><h2> Finds and reports unused methods in Jenkins api </h2> (including in latest published plugins, except api used in jelly and groovy files, except getters, setters and fields, except deprecated classes and methods, except unit tests)<br/>
+Downloaded update-center.json<br/>
+All files are up to date (1114 plugins)<br/>
+Indexing api in Jenkins<br/>
+Analyzing usage in core and plugins<br/>
+analyzing ace-editor.hpi<br/>
+analyzing accurev.hpi<br/>
+analyzing accelerated-build-now-plugin.hpi<br/>
+analyzing active-directory.hpi<br/>
+analyzing adaptive-disconnector.hpi<br/>
+analyzing AdaptivePlugin.hpi<br/>
+analyzing additional-identities-plugin.hpi<br/>
+analyzing advanced-installer-msi-builder.hpi<br/>
+analyzing all-changes.hpi<br/>
+analyzing allure-jenkins-plugin.hpi<br/>
+analyzing amazon-ecs.hpi<br/>
+analyzing analysis-collector.hpi<br/>
+analyzing analysis-core.hpi<br/>
+analyzing AnchorChain.hpi<br/>
+analyzing android-emulator.hpi<br/>
+analyzing android-lint.hpi<br/>
+analyzing ansible.hpi<br/>
+analyzing ansicolor.hpi<br/>
+analyzing ant.hpi<br/>
+analyzing antexec.hpi<br/>
+analyzing antisamy-markup-formatter.hpi<br/>
+analyzing any-buildstep.hpi<br/>
+analyzing anything-goes-formatter.hpi<br/>
+analyzing ApicaLoadtest.hpi<br/>
+analyzing appaloosa-plugin.hpi<br/>
+analyzing appdynamics-dashboard.hpi<br/>
+analyzing appetize.hpi<br/>
+analyzing appio.hpi<br/>
+analyzing application-director-plugin.hpi<br/>
+analyzing archived-artifact-url-viewer.hpi<br/>
+analyzing artifact-diff-plugin.hpi<br/>
+analyzing artifact-promotion.hpi<br/>
+analyzing artifactdeployer.hpi<br/>
+analyzing artifactory.hpi<br/>
+analyzing asakusa-satellite-plugin.hpi<br/>
+analyzing assembla.hpi<br/>
+analyzing assembla-auth.hpi<br/>
+analyzing associated-files.hpi<br/>
+analyzing async-http-client.hpi<br/>
+analyzing async-job.hpi<br/>
+analyzing attention.hpi<br/>
+analyzing audit-trail.hpi<br/>
+analyzing audit2db.hpi<br/>
+analyzing authentication-tokens.hpi<br/>
+analyzing authorize-project.hpi<br/>
+analyzing avatar.hpi<br/>
+analyzing aws-beanstalk-publisher-plugin.hpi<br/>
+analyzing aws-codepipeline.hpi<br/>
+analyzing aws-credentials.hpi<br/>
+analyzing aws-device-farm.hpi<br/>
+analyzing aws-java-sdk.hpi<br/>
+analyzing aws-lambda.hpi<br/>
+analyzing awseb-deployment-plugin.hpi<br/>
+analyzing azure-publishersettings-credentials.hpi<br/>
+analyzing azure-slave-plugin.hpi<br/>
+analyzing backlog.hpi<br/>
+analyzing backup.hpi<br/>
+analyzing backup-interrupt-plugin.hpi<br/>
+analyzing bamboo-notifier.hpi<br/>
+analyzing batch-task.hpi<br/>
+analyzing bazaar.hpi<br/>
+analyzing bds-plugin.hpi<br/>
+analyzing beaker-builder.hpi<br/>
+analyzing bearychat.hpi<br/>
+analyzing beer.hpi<br/>
+analyzing bigpanda-jenkins.hpi<br/>
+analyzing bitbucket.hpi<br/>
+analyzing bitbucket-approve.hpi<br/>
+analyzing bitbucket-oauth.hpi<br/>
+analyzing bitbucket-pullrequest-builder.hpi<br/>
+analyzing bitkeeper.hpi<br/>
+analyzing blackduck-installer.hpi<br/>
+analyzing blame-upstream-commiters.hpi<br/>
+analyzing BlameSubversion.hpi<br/>
+analyzing BlazeMeterJenkinsPlugin.hpi<br/>
+analyzing blink1.hpi<br/>
+analyzing blitz_io-jenkins.hpi<br/>
+analyzing block-queued-job.hpi<br/>
+analyzing bootstraped-multi-test-results-report.hpi<br/>
+analyzing brakeman.hpi<br/>
+analyzing branch-api.hpi<br/>
+analyzing browser-axis-plugin.hpi<br/>
+analyzing bruceschneier.hpi<br/>
+analyzing buckminster.hpi<br/>
+analyzing buddycloud.hpi<br/>
+analyzing bugzilla.hpi<br/>
+analyzing build-alias-setter.hpi<br/>
+analyzing build-blocker-plugin.hpi<br/>
+analyzing build-cause-run-condition.hpi<br/>
+analyzing build-env-propagator.hpi<br/>
+analyzing build-environment.hpi<br/>
+analyzing build-failure-analyzer.hpi<br/>
+analyzing build-flow-extensions-plugin.hpi<br/>
+analyzing build-flow-plugin.hpi<br/>
+analyzing build-flow-test-aggregator.hpi<br/>
+analyzing build-flow-toolbox-plugin.hpi<br/>
+analyzing build-history-metrics-plugin.hpi<br/>
+analyzing build-keeper-plugin.hpi<br/>
+analyzing build-line.hpi<br/>
+analyzing build-metrics.hpi<br/>
+analyzing build-monitor-plugin.hpi<br/>
+analyzing build-name-setter.hpi<br/>
+analyzing build-pipeline-plugin.hpi<br/>
+analyzing build-publisher.hpi<br/>
+analyzing build-timeout.hpi<br/>
+analyzing build-token-root.hpi<br/>
+analyzing build-user-vars-plugin.hpi<br/>
+analyzing build-view-column.hpi<br/>
+analyzing build-with-parameters.hpi<br/>
+analyzing buildcontext-capture.hpi<br/>
+analyzing buildgraph-view.hpi<br/>
+analyzing buildresult-trigger.hpi<br/>
+analyzing buildtriggerbadge.hpi<br/>
+analyzing built-on-column.hpi<br/>
+analyzing bulk-builder.hpi<br/>
+analyzing bumblebee.hpi<br/>
+analyzing caliper-ci.hpi<br/>
+analyzing call-remote-job-plugin.hpi<br/>
+analyzing campfire.hpi<br/>
+analyzing capitomcat.hpi<br/>
+analyzing cas-plugin.hpi<br/>
+analyzing cas1.hpi<br/>
+analyzing categorized-view.hpi<br/>
+analyzing cccc.hpi<br/>
+analyzing ccm.hpi<br/>
+analyzing CFLint.hpi<br/>
+analyzing change-assembly-version-plugin.hpi<br/>
+analyzing changelog-history.hpi<br/>
+analyzing changes-since-last-success.hpi<br/>
+analyzing chatter-notifier.hpi<br/>
+analyzing chatwork.hpi<br/>
+analyzing checkstyle.hpi<br/>
+analyzing chef.hpi<br/>
+analyzing chef-identity.hpi<br/>
+analyzing chef-tracking.hpi<br/>
+analyzing chosen.hpi<br/>
+analyzing chosen-views-tabbar.hpi<br/>
+analyzing chrome-frame-plugin.hpi<br/>
+analyzing chromedriver.hpi<br/>
+analyzing chroot.hpi<br/>
+analyzing chucknorris.hpi<br/>
+analyzing ci-game.hpi<br/>
+analyzing ci-skip.hpi<br/>
+analyzing claim.hpi<br/>
+analyzing clamav.hpi<br/>
+analyzing clang-scanbuild-plugin.hpi<br/>
+analyzing clearcase.hpi<br/>
+analyzing clearcase-release.hpi<br/>
+analyzing clearcase-ucm-baseline.hpi<br/>
+analyzing clearcase-ucm-plugin.hpi<br/>
+analyzing cli-commander.hpi<br/>
+analyzing clone-workspace-scm.hpi<br/>
+analyzing cloudbees-credentials.hpi<br/>
+analyzing cloudbees-disk-usage-simple.hpi<br/>
+analyzing cloudbees-enterprise-plugins.hpi<br/>
+analyzing cloudbees-folder.hpi<br/>
+analyzing cloudbees-plugin-gateway.hpi<br/>
+analyzing cloudbees-registration.hpi<br/>
+analyzing cloudfoundry.hpi<br/>
+analyzing cloudtest.hpi<br/>
+analyzing clover.hpi<br/>
+analyzing cloverphp.hpi<br/>
+analyzing cluster-stats.hpi<br/>
+analyzing cmakebuilder.hpi<br/>
+analyzing cmvc.hpi<br/>
+analyzing cobertura.hpi<br/>
+analyzing cocoapods-integration.hpi<br/>
+analyzing codebeamer-result-trend-updater.hpi<br/>
+analyzing codecover.hpi<br/>
+analyzing codedeploy.hpi<br/>
+analyzing codedx.hpi<br/>
+analyzing codescanner.hpi<br/>
+analyzing codesonar.hpi<br/>
+analyzing collabnet.hpi<br/>
+analyzing collabnet-automic-deploy.hpi<br/>
+analyzing collabnet-uc4-deploy.hpi<br/>
+analyzing collapsing-console-sections.hpi<br/>
+analyzing ColumnsPlugin.hpi<br/>
+analyzing commit-message-trigger-plugin.hpi<br/>
+analyzing compact-columns.hpi<br/>
+analyzing compatibility-action-storage.hpi<br/>
+analyzing composer-security-checker.hpi<br/>
+analyzing compound-slaves.hpi<br/>
+analyzing compress-artifacts.hpi<br/>
+analyzing compress-buildlog.hpi<br/>
+analyzing computer-queue-plugin.hpi<br/>
+analyzing concordionpresenter.hpi<br/>
+analyzing concurrent-login-plugin.hpi<br/>
+analyzing conditional-buildstep.hpi<br/>
+analyzing config-autorefresh-plugin.hpi<br/>
+analyzing config-file-provider.hpi<br/>
+analyzing config-rotator.hpi<br/>
+analyzing configurationslicing.hpi<br/>
+analyzing configure-job-column-plugin.hpi<br/>
+analyzing confluence-publisher.hpi<br/>
+analyzing console-column-plugin.hpi<br/>
+analyzing console-tail.hpi<br/>
+analyzing convertigo-mobile-platform.hpi<br/>
+analyzing coordinator.hpi<br/>
+analyzing copado.hpi<br/>
+analyzing copr.hpi<br/>
+analyzing copy-data-to-workspace-plugin.hpi<br/>
+analyzing copy-project-link.hpi<br/>
+analyzing copy-to-slave.hpi<br/>
+analyzing copyartifact.hpi<br/>
+analyzing cors-filter.hpi<br/>
+analyzing couchdb-statistics.hpi<br/>
+analyzing countjobs-viewstabbar.hpi<br/>
+analyzing covcomplplot.hpi<br/>
+analyzing coverity.hpi<br/>
+analyzing cppcheck.hpi<br/>
+analyzing cppncss.hpi<br/>
+analyzing cpptest.hpi<br/>
+analyzing crap4j.hpi<br/>
+analyzing create-fingerprint.hpi<br/>
+analyzing createjobadvanced.hpi<br/>
+analyzing credentials.hpi<br/>
+analyzing credentials-binding.hpi<br/>
+analyzing crittercism-dsym.hpi<br/>
+analyzing cron_column.hpi<br/>
+analyzing crowd.hpi<br/>
+analyzing crowd2.hpi<br/>
+analyzing crx-content-package-deployer.hpi<br/>
+analyzing cucumber.hpi<br/>
+analyzing cucumber-perf.hpi<br/>
+analyzing cucumber-reports.hpi<br/>
+analyzing cucumber-testresult-plugin.hpi<br/>
+analyzing curseforge-publisher.hpi<br/>
+analyzing custom-job-icon.hpi<br/>
+analyzing custom-tools-plugin.hpi<br/>
+analyzing custom-view-tabs.hpi<br/>
+analyzing CustomHistory.hpi<br/>
+analyzing customize-build-now.hpi<br/>
+analyzing cvs.hpi<br/>
+analyzing cvs-tag.hpi<br/>
+analyzing cygpath.hpi<br/>
+analyzing cygwin-process-killer.hpi<br/>
+analyzing daily-quote.hpi<br/>
+analyzing darcs.hpi<br/>
+analyzing dashboard-view.hpi<br/>
+analyzing database.hpi<br/>
+analyzing database-drizzle.hpi<br/>
+analyzing database-h2.hpi<br/>
+analyzing database-mysql.hpi<br/>
+analyzing database-postgresql.hpi<br/>
+analyzing datadog.hpi<br/>
+analyzing datical-db-plugin.hpi<br/>
+analyzing dbCharts.hpi<br/>
+analyzing debian-package-builder.hpi<br/>
+analyzing delete-log-plugin.hpi<br/>
+analyzing delivery-pipeline-plugin.hpi<br/>
+analyzing delphix.hpi<br/>
+analyzing delta-cloud.hpi<br/>
+analyzing dependency-check-jenkins-plugin.hpi<br/>
+analyzing dependency-queue-plugin.hpi<br/>
+analyzing dependencyanalyzer.hpi<br/>
+analyzing depgraph-view.hpi<br/>
+analyzing deploy.hpi<br/>
+analyzing deploy-websphere.hpi<br/>
+analyzing deploydb.hpi<br/>
+analyzing deployed-on-column.hpi<br/>
+analyzing deployer-framework.hpi<br/>
+analyzing deploygate-plugin.hpi<br/>
+analyzing deployit-plugin.hpi<br/>
+analyzing deployment-notification.hpi<br/>
+analyzing deployment-sphere.hpi<br/>
+analyzing description-column-plugin.hpi<br/>
+analyzing description-setter.hpi<br/>
+analyzing deveo.hpi<br/>
+analyzing devstack.hpi<br/>
+analyzing dimensionsscm.hpi<br/>
+analyzing disable-failed-job.hpi<br/>
+analyzing discard-old-build.hpi<br/>
+analyzing discobit-autoconfig.hpi<br/>
+analyzing disk-usage.hpi<br/>
+analyzing diskcheck.hpi<br/>
+analyzing display-upstream-changes.hpi<br/>
+analyzing distfork.hpi<br/>
+analyzing distTest.hpi<br/>
+analyzing docker-build-publish.hpi<br/>
+analyzing docker-build-step.hpi<br/>
+analyzing docker-commons.hpi<br/>
+analyzing docker-custom-build-environment.hpi<br/>
+analyzing docker-plugin.hpi<br/>
+analyzing docker-traceability.hpi<br/>
+analyzing docker-workflow.hpi<br/>
+analyzing dockerhub-notification.hpi<br/>
+analyzing doclinks.hpi<br/>
+analyzing dos-trigger.hpi<br/>
+analyzing DotCi.hpi<br/>
+analyzing DotCi-Fig-template.hpi<br/>
+analyzing DotCi-Plugins-Starter-Pack.hpi<br/>
+analyzing downstream-buildview.hpi<br/>
+analyzing downstream-ext.hpi<br/>
+analyzing doxygen.hpi<br/>
+analyzing drecycler.hpi<br/>
+analyzing drmemory-plugin.hpi<br/>
+analyzing dropdown-viewstabbar-plugin.hpi<br/>
+analyzing drupal-developer.hpi<br/>
+analyzing dry.hpi<br/>
+analyzing dry-run.hpi<br/>
+analyzing dtkit.hpi<br/>
+analyzing dumpinfo-buildwrapper-plugin.hpi<br/>
+analyzing dumpling.hpi<br/>
+analyzing durable-task.hpi<br/>
+analyzing dynamic-axis.hpi<br/>
+analyzing dynamic-search-view.hpi<br/>
+analyzing dynamic_extended_choice_parameter.hpi<br/>
+analyzing dynamicparameter.hpi<br/>
+analyzing dynatrace-dashboard.hpi<br/>
+analyzing ease-plugin.hpi<br/>
+analyzing easyant.hpi<br/>
+analyzing ec2.hpi<br/>
+analyzing ec2-cloud-axis.hpi<br/>
+analyzing ec2-deployment-dashboard.hpi<br/>
+analyzing eclipse-update-site.hpi<br/>
+analyzing ecutest.hpi<br/>
+analyzing eggplant-plugin.hpi<br/>
+analyzing elastic-axis.hpi<br/>
+analyzing elasticbox.hpi<br/>
+analyzing elOyente.hpi<br/>
+analyzing email-ext.hpi<br/>
+analyzing email-ext-recipients-column.hpi<br/>
+analyzing emailext-template.hpi<br/>
+analyzing embeddable-build-status.hpi<br/>
+analyzing emma.hpi<br/>
+analyzing emmacoveragecolumn.hpi<br/>
+analyzing emotional-jenkins-plugin.hpi<br/>
+analyzing enhanced-old-build-discarder.hpi<br/>
+analyzing envfile.hpi<br/>
+analyzing envinject.hpi<br/>
+analyzing environment-dashboard.hpi<br/>
+analyzing environment-labels-setter.hpi<br/>
+analyzing environment-script.hpi<br/>
+analyzing escaped-markup-plugin.hpi<br/>
+analyzing event-announcer.hpi<br/>
+analyzing excludeMatrixParent.hpi<br/>
+analyzing Exclusion.hpi<br/>
+analyzing exclusive-execution.hpi<br/>
+analyzing exclusive-label-plugin.hpi<br/>
+analyzing export-params.hpi<br/>
+analyzing extended-choice-parameter.hpi<br/>
+analyzing extended-read-permission.hpi<br/>
+analyzing extensible-choice-parameter.hpi<br/>
+analyzing extension-filter.hpi<br/>
+analyzing external-monitor-job.hpi<br/>
+analyzing external-scheduler.hpi<br/>
+analyzing externalresource-dispatcher.hpi<br/>
+analyzing extra-columns.hpi<br/>
+analyzing extra-tool-installers.hpi<br/>
+analyzing extreme-feedback.hpi<br/>
+analyzing extreme-notification.hpi<br/>
+analyzing ezwall.hpi<br/>
+analyzing fail-the-build-plugin.hpi<br/>
+analyzing failedJobDeactivator.hpi<br/>
+analyzing favorite.hpi<br/>
+analyzing favorite-view.hpi<br/>
+analyzing feature-branch-notifier.hpi<br/>
+analyzing figlet-buildstep.hpi<br/>
+analyzing file-leak-detector.hpi<br/>
+analyzing files-found-trigger.hpi<br/>
+analyzing filesystem-list-parameter-plugin.hpi<br/>
+analyzing filesystem_scm.hpi<br/>
+analyzing findbugs.hpi<br/>
+analyzing fitnesse.hpi<br/>
+analyzing flaky-test-handler.hpi<br/>
+analyzing flashlog-plugin.hpi<br/>
+analyzing flexible-publish.hpi<br/>
+analyzing flexteam.hpi<br/>
+analyzing flow.hpi<br/>
+analyzing fogbugz.hpi<br/>
+analyzing form-element-path.hpi<br/>
+analyzing fortify-cloudscan-jenkins-plugin.hpi<br/>
+analyzing fortify360.hpi<br/>
+analyzing fstrigger.hpi<br/>
+analyzing ftppublisher.hpi<br/>
+analyzing fxcop-runner.hpi<br/>
+analyzing gallio.hpi<br/>
+analyzing gant.hpi<br/>
+analyzing GatekeeperPlugin.hpi<br/>
+analyzing gatling.hpi<br/>
+analyzing gcal.hpi<br/>
+analyzing gcloud-sdk.hpi<br/>
+analyzing gcm-notification.hpi<br/>
+analyzing gearman-plugin.hpi<br/>
+analyzing gem-publisher.hpi<br/>
+analyzing gerrit-trigger.hpi<br/>
+analyzing ghprb.hpi<br/>
+analyzing git.hpi<br/>
+analyzing git-changelog.hpi<br/>
+analyzing git-chooser-alternative.hpi<br/>
+analyzing git-client.hpi<br/>
+analyzing git-notes.hpi<br/>
+analyzing git-parameter.hpi<br/>
+analyzing git-server.hpi<br/>
+analyzing git-tag-message.hpi<br/>
+analyzing git-userContent.hpi<br/>
+analyzing gitbucket.hpi<br/>
+analyzing gitcolony-plugin.hpi<br/>
+analyzing github.hpi<br/>
+analyzing github-api.hpi<br/>
+analyzing github-branch-source.hpi<br/>
+analyzing github-oauth.hpi<br/>
+analyzing github-sqs-plugin.hpi<br/>
+analyzing gitlab-hook.hpi<br/>
+analyzing gitlab-logo.hpi<br/>
+analyzing gitlab-merge-request-jenkins.hpi<br/>
+analyzing gitlab-plugin.hpi<br/>
+analyzing global-build-stats.hpi<br/>
+analyzing global-post-script.hpi<br/>
+analyzing global-variable-string-parameter.hpi<br/>
+analyzing gnat.hpi<br/>
+analyzing golang.hpi<br/>
+analyzing google-analytics-usage-reporter.hpi<br/>
+analyzing google-api-client-plugin.hpi<br/>
+analyzing google-cloud-backup.hpi<br/>
+analyzing google-cloud-health-check.hpi<br/>
+analyzing google-container-registry-auth.hpi<br/>
+analyzing google-git-notes-publisher.hpi<br/>
+analyzing google-login.hpi<br/>
+analyzing google-metadata-plugin.hpi<br/>
+analyzing google-oauth-plugin.hpi<br/>
+analyzing google-play-android-publisher.hpi<br/>
+analyzing google-source-plugin.hpi<br/>
+analyzing google-storage-plugin.hpi<br/>
+analyzing googleanalytics.hpi<br/>
+analyzing gradle.hpi<br/>
+analyzing grails.hpi<br/>
+analyzing graphiteIntegrator.hpi<br/>
+analyzing gravatar.hpi<br/>
+analyzing greenballs.hpi<br/>
+analyzing grinder.hpi<br/>
+analyzing groovy.hpi<br/>
+analyzing groovy-events-listener-plugin.hpi<br/>
+analyzing groovy-events-listener-plugin-master.hpi<br/>
+analyzing groovy-label-assignment.hpi<br/>
+analyzing groovy-postbuild.hpi<br/>
+analyzing groovy-remote.hpi<br/>
+analyzing groovyaxis.hpi<br/>
+analyzing growl.hpi<br/>
+analyzing hadoop.hpi<br/>
+analyzing harvest.hpi<br/>
+analyzing hckrnews.hpi<br/>
+analyzing heavy-job.hpi<br/>
+analyzing heroku-jenkins-plugin.hpi<br/>
+analyzing hgca.hpi<br/>
+analyzing hidden-parameter.hpi<br/>
+analyzing hipchat.hpi<br/>
+analyzing hockeyapp.hpi<br/>
+analyzing housekeeper.hpi<br/>
+analyzing hp-application-automation-tools-plugin.hpi<br/>
+analyzing hp-operations-orchestration-automation-execution-plugin.hpi<br/>
+analyzing hsts-filter-plugin.hpi<br/>
+analyzing html-audio-notifier.hpi<br/>
+analyzing html5-notifier-plugin.hpi<br/>
+analyzing htmlpublisher.hpi<br/>
+analyzing http-post.hpi<br/>
+analyzing http_request.hpi<br/>
+analyzing hudson-pview-plugin.hpi<br/>
+analyzing hudson-wsclean-plugin.hpi<br/>
+analyzing hudsontrayapp.hpi<br/>
+analyzing hue-light.hpi<br/>
+analyzing humbug.hpi<br/>
+analyzing icescrum.hpi<br/>
+analyzing icon-shim.hpi<br/>
+analyzing idobata-notifier.hpi<br/>
+analyzing ifttt-build-notifier.hpi<br/>
+analyzing ikachan.hpi<br/>
+analyzing image-gallery.hpi<br/>
+analyzing imagecomparison.hpi<br/>
+analyzing implied-labels.hpi<br/>
+analyzing inedo-buildmaster.hpi<br/>
+analyzing installshield.hpi<br/>
+analyzing instant-messaging.hpi<br/>
+analyzing integrity-plugin.hpi<br/>
+analyzing internetmeme.hpi<br/>
+analyzing ios-device-connector.hpi<br/>
+analyzing iphoneview.hpi<br/>
+analyzing ipmessenger-plugin.hpi<br/>
+analyzing ircbot.hpi<br/>
+analyzing ironmq-notifier.hpi<br/>
+analyzing issue-link.hpi<br/>
+analyzing itest.hpi<br/>
+analyzing ivy.hpi<br/>
+analyzing ivy-report.hpi<br/>
+analyzing ivytrigger.hpi<br/>
+analyzing jabber.hpi<br/>
+analyzing jabber-server-plugin.hpi<br/>
+analyzing jackson-databind.hpi<br/>
+analyzing jackson2-api.hpi<br/>
+analyzing jacoco.hpi<br/>
+analyzing japex.hpi<br/>
+analyzing javadoc.hpi<br/>
+analyzing javancss.hpi<br/>
+analyzing javatest-report.hpi<br/>
+analyzing jboss.hpi<br/>
+analyzing jbpm-embedded-plugin.hpi<br/>
+analyzing jbpm-workflow-plugin.hpi<br/>
+analyzing jcaptcha-plugin.hpi<br/>
+analyzing jclouds-jenkins.hpi<br/>
+analyzing jdepend.hpi<br/>
+analyzing JDK_Parameter_Plugin.hpi<br/>
+analyzing jenkins-cloudformation-plugin.hpi<br/>
+analyzing jenkins-flowdock-plugin.hpi<br/>
+analyzing jenkins-jira-issue-updater.hpi<br/>
+analyzing jenkins-multijob-plugin.hpi<br/>
+analyzing jenkins-reviewbot.hpi<br/>
+analyzing jenkins-tag-cloud-plugin.hpi<br/>
+analyzing jenkins-testswarm-plugin.hpi<br/>
+analyzing jenkins-tracker.hpi<br/>
+analyzing jenkinsci-appspider-plugin.hpi<br/>
+analyzing jenkinslint.hpi<br/>
+analyzing jenkinswalldisplay.hpi<br/>
+analyzing jgiven.hpi<br/>
+analyzing jianliao.hpi<br/>
+analyzing jigomerge.hpi<br/>
+analyzing jira.hpi<br/>
+analyzing JiraTestResultReporter.hpi<br/>
+analyzing job-direct-mail.hpi<br/>
+analyzing job-dsl.hpi<br/>
+analyzing job-exporter.hpi<br/>
+analyzing job-import-plugin.hpi<br/>
+analyzing job-log-logger-plugin.hpi<br/>
+analyzing job-node-stalker.hpi<br/>
+analyzing job-parameter-summary.hpi<br/>
+analyzing job-poll-action-plugin.hpi<br/>
+analyzing job-restrictions.hpi<br/>
+analyzing job-strongauth-simple.hpi<br/>
+analyzing jobConfigHistory.hpi<br/>
+analyzing jobcopy-builder.hpi<br/>
+analyzing jobdelete-builder.hpi<br/>
+analyzing jobgenerator.hpi<br/>
+analyzing jobrequeue.hpi<br/>
+analyzing jobrevision.hpi<br/>
+analyzing jobtemplates.hpi<br/>
+analyzing jobtype-column.hpi<br/>
+analyzing join.hpi<br/>
+analyzing jprt.hpi<br/>
+analyzing jqs-monitoring.hpi<br/>
+analyzing jquery.hpi<br/>
+analyzing jquery-detached.hpi<br/>
+analyzing jquery-ui.hpi<br/>
+analyzing jsch.hpi<br/>
+analyzing jsgames.hpi<br/>
+analyzing jslint.hpi<br/>
+analyzing jsoup.hpi<br/>
+analyzing jsunit.hpi<br/>
+analyzing jswidgets.hpi<br/>
+analyzing junit.hpi<br/>
+analyzing junit-attachments.hpi<br/>
+analyzing junit-realtime-test-reporter.hpi<br/>
+analyzing jython.hpi<br/>
+analyzing kagemai.hpi<br/>
+analyzing keep-slave-disconnected.hpi<br/>
+analyzing keepSlaveOffline.hpi<br/>
+analyzing kerberos-sso.hpi<br/>
+analyzing keyboard-shortcuts-plugin.hpi<br/>
+analyzing kiuwanJenkinsPlugin.hpi<br/>
+analyzing klaros-testmanagement.hpi<br/>
+analyzing klocwork.hpi<br/>
+analyzing kmap-jenkins.hpi<br/>
+analyzing koji.hpi<br/>
+analyzing kpp-management-plugin.hpi<br/>
+analyzing kubernetes.hpi<br/>
+analyzing label-linked-jobs.hpi<br/>
+analyzing label-verifier.hpi<br/>
+analyzing labeled-test-groups-publisher.hpi<br/>
+analyzing labmanager.hpi<br/>
+analyzing lastfailureversioncolumn.hpi<br/>
+analyzing lastsuccessdescriptioncolumn.hpi<br/>
+analyzing lastsuccessversioncolumn.hpi<br/>
+analyzing LavaLampNotifier.hpi<br/>
+analyzing ldap.hpi<br/>
+analyzing ldapemail.hpi<br/>
+analyzing leastload.hpi<br/>
+analyzing leiningen-plugin.hpi<br/>
+analyzing lenientshutdown.hpi<br/>
+analyzing libvirt-slave.hpi<br/>
+analyzing lifx-notifier.hpi<br/>
+analyzing linenumbers.hpi<br/>
+analyzing lingr-plugin.hpi<br/>
+analyzing list-command.hpi<br/>
+analyzing literate.hpi<br/>
+analyzing liverebel-deploy.hpi<br/>
+analyzing livescreenshot.hpi<br/>
+analyzing loaderio-jenkins-plugin.hpi<br/>
+analyzing loadimpact-plugin.hpi<br/>
+analyzing locale.hpi<br/>
+analyzing lockable-resources.hpi<br/>
+analyzing locked-files-report.hpi<br/>
+analyzing locks-and-latches.hpi<br/>
+analyzing log-command.hpi<br/>
+analyzing log-parser.hpi<br/>
+analyzing logaction-plugin.hpi<br/>
+analyzing logentries.hpi<br/>
+analyzing logfilesizechecker.hpi<br/>
+analyzing logging.hpi<br/>
+analyzing logstash.hpi<br/>
+analyzing lotus-connections-plugin.hpi<br/>
+analyzing lsf-cloud.hpi<br/>
+analyzing lucene-search.hpi<br/>
+analyzing m2-repo-reaper.hpi<br/>
+analyzing m2release.hpi<br/>
+analyzing mail-watcher-plugin.hpi<br/>
+analyzing mailcommander.hpi<br/>
+analyzing mailer.hpi<br/>
+analyzing mailmap-resolver.hpi<br/>
+analyzing managed-scripts.hpi<br/>
+analyzing mansion-cloud.hpi<br/>
+analyzing mantis.hpi<br/>
+analyzing mapdb-api.hpi<br/>
+analyzing mashup-portlets-plugin.hpi<br/>
+analyzing mask-passwords.hpi<br/>
+analyzing matrix-auth.hpi<br/>
+analyzing matrix-combinations-parameter.hpi<br/>
+analyzing matrix-groovy-execution-strategy.hpi<br/>
+analyzing matrix-project.hpi<br/>
+analyzing matrix-reloaded.hpi<br/>
+analyzing Matrix-sorter-plugin.hpi<br/>
+analyzing matrixtieparent.hpi<br/>
+analyzing mattermost.hpi<br/>
+analyzing maven-dependency-update-trigger.hpi<br/>
+analyzing maven-deployment-linker.hpi<br/>
+analyzing maven-info.hpi<br/>
+analyzing maven-invoker-plugin.hpi<br/>
+analyzing maven-metadata-plugin.hpi<br/>
+analyzing maven-plugin.hpi<br/>
+analyzing maven-release-cascade.hpi<br/>
+analyzing maven-repo-cleaner.hpi<br/>
+analyzing mber.hpi<br/>
+analyzing mdtool.hpi<br/>
+analyzing measurement-plots.hpi<br/>
+analyzing meliora-testlab.hpi<br/>
+analyzing memegen.hpi<br/>
+analyzing memory-map.hpi<br/>
+analyzing mercurial.hpi<br/>
+analyzing mesos.hpi<br/>
+analyzing metadata.hpi<br/>
+analyzing metrics.hpi<br/>
+analyzing metrics-diskusage.hpi<br/>
+analyzing metrics-ganglia.hpi<br/>
+analyzing metrics-graphite.hpi<br/>
+analyzing mktmpio.hpi<br/>
+analyzing mock-load-builder.hpi<br/>
+analyzing mock-security-realm.hpi<br/>
+analyzing mock-slave.hpi<br/>
+analyzing modernstatus.hpi<br/>
+analyzing mongodb.hpi<br/>
+analyzing mongodb-document-upload.hpi<br/>
+analyzing monitor-remote-job.hpi<br/>
+analyzing monitoring.hpi<br/>
+analyzing monkit-plugin.hpi<br/>
+analyzing mozmill.hpi<br/>
+analyzing mqtt-notification-plugin.hpi<br/>
+analyzing msbuild.hpi<br/>
+analyzing mstest.hpi<br/>
+analyzing mstestrunner.hpi<br/>
+analyzing mttr.hpi<br/>
+analyzing multi-branch-project-plugin.hpi<br/>
+analyzing multi-module-tests-publisher.hpi<br/>
+analyzing multi-slave-config-plugin.hpi<br/>
+analyzing multiline-tabbar-plugin.hpi<br/>
+analyzing multiple-scms.hpi<br/>
+analyzing mysql-auth.hpi<br/>
+analyzing mysql-job-databases.hpi<br/>
+analyzing myst-plugin.hpi<br/>
+analyzing naginator.hpi<br/>
+analyzing nant.hpi<br/>
+analyzing ncover.hpi<br/>
+analyzing NegotiateSSO.hpi<br/>
+analyzing neoload-jenkins-plugin.hpi<br/>
+analyzing nerrvana-plugin.hpi<br/>
+analyzing nested-view.hpi<br/>
+analyzing network-monitor.hpi<br/>
+analyzing newrelic-deployment-notifier.hpi<br/>
+analyzing next-build-number.hpi<br/>
+analyzing next-executions.hpi<br/>
+analyzing nexus-task-runner.hpi<br/>
+analyzing nis-notification-lamp.hpi<br/>
+analyzing node-iterator-api.hpi<br/>
+analyzing nodejs.hpi<br/>
+analyzing nodelabelparameter.hpi<br/>
+analyzing nodenamecolumn.hpi<br/>
+analyzing nopmdcheck.hpi<br/>
+analyzing nopmdverifytrac.hpi<br/>
+analyzing notification.hpi<br/>
+analyzing nouvola-divecloud.hpi<br/>
+analyzing nsiqcollector.hpi<br/>
+analyzing nuget.hpi<br/>
+analyzing nunit.hpi<br/>
+analyzing oauth-credentials.hpi<br/>
+analyzing octopusdeploy.hpi<br/>
+analyzing offlineonfailure-plugin.hpi<br/>
+analyzing oki-docki.hpi<br/>
+analyzing ontrack.hpi<br/>
+analyzing openid.hpi<br/>
+analyzing openid4java.hpi<br/>
+analyzing openJDK-native-plugin.hpi<br/>
+analyzing openscada-jenkins-exporter.hpi<br/>
+analyzing openshift-deployer.hpi<br/>
+analyzing openshift-pipeline.hpi<br/>
+analyzing openstack-cloud.hpi<br/>
+analyzing oslc-cm.hpi<br/>
+analyzing ownership.hpi<br/>
+analyzing p4.hpi<br/>
+analyzing paaslane-estimate.hpi<br/>
+analyzing package-drone.hpi<br/>
+analyzing package-parameter.hpi<br/>
+analyzing packagecloud.hpi<br/>
+analyzing packer.hpi<br/>
+analyzing pagerduty.hpi<br/>
+analyzing pam-auth.hpi<br/>
+analyzing parallel-test-executor.hpi<br/>
+analyzing parallels-desktop.hpi<br/>
+analyzing parameter-pool.hpi<br/>
+analyzing parameter-separator.hpi<br/>
+analyzing Parameterized-Remote-Trigger.hpi<br/>
+analyzing parameterized-scheduler.hpi<br/>
+analyzing parameterized-trigger.hpi<br/>
+analyzing patch-parameter.hpi<br/>
+analyzing pathignore.hpi<br/>
+analyzing pegdown-formatter.hpi<br/>
+analyzing pending-changes.hpi<br/>
+analyzing people-redirector.hpi<br/>
+analyzing percentage-du-node-column.hpi<br/>
+analyzing perfectomobile.hpi<br/>
+analyzing perforce.hpi<br/>
+analyzing performance.hpi<br/>
+analyzing perfpublisher.hpi<br/>
+analyzing periodic-reincarnation.hpi<br/>
+analyzing periodicbackup.hpi<br/>
+analyzing perl.hpi<br/>
+analyzing perl-smoke-test.hpi<br/>
+analyzing persistent-build-queue-plugin.hpi<br/>
+analyzing persistent-parameter.hpi<br/>
+analyzing persona.hpi<br/>
+analyzing phabricator-plugin.hpi<br/>
+analyzing phing.hpi<br/>
+analyzing php.hpi<br/>
+analyzing php-builtin-web-server.hpi<br/>
+analyzing piketec-tpt.hpi<br/>
+analyzing pitmutation.hpi<br/>
+analyzing piwikanalytics.hpi<br/>
+analyzing plain-credentials.hpi<br/>
+analyzing plasticscm-plugin.hpi<br/>
+analyzing platformlabeler.hpi<br/>
+analyzing play-autotest-plugin.hpi<br/>
+analyzing plot.hpi<br/>
+analyzing plugin-usage-plugin.hpi<br/>
+analyzing pmd.hpi<br/>
+analyzing polarion.hpi<br/>
+analyzing poll-mailbox-trigger-plugin.hpi<br/>
+analyzing pollscm.hpi<br/>
+analyzing pom2config.hpi<br/>
+analyzing port-allocator.hpi<br/>
+analyzing post-completed-build-result.hpi<br/>
+analyzing postbuild-task.hpi<br/>
+analyzing postbuildscript.hpi<br/>
+analyzing powershell.hpi<br/>
+analyzing pragprog.hpi<br/>
+analyzing prereq-buildstep.hpi<br/>
+analyzing preSCMbuildstep.hpi<br/>
+analyzing pretested-integration.hpi<br/>
+analyzing PrioritySorter.hpi<br/>
+analyzing proc-cleaner-plugin.hpi<br/>
+analyzing progress-bar-column-plugin.hpi<br/>
+analyzing project-build-times.hpi<br/>
+analyzing project-description-setter.hpi<br/>
+analyzing project-health-report.hpi<br/>
+analyzing project-inheritance.hpi<br/>
+analyzing project-stats-plugin.hpi<br/>
+analyzing promoted-builds.hpi<br/>
+analyzing promoted-builds-simple.hpi<br/>
+analyzing proxmox.hpi<br/>
+analyzing prqa-plugin.hpi<br/>
+analyzing pry.hpi<br/>
+analyzing publish-over-cifs.hpi<br/>
+analyzing publish-over-dropbox.hpi<br/>
+analyzing publish-over-ftp.hpi<br/>
+analyzing publish-over-ssh.hpi<br/>
+analyzing puppet.hpi<br/>
+analyzing purge-build-queue-plugin.hpi<br/>
+analyzing purge-job-history.hpi<br/>
+analyzing pvcs_scm.hpi<br/>
+analyzing pwauth.hpi<br/>
+analyzing pxe.hpi<br/>
+analyzing pyenv.hpi<br/>
+analyzing python.hpi<br/>
+analyzing qc.hpi<br/>
+analyzing qftest.hpi<br/>
+analyzing qtest.hpi<br/>
+analyzing queue-cleanup.hpi<br/>
+analyzing r.hpi<br/>
+analyzing rabbitmq-build-trigger.hpi<br/>
+analyzing rabbitmq-consumer.hpi<br/>
+analyzing rad-builder.hpi<br/>
+analyzing radiatorviewplugin.hpi<br/>
+analyzing rake.hpi<br/>
+analyzing rally-plugin.hpi<br/>
+analyzing rallyBuild.hpi<br/>
+analyzing random-job-builder.hpi<br/>
+analyzing random-string-parameter.hpi<br/>
+analyzing rapiddeploy-jenkins.hpi<br/>
+analyzing rbenv.hpi<br/>
+analyzing reactor-plugin.hpi<br/>
+analyzing read-only-configurations.hpi<br/>
+analyzing readonly-parameters.hpi<br/>
+analyzing rebuild.hpi<br/>
+analyzing recipe.hpi<br/>
+analyzing redgate-sql-ci.hpi<br/>
+analyzing redmine.hpi<br/>
+analyzing refit.hpi<br/>
+analyzing regexemail.hpi<br/>
+analyzing regression-report-plugin.hpi<br/>
+analyzing release.hpi<br/>
+analyzing relution-publisher.hpi<br/>
+analyzing remote-jobs-view-plugin.hpi<br/>
+analyzing remote-terminal-access.hpi<br/>
+analyzing repo.hpi<br/>
+analyzing repository.hpi<br/>
+analyzing repository-connector.hpi<br/>
+analyzing reverse-proxy-auth-plugin.hpi<br/>
+analyzing reviewboard.hpi<br/>
+analyzing rhnpush-plugin.hpi<br/>
+analyzing rich-text-publisher-plugin.hpi<br/>
+analyzing robot.hpi<br/>
+analyzing role-strategy.hpi<br/>
+analyzing rpmsign-plugin.hpi<br/>
+analyzing rqm-plugin.hpi<br/>
+analyzing rrod.hpi<br/>
+analyzing ruby.hpi<br/>
+analyzing ruby-runtime.hpi<br/>
+analyzing rubyMetrics.hpi<br/>
+analyzing rubymotion.hpi<br/>
+analyzing run-condition.hpi<br/>
+analyzing run-condition-extras.hpi<br/>
+analyzing rundeck.hpi<br/>
+analyzing runscope.hpi<br/>
+analyzing rusalad-plugin.hpi<br/>
+analyzing rvm.hpi<br/>
+analyzing s3.hpi<br/>
+analyzing saferestart.hpi<br/>
+analyzing sahagin.hpi<br/>
+analyzing saltstack.hpi<br/>
+analyzing sametime.hpi<br/>
+analyzing saml.hpi<br/>
+analyzing sasunit-plugin.hpi<br/>
+analyzing sauce-ondemand.hpi<br/>
+analyzing sbt.hpi<br/>
+analyzing SBuild.hpi<br/>
+analyzing scala-junit-name-decoder.hpi<br/>
+analyzing schedule-build.hpi<br/>
+analyzing Schmant.hpi<br/>
+analyzing scm-api.hpi<br/>
+analyzing scm-sync-configuration.hpi<br/>
+analyzing scm2job.hpi<br/>
+analyzing scons.hpi<br/>
+analyzing scoring-load-balancer.hpi<br/>
+analyzing scoverage.hpi<br/>
+analyzing scp.hpi<br/>
+analyzing screenshot.hpi<br/>
+analyzing script-realm.hpi<br/>
+analyzing script-scm.hpi<br/>
+analyzing script-security.hpi<br/>
+analyzing scripted-cloud-plugin.hpi<br/>
+analyzing scriptler.hpi<br/>
+analyzing scripttrigger.hpi<br/>
+analyzing SCTMExecutor.hpi<br/>
+analyzing search-all-results-plugin.hpi<br/>
+analyzing secondary-timestamper-plugin.hpi<br/>
+analyzing sectioned-view.hpi<br/>
+analyzing secure-requester-whitelist.hpi<br/>
+analyzing seed.hpi<br/>
+analyzing selected-tests-executor.hpi<br/>
+analyzing selection-tasks-plugin.hpi<br/>
+analyzing selenium.hpi<br/>
+analyzing selenium-aes.hpi<br/>
+analyzing selenium-axis.hpi<br/>
+analyzing selenium-builder.hpi<br/>
+analyzing seleniumhq.hpi<br/>
+analyzing seleniumhtmlreport.hpi<br/>
+analyzing seleniumrc-plugin.hpi<br/>
+analyzing selfie-trigger-plugin.hpi<br/>
+analyzing semantic-versioning-plugin.hpi<br/>
+analyzing send-stacktrace-to-eclipse-plugin.hpi<br/>
+analyzing serenity.hpi<br/>
+analyzing sfee.hpi<br/>
+analyzing shared-objects.hpi<br/>
+analyzing shared-workspace.hpi<br/>
+analyzing shelve-project-plugin.hpi<br/>
+analyzing shiningpanda.hpi<br/>
+analyzing short-workspace-path.hpi<br/>
+analyzing show-build-parameters.hpi<br/>
+analyzing sicci_for_xcode.hpi<br/>
+analyzing sidebar-link.hpi<br/>
+analyzing sidebar-update-notification.hpi<br/>
+analyzing signal-killer.hpi<br/>
+analyzing simple-parameterized-builds-report.hpi<br/>
+analyzing simple-theme-plugin.hpi<br/>
+analyzing simpleclearcase.hpi<br/>
+analyzing simpleupdatesite.hpi<br/>
+analyzing singleuseslave.hpi<br/>
+analyzing sitemonitor.hpi<br/>
+analyzing skip-certificate-check.hpi<br/>
+analyzing skype-notifier.hpi<br/>
+analyzing skytap.hpi<br/>
+analyzing slack.hpi<br/>
+analyzing sladiator-notifier.hpi<br/>
+analyzing slave-prerequisites.hpi<br/>
+analyzing slave-proxy.hpi<br/>
+analyzing slave-setup.hpi<br/>
+analyzing slave-squatter.hpi<br/>
+analyzing slave-status.hpi<br/>
+analyzing slave-utilization-plugin.hpi<br/>
+analyzing sloccount.hpi<br/>
+analyzing smart-jenkins.hpi<br/>
+analyzing smartfrog-plugin.hpi<br/>
+analyzing sms.hpi<br/>
+analyzing snsnotify.hpi<br/>
+analyzing sonar.hpi<br/>
+analyzing sonar-gerrit.hpi<br/>
+analyzing sonargraph-plugin.hpi<br/>
+analyzing sounds.hpi<br/>
+analyzing sourcemonitor.hpi<br/>
+analyzing speaks.hpi<br/>
+analyzing spoonscript.hpi<br/>
+analyzing sqlplus-script-runner.hpi<br/>
+analyzing sra-deploy.hpi<br/>
+analyzing ssh.hpi<br/>
+analyzing ssh-agent.hpi<br/>
+analyzing ssh-credentials.hpi<br/>
+analyzing ssh-slaves.hpi<br/>
+analyzing ssh2easy.hpi<br/>
+analyzing SSSCM.hpi<br/>
+analyzing stackhammer.hpi<br/>
+analyzing staf.hpi<br/>
+analyzing starteam.hpi<br/>
+analyzing started-by-envvar.hpi<br/>
+analyzing startup-trigger-plugin.hpi<br/>
+analyzing stash-pullrequest-builder.hpi<br/>
+analyzing StashBranchParameter.hpi<br/>
+analyzing stashNotifier.hpi<br/>
+analyzing status-view.hpi<br/>
+analyzing statusmonitor.hpi<br/>
+analyzing stepcounter.hpi<br/>
+analyzing storable-configs-plugin.hpi<br/>
+analyzing strawboss.hpi<br/>
+analyzing subversion.hpi<br/>
+analyzing suite-test-groups-publisher.hpi<br/>
+analyzing summary_report.hpi<br/>
+analyzing sumologic-publisher.hpi<br/>
+analyzing support-core.hpi<br/>
+analyzing suppress-stack-trace.hpi<br/>
+analyzing Surround-SCM-plugin.hpi<br/>
+analyzing svn-release-mgr.hpi<br/>
+analyzing svn-revert-plugin.hpi<br/>
+analyzing svn-tag.hpi<br/>
+analyzing svn-workspace-cleaner.hpi<br/>
+analyzing svncompat13.hpi<br/>
+analyzing svncompat14.hpi<br/>
+analyzing svnmerge.hpi<br/>
+analyzing svnpublisher.hpi<br/>
+analyzing swarm.hpi<br/>
+analyzing synergy.hpi<br/>
+analyzing syslog-logger.hpi<br/>
+analyzing systemloadaverage-monitor.hpi<br/>
+analyzing tag-profiler.hpi<br/>
+analyzing tap.hpi<br/>
+analyzing tasks.hpi<br/>
+analyzing tattletale-plugin.hpi<br/>
+analyzing tcl.hpi<br/>
+analyzing team-views.hpi<br/>
+analyzing teamconcert.hpi<br/>
+analyzing teamconcert-git.hpi<br/>
+analyzing template-project.hpi<br/>
+analyzing template-workflows.hpi<br/>
+analyzing terminal.hpi<br/>
+analyzing terminate-ssh-processes-plugin.hpi<br/>
+analyzing terraform.hpi<br/>
+analyzing test-results-analyzer.hpi<br/>
+analyzing test-stability.hpi<br/>
+analyzing testabilityexplorer.hpi<br/>
+analyzing TestComplete.hpi<br/>
+analyzing testcomplete-xunit.hpi<br/>
+analyzing TestFairy.hpi<br/>
+analyzing testingbot.hpi<br/>
+analyzing testInProgress.hpi<br/>
+analyzing testlink.hpi<br/>
+analyzing testng-plugin.hpi<br/>
+analyzing testopia.hpi<br/>
+analyzing text-finder.hpi<br/>
+analyzing text-finder-run-condition.hpi<br/>
+analyzing tfs.hpi<br/>
+analyzing thinBackup.hpi<br/>
+analyzing thread-dump-action-plugin.hpi<br/>
+analyzing threadfix.hpi<br/>
+analyzing throttle-concurrents.hpi<br/>
+analyzing thucydides.hpi<br/>
+analyzing tibco-builder.hpi<br/>
+analyzing timestamper.hpi<br/>
+analyzing tinfoil-scan.hpi<br/>
+analyzing tmpcleaner.hpi<br/>
+analyzing token-macro.hpi<br/>
+analyzing tool-labels-plugin.hpi<br/>
+analyzing toolenv.hpi<br/>
+analyzing trac.hpi<br/>
+analyzing trac-publisher-plugin.hpi<br/>
+analyzing tracking-git.hpi<br/>
+analyzing tracking-svn.hpi<br/>
+analyzing transifex.hpi<br/>
+analyzing translation.hpi<br/>
+analyzing travis-yml.hpi<br/>
+analyzing tuxdroid.hpi<br/>
+analyzing TwilioNotifier.hpi<br/>
+analyzing twitter.hpi<br/>
+analyzing typetalk.hpi<br/>
+analyzing ui-samples-plugin.hpi<br/>
+analyzing ui-test-capture.hpi<br/>
+analyzing unicorn.hpi<br/>
+analyzing unique-id.hpi<br/>
+analyzing unity-asset-server.hpi<br/>
+analyzing unity3d-plugin.hpi<br/>
+analyzing uno-choice.hpi<br/>
+analyzing unreliable-slave-plugin.hpi<br/>
+analyzing update-sites-manager.hpi<br/>
+analyzing upstream-downstream-view.hpi<br/>
+analyzing uptime.hpi<br/>
+analyzing url-auth.hpi<br/>
+analyzing URLSCM.hpi<br/>
+analyzing urltrigger.hpi<br/>
+analyzing utplsql.hpi<br/>
+analyzing vaddy-plugin.hpi<br/>
+analyzing vagrant.hpi<br/>
+analyzing valgrind.hpi<br/>
+analyzing validating-string-parameter.hpi<br/>
+analyzing vault-scm-plugin.hpi<br/>
+analyzing vboxwrapper.hpi<br/>
+analyzing veracode-scanner.hpi<br/>
+analyzing versioncolumn.hpi<br/>
+analyzing versionnumber.hpi<br/>
+analyzing vertx.hpi<br/>
+analyzing vessel.hpi<br/>
+analyzing view-job-filters.hpi<br/>
+analyzing viewVC.hpi<br/>
+analyzing violation-columns.hpi<br/>
+analyzing violation-comments-to-stash.hpi<br/>
+analyzing violations.hpi<br/>
+analyzing virtualbox.hpi<br/>
+analyzing visualworks-store.hpi<br/>
+analyzing vmanager-plugin.hpi<br/>
+analyzing vmware.hpi<br/>
+analyzing vmware-vrealize-codestream.hpi<br/>
+analyzing vncrecorder.hpi<br/>
+analyzing vncviewer.hpi<br/>
+analyzing vs-code-metrics.hpi<br/>
+analyzing vsphere-cloud.hpi<br/>
+analyzing vss.hpi<br/>
+analyzing vstestrunner.hpi<br/>
+analyzing walti.hpi<br/>
+analyzing warnings.hpi<br/>
+analyzing was-builder.hpi<br/>
+analyzing webload.hpi<br/>
+analyzing weblogic-deployer-plugin.hpi<br/>
+analyzing websocket.hpi<br/>
+analyzing websphere-deployer.hpi<br/>
+analyzing WebSVN2.hpi<br/>
+analyzing webtestpresenter.hpi<br/>
+analyzing weibo.hpi<br/>
+analyzing whitesource.hpi<br/>
+analyzing wildfly-deployer.hpi<br/>
+analyzing windmill.hpi<br/>
+analyzing windows-azure-storage.hpi<br/>
+analyzing windows-exe-runner.hpi<br/>
+analyzing windows-slaves.hpi<br/>
+analyzing wix.hpi<br/>
+analyzing workflow-aggregator.hpi<br/>
+analyzing workflow-api.hpi<br/>
+analyzing workflow-basic-steps.hpi<br/>
+analyzing workflow-cps.hpi<br/>
+analyzing workflow-cps-global-lib.hpi<br/>
+analyzing workflow-durable-task-step.hpi<br/>
+analyzing workflow-job.hpi<br/>
+analyzing workflow-multibranch.hpi<br/>
+analyzing workflow-scm-step.hpi<br/>
+analyzing workflow-step-api.hpi<br/>
+analyzing workflow-support.hpi<br/>
+analyzing workplace-notifier.hpi<br/>
+analyzing writable-filesystem-monitor.hpi<br/>
+analyzing ws-cleanup.hpi<br/>
+analyzing wwpass-plugin.hpi<br/>
+analyzing xcode-plugin.hpi<br/>
+analyzing xcp-ci.hpi<br/>
+analyzing xfpanel.hpi<br/>
+analyzing xframe-filter-plugin.hpi<br/>
+analyzing xlrelease-plugin.hpi<br/>
+analyzing xltestview-plugin.hpi<br/>
+analyzing xpath-config-viewer.hpi<br/>
+analyzing xpdev.hpi<br/>
+analyzing xshell.hpi<br/>
+analyzing xtrigger.hpi<br/>
+analyzing xunit.hpi<br/>
+analyzing xvfb.hpi<br/>
+analyzing xvnc.hpi<br/>
+analyzing yammer.hpi<br/>
+analyzing yandex-metrica.hpi<br/>
+analyzing youtrack-plugin.hpi<br/>
+analyzing zapper.hpi<br/>
+analyzing zaproxy.hpi<br/>
+analyzing zentimestamp.hpi<br/>
+analyzing zephyr-enterprise-test-management.hpi<br/>
+analyzing zephyr-for-jira-test-management.hpi<br/>
+analyzing zmq-event-publisher.hpi<br/>
+analyzing zos-connector.hpi<br/>
+<br/>
+<br/>
+ignored plugins : [python-wrapper.hpi]<br/>
+<br/>
+Unused methods in Jenkins :<br/>
+jenkins.MasterToSlaveFileCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+jenkins.model.Jenkins.getRepositoryBrowser(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.getTrigger(String) hudson.triggers.TriggerDescriptor;<br/>
+jenkins.model.Jenkins.putItem(hudson.model.TopLevelItem)<br/>
+jenkins.model.Jenkins.getBuildWrapper(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.getJobProperty(String) hudson.model.JobPropertyDescriptor;<br/>
+jenkins.model.Jenkins.getDynamic(String) Object;<br/>
+jenkins.model.Jenkins.getSecurityRealms(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.getPublisher(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.getRetentionStrategy(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.getBuilder(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.getAdjuncts(String) org.kohsuke.stapler.framework.adjunct.AdjunctManager;<br/>
+jenkins.model.Jenkins$18.run(org.jvnet.hudson.reactor.Reactor)<br/>
+jenkins.model.Jenkins$7.run(org.jvnet.hudson.reactor.Reactor)<br/>
+jenkins.model.Jenkins$DescriptorImpl.getDynamic(String) Object;<br/>
+jenkins.model.ModelObjectWithContextMenu$ContextMenu.add(String;String;String;Z) jenkins.model.ModelObjectWithContextMenu$ContextMenu;<br/>
+jenkins.model.ModelObjectWithContextMenu$ContextMenu.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+jenkins.model.ModelObjectWithContextMenu$ContextMenu.add(String;String;String;ZZ) jenkins.model.ModelObjectWithContextMenu$ContextMenu;<br/>
+jenkins.model.Jenkins$17.run(org.jvnet.hudson.reactor.Reactor)<br/>
+jenkins.model.lazy.SortedList.ceil(Comparable)I<br/>
+jenkins.model.lazy.SortedList.floor(Comparable)I<br/>
+jenkins.model.lazy.SortedList(java.util.List)<br/>
+jenkins.model.lazy.SortedList.isInRange(I)Z<br/>
+jenkins.model.lazy.SortedList.higher(Comparable)I<br/>
+jenkins.model.lazy.SortedList.lower(Comparable)I<br/>
+jenkins.model.lazy.LazyBuildMixIn$1.create(java.io.File) hudson.model.Run;<br/>
+jenkins.model.lazy.AbstractLazyLoadRunMap.put(Object) Object;<br/>
+jenkins.model.lazy.AbstractLazyLoadRunMap.purgeCache()<br/>
+jenkins.model.lazy.SortedIntList.higher(I)I<br/>
+jenkins.model.lazy.SortedIntList.copyInto([I)<br/>
+jenkins.model.lazy.SortedIntList.lower(I)I<br/>
+jenkins.model.lazy.SortedIntList.floor(I)I<br/>
+jenkins.model.Uptime.init()<br/>
+jenkins.model.BuildDiscarder$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
+jenkins.model.BuildDiscarder$ConverterImpl(com.thoughtworks.xstream.mapper.Mapper)<br/>
+jenkins.model.BuildDiscarder$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
+jenkins.model.BuildDiscarder$ConverterImpl.canConvert(Class)Z<br/>
+jenkins.model.Jenkins$19.run(org.jvnet.hudson.reactor.Reactor)<br/>
+jenkins.model.ProjectNamingStrategy.all() hudson.DescriptorExtensionList;<br/>
+jenkins.model.ModelObjectWithContextMenu$ContextMenu$1.run(org.apache.commons.jelly.JellyContext;org.apache.commons.jelly.XMLOutput)<br/>
+jenkins.model.ModelObjectWithContextMenu$ContextMenu$1.compile() org.apache.commons.jelly.Script;<br/>
+jenkins.model.Jenkins$20.run(org.jvnet.hudson.reactor.Reactor)<br/>
+jenkins.model.Jenkins$MasterComputer.isUnix() Boolean;<br/>
+jenkins.model.ModelObjectWithContextMenu$MenuItem.withDisplayName(hudson.model.ModelObject) jenkins.model.ModelObjectWithContextMenu$MenuItem;<br/>
+jenkins.ExtensionRefreshException(String;Throwable)<br/>
+jenkins.triggers.SCMTriggerItem$SCMTriggerItems$Bridge.asItem() hudson.model.Item;<br/>
+jenkins.triggers.SCMTriggerItem$SCMTriggerItems$Bridge.scheduleBuild2(I[Lhudson.model.Action) hudson.model.queue.QueueTaskFuture;<br/>
+jenkins.triggers.SCMTriggerItem$SCMTriggerItems$Bridge.poll(hudson.model.TaskListener) hudson.scm.PollingResult;<br/>
+jenkins.triggers.ReverseBuildTrigger(String;hudson.model.Result)<br/>
+jenkins.YesNoMaybe.toBoolean(jenkins.YesNoMaybe) Boolean;<br/>
+jenkins.FilePathFilterAggregator.add(jenkins.FilePathFilter)<br/>
+jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.ThreadFactory;java.util.concurrent.RejectedExecutionHandler)<br/>
+jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.RejectedExecutionHandler)<br/>
+jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(I)<br/>
+jenkins.util.BuildListenerAdapter.finished(hudson.model.Result)<br/>
+jenkins.util.BuildListenerAdapter.fatalError(String;[LObject) java.io.PrintWriter;<br/>
+jenkins.util.BuildListenerAdapter.fatalError(String) java.io.PrintWriter;<br/>
+jenkins.util.BuildListenerAdapter.hyperlink(String;String)<br/>
+jenkins.util.BuildListenerAdapter.error(String;[LObject) java.io.PrintWriter;<br/>
+jenkins.util.BuildListenerAdapter.started(java.util.List)<br/>
+jenkins.util.BuildListenerAdapter.annotate(hudson.console.ConsoleNote)<br/>
+jenkins.util.BuildListenerAdapter.error(String) java.io.PrintWriter;<br/>
+jenkins.util.TreeStringBuilder.intern(jenkins.util.TreeString) jenkins.util.TreeString;<br/>
+jenkins.util.ProgressiveRendering.news() net.sf.json.JSONObject;<br/>
+jenkins.util.xml.FilteredFunctionContext.getFunction(String;String;String) org.jaxen.Function;<br/>
+jenkins.util.AntClassLoader.newAntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z) jenkins.util.AntClassLoader;<br/>
+jenkins.util.AntClassLoader.targetFinished(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader.subBuildStarted(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader.forceLoadClass(String) Class;<br/>
+jenkins.util.AntClassLoader.messageLogged(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader.taskFinished(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader.subBuildFinished(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader.buildFinished(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader.addLoaderPackageRoot(String)<br/>
+jenkins.util.AntClassLoader.forceLoadSystemClass(String) Class;<br/>
+jenkins.util.AntClassLoader.setThreadContextLoader()<br/>
+jenkins.util.AntClassLoader.buildStarted(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader.resetThreadContextLoader()<br/>
+jenkins.util.AntClassLoader.taskStarted(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.AntClassLoader(org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z)<br/>
+jenkins.util.AntClassLoader.addPathComponent(java.io.File)<br/>
+jenkins.util.AntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path)<br/>
+jenkins.util.AntClassLoader.getNamedResources(String) java.util.Enumeration;<br/>
+jenkins.util.AntClassLoader.targetStarted(org.apache.tools.ant.BuildEvent)<br/>
+jenkins.util.TimeDuration$StaplerConverterImpl.convert(Class;Object) Object;<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.getProperty(String) Object;<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.invokeMethod(String;Object) Object;<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.setProperty(String;Object)<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String;Object) Object;<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.methodMissing(String;Object) Object;<br/>
+jenkins.util.groovy.AbstractGroovyViewModule(org.kohsuke.stapler.jelly.groovy.JellyBuilder)<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String) Object;<br/>
+jenkins.util.TreeString.toString(jenkins.util.TreeString) String;<br/>
+jenkins.util.TreeString.of(String) jenkins.util.TreeString;<br/>
+jenkins.util.io.FileBoolean(Class;String)<br/>
+jenkins.util.io.FileBoolean.fastGet()Z<br/>
+jenkins.util.TreeString$ConverterImpl.canConvert(Class)Z<br/>
+jenkins.util.TreeString$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
+jenkins.util.TreeString$ConverterImpl(com.thoughtworks.xstream.XStream)<br/>
+jenkins.util.TreeString$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
+jenkins.util.ServerTcpPort(ILString)<br/>
+jenkins.util.xstream.XStreamDOM$ConverterImpl.canConvert(Class)Z<br/>
+jenkins.util.xstream.XStreamDOM.unmarshal(com.thoughtworks.xstream.XStream;Object) Object;<br/>
+jenkins.util.xstream.XStreamDOM.from(java.io.InputStream) jenkins.util.xstream.XStreamDOM;<br/>
+jenkins.util.xstream.XStreamDOM.unmarshal(com.thoughtworks.xstream.XStream) Object;<br/>
+jenkins.util.xstream.XStreamDOM(String;java.util.Map;java.util.List)<br/>
+jenkins.util.xstream.XStreamDOM.writeTo(java.io.Writer)<br/>
+jenkins.util.xstream.XStreamDOM.from(java.io.Reader) jenkins.util.xstream.XStreamDOM;<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.hasMoreChildren()Z<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.getAttribute(I) String;<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.getAttributeName(I) String;<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.peekNextChild() String;<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.getAttribute(String) String;<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.appendErrors(com.thoughtworks.xstream.converters.ErrorWriter)<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.underlyingReader() com.thoughtworks.xstream.io.HierarchicalStreamReader;<br/>
+jenkins.util.xstream.XStreamDOM$ReaderImpl.moveUp()<br/>
+jenkins.util.xstream.XStreamDOM$WriterImpl.endNode()<br/>
+jenkins.util.xstream.XStreamDOM$WriterImpl.addAttribute(String;String)<br/>
+jenkins.util.xstream.XStreamDOM$WriterImpl.underlyingWriter() com.thoughtworks.xstream.io.HierarchicalStreamWriter;<br/>
+jenkins.ProxyInjector.createChildInjector(Iterable) com.google.inject.Injector;<br/>
+jenkins.ProxyInjector.getProvider(Class) com.google.inject.Provider;<br/>
+jenkins.ProxyInjector.injectMembers(Object)<br/>
+jenkins.ProxyInjector.findBindingsByType(com.google.inject.TypeLiteral) java.util.List;<br/>
+jenkins.ProxyInjector.getInstance(com.google.inject.Key) Object;<br/>
+jenkins.ProxyInjector.getExistingBinding(com.google.inject.Key) com.google.inject.Binding;<br/>
+jenkins.ProxyInjector.getBinding(Class) com.google.inject.Binding;<br/>
+jenkins.ProxyInjector.getMembersInjector(com.google.inject.TypeLiteral) com.google.inject.MembersInjector;<br/>
+jenkins.ProxyInjector.createChildInjector([Lcom.google.inject.Module) com.google.inject.Injector;<br/>
+jenkins.ProxyInjector.getBinding(com.google.inject.Key) com.google.inject.Binding;<br/>
+jenkins.ProxyInjector.getInstance(Class) Object;<br/>
+jenkins.ProxyInjector.getProvider(com.google.inject.Key) com.google.inject.Provider;<br/>
+jenkins.ProxyInjector.getMembersInjector(Class) com.google.inject.MembersInjector;<br/>
+jenkins.security.SlaveToMasterCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+jenkins.security.LastGrantedAuthoritiesProperty.invalidate()<br/>
+jenkins.security.HMACConfidentialKey.checkMac([B[B)Z<br/>
+jenkins.security.HMACConfidentialKey.checkMac(String;String)Z<br/>
+jenkins.security.RekeySecretAdminMonitor.setNeeded()<br/>
+jenkins.security.RekeySecretAdminMonitor.scanOnReboot()<br/>
+jenkins.security.NotReallyRoleSensitiveCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+jenkins.security.ExceptionTranslationFilter.afterPropertiesSet()<br/>
+jenkins.security.RSADigitalSignatureConfidentialKey.sign(String) String;<br/>
+jenkins.security.s2m.OpMatcher$1.matches(String)Z<br/>
+jenkins.security.s2m.FilePathRuleConfig$1.matches(String)Z<br/>
+jenkins.security.SecureRequester$Default.permit(org.kohsuke.stapler.StaplerRequest;Object)Z<br/>
+jenkins.security.MasterToSlaveCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+jenkins.RestartRequiredException(org.jvnet.localizer.Localizable;Throwable)<br/>
+jenkins.SlaveToMasterFileCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$2$1.onReconnect()<br/>
+jenkins.slaves.EncryptedSlaveAgentJnlpFile.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+jenkins.InitReactorRunner$1.onTaskCompleted(org.jvnet.hudson.reactor.Task)<br/>
+jenkins.InitReactorRunner$1.onTaskStarted(org.jvnet.hudson.reactor.Task)<br/>
+jenkins.InitReactorRunner$1.onAttained(org.jvnet.hudson.reactor.Milestone)<br/>
+jenkins.InitReactorRunner$1.onTaskFailed(org.jvnet.hudson.reactor.Task;Throwable;Z)<br/>
+jenkins.FilePathFilter.uninstallFrom(hudson.remoting.Channel)<br/>
+jenkins.FilePathFilter.installTo(hudson.remoting.ChannelBuilder)<br/>
+hudson.search.SearchIndex$1.suggest(String;java.util.List)<br/>
+hudson.search.SearchIndex$1.find(String;java.util.List)<br/>
+hudson.search.SearchIndexBuilder.add(String;hudson.search.SearchableModelObject;[LString) hudson.search.SearchIndexBuilder;<br/>
+hudson.search.UnionSearchIndex.combine([Lhudson.search.SearchIndex) hudson.search.SearchIndex;<br/>
+hudson.search.UnionSearchIndex.find(String;java.util.List)<br/>
+hudson.search.UnionSearchIndex.suggest(String;java.util.List)<br/>
+hudson.search.Search$SearchResultImpl.hasMoreResults()Z<br/>
+hudson.search.FixedSet([Lhudson.search.SearchItem)<br/>
+hudson.search.FixedSet.suggest(String;java.util.List)<br/>
+hudson.search.FixedSet.find(String;java.util.List)<br/>
+hudson.search.CollectionSearchIndex.find(String;java.util.List)<br/>
+hudson.search.CollectionSearchIndex.suggest(String;java.util.List)<br/>
+hudson.console.ConsoleNote.encodeTo(java.io.Writer)<br/>
+hudson.console.ExpandableDetailsNote.encodeTo(String;String) String;<br/>
+hudson.model.AbstractItem.getRelativeNameFromGroup(hudson.model.ItemGroup) String;<br/>
+hudson.model.AbstractItem.getRelativeDisplayNameFrom(hudson.model.ItemGroup) String;<br/>
+hudson.model.AbstractItem.resolveForCLI(String) hudson.model.AbstractItem;<br/>
+hudson.model.Saveable$1.save()<br/>
+hudson.model.UsageStatistics$CombinedCipherInputStream(java.io.InputStream;java.security.interfaces.RSAKey;String)<br/>
+hudson.model.UpdateCenter.init(jenkins.model.Jenkins)<br/>
+hudson.model.UpdateCenter.getJob(I) hudson.model.UpdateCenter$UpdateCenterJob;<br/>
+hudson.model.HealthReport.max(hudson.model.HealthReport;hudson.model.HealthReport) hudson.model.HealthReport;<br/>
+hudson.model.TaskThread.createListener() hudson.model.TaskThread$ListenerAndText;<br/>
+hudson.model.TaskThread.readAll() java.io.Reader;<br/>
+hudson.model.Queue$Item.hasCancelPermission()Z<br/>
+hudson.model.MyViewsProperty.canDelete(hudson.model.View)Z<br/>
+hudson.model.MyViewsProperty.onViewRenamed(hudson.model.View;String;String)<br/>
+hudson.model.MyViewsProperty.deleteView(hudson.model.View)<br/>
+hudson.model.MyViewsProperty.hasPermission(hudson.security.Permission)Z<br/>
+hudson.model.Result$1.canConvert(Class)Z<br/>
+hudson.model.RunMap.oldestValue() hudson.model.Run;<br/>
+hudson.model.RunMap.newestValue() hudson.model.Run;<br/>
+hudson.model.Descriptor$FormException.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.model.View.allInstantiable() java.util.List;<br/>
+hudson.model.View.getDynamic(String) Object;<br/>
+hudson.model.OverallLoadStatistics.createOverallTrendChart(hudson.model.MultiStageTimeSeries$TimeScale) hudson.model.MultiStageTimeSeries$TrendChart;<br/>
+hudson.model.Fingerprint._getUsages() java.util.List;<br/>
+hudson.model.ResourceController.getMissingResource(hudson.model.ResourceList) hudson.model.Resource;<br/>
+hudson.model.LargeText$BufferSession.skip(J)<br/>
+hudson.model.Queue.clearLeftItems()<br/>
+hudson.model.Queue.init(jenkins.model.Jenkins)<br/>
+hudson.model.Queue.wrapWithLock(java.util.concurrent.Callable) java.util.concurrent.Callable;<br/>
+hudson.model.Queue.wrapWithLock(hudson.remoting.Callable) hudson.remoting.Callable;<br/>
+hudson.model.listeners.SaveableListener.unregister()<br/>
+hudson.model.ComputerSet$1.save()<br/>
+hudson.model.LoadStatistics.createChart(org.jfree.data.category.CategoryDataset) org.jfree.chart.JFreeChart;<br/>
+hudson.model.StockStatusIcon.getImageOf(String) String;<br/>
+hudson.model.StockStatusIcon(String;org.jvnet.localizer.Localizable)<br/>
+hudson.model.ListView.jobNamesContains(hudson.model.TopLevelItem)Z<br/>
+hudson.model.ListView.hasJobFilterExtensions()Z<br/>
+hudson.model.AbstractProject$AbstractProjectDescriptor.getApplicableSCMCheckoutStrategyDescriptors(hudson.model.AbstractProject) java.util.List;<br/>
+hudson.model.Job$3.suggest(String;java.util.List)<br/>
+hudson.model.Queue$4.canConvert(Class)Z<br/>
+hudson.model.queue.AbstractQueueTask.getDefaultAuthentication(hudson.model.Queue$Item) org.acegisecurity.Authentication;<br/>
+hudson.model.queue.BackFiller.newInstance() hudson.model.queue.BackFiller;<br/>
+hudson.model.queue.AbstractQueueSorterImpl.compare(II)I<br/>
+hudson.model.queue.MappingWorksheet.executors(I) hudson.model.queue.MappingWorksheet$ExecutorChunk;<br/>
+hudson.model.queue.QueueSorter.installDefaultQueueSorter()<br/>
+hudson.model.queue.QueueTaskFilter.hasAbortPermission()Z<br/>
+hudson.model.queue.QueueTaskFilter.checkAbortPermission()<br/>
+hudson.model.queue.QueueTaskFilter.createExecutable() hudson.model.Queue$Executable;<br/>
+hudson.model.queue.QueueTaskFilter(hudson.model.Queue$Task)<br/>
+hudson.model.UpdateSite$Data.canUpgrade()Z<br/>
+hudson.model.ResourceList.r(hudson.model.Resource) hudson.model.ResourceList;<br/>
+hudson.model.Run.writeLogTo(JLorg.apache.commons.jelly.XMLOutput)<br/>
+hudson.model.Run.hasCustomDisplayName()Z<br/>
+hudson.model.Run.canToggleLogKeep()Z<br/>
+hudson.model.Run.getDescriptorByName(String) hudson.model.Descriptor;<br/>
+hudson.model.FileParameterValue$FileItemImpl.write(java.io.File)<br/>
+hudson.model.FileParameterValue$FileItemImpl.getString(String) String;<br/>
+hudson.model.FileParameterValue$FileItemImpl.delete()<br/>
+hudson.model.MultiStageTimeSeries$TrendChart.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.model.Items.all(hudson.model.ItemGroup) java.util.List;<br/>
+hudson.model.LargeText$2.open() hudson.model.LargeText$Session;<br/>
+hudson.model.LargeText$2.exists()Z<br/>
+hudson.model.LargeText$2.length()J<br/>
+hudson.model.ComputerSet.init()<br/>
+hudson.model.ComputerSet.getDynamic(String;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse) hudson.model.Computer;<br/>
+hudson.model.JobProperty.getProjectActions(hudson.model.AbstractProject) java.util.Collection;<br/>
+hudson.model.JobProperty.perform(hudson.model.AbstractBuild;hudson.Launcher;hudson.model.BuildListener)Z<br/>
+hudson.model.DependencyGraph.addDependencyDeclarers(hudson.model.AbstractProject;java.util.Collection)<br/>
+hudson.model.Fingerprint$RangeSet$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
+hudson.model.Fingerprint$RangeSet$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
+hudson.model.Fingerprint$RangeSet$ConverterImpl.canConvert(Class)Z<br/>
+hudson.model.FingerprintMap.getOrCreate(hudson.model.AbstractBuild;String;[B) hudson.model.Fingerprint;<br/>
+hudson.model.Job$4.getNextKey(String) String;<br/>
+hudson.model.Computer.cliOffline(String)<br/>
+hudson.model.Computer.cliDisconnect(String)<br/>
+hudson.model.Computer.cliConnect(Z)<br/>
+hudson.model.Computer.relocateOldLogs()<br/>
+hudson.model.Computer.cliOnline()<br/>
+hudson.model.Computer.resolveForCLI(String) hudson.model.Computer;<br/>
+hudson.model.DownloadService$DownloadableListener.installListener()<br/>
+hudson.model.Descriptor.toList([LObject) java.util.List;<br/>
+hudson.model.BuildAuthorizationToken$ConverterImpl.canConvert(Class)Z<br/>
+hudson.model.LargeText$FileSession.skip(J)<br/>
+hudson.model.AbstractProject.loadBuild(java.io.File) hudson.model.AbstractBuild;<br/>
+hudson.model.AbstractProject.getRelationship(hudson.model.AbstractProject) java.util.SortedMap;<br/>
+hudson.model.AbstractProject.resolveForCLI(String) hudson.model.AbstractProject;<br/>
+hudson.model.AbstractProject.getDefaultAuthentication(hudson.model.Queue$Item) org.acegisecurity.Authentication;<br/>
+hudson.model.labels.LabelExpressionParser(antlr.TokenBuffer)<br/>
+hudson.model.labels.LabelAtom$LabelAtomConverter.canConvert(Class)Z<br/>
+hudson.model.TreeView.createFixedIndenter(String) hudson.Indenter;<br/>
+hudson.model.TreeView.register() hudson.model.ViewDescriptor;<br/>
+hudson.model.AutoCompletionCandidates.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.model.UpdateCenter$UpdateCenterConfiguration.upgrade(hudson.model.UpdateCenter$DownloadJob;java.io.File;java.io.File)<br/>
+hudson.model.Executor.killHard()<br/>
+hudson.model.Executor.hasStopPermission()Z<br/>
+hudson.model.Queue$5.canConvert(Class)Z<br/>
+hudson.model.Result.init()<br/>
+hudson.model.Queue$6.canConvert(Class)Z<br/>
+hudson.model.ParametersAction.getAssignedLabel(hudson.model.queue.SubTask) hudson.model.Label;<br/>
+hudson.model.ParametersAction.merge(hudson.model.ParametersAction) hudson.model.ParametersAction;<br/>
+hudson.model.ParametersAction.shouldSchedule(java.util.List)Z<br/>
+hudson.model.CauseAction.onAttached(hudson.model.Run)<br/>
+hudson.model.CauseAction.foldIntoExisting(hudson.model.Queue$Item;hudson.model.Queue$Task;java.util.List)<br/>
+hudson.model.CauseAction.onLoad(hudson.model.Run)<br/>
+hudson.model.Slave$JnlpJar.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.model.AperiodicWork.init()<br/>
+hudson.model.Queue$ItemList.remove(hudson.model.Queue$Task) hudson.model.Queue$Item;<br/>
+hudson.model.Queue$ItemList.put(hudson.model.Queue$Task;hudson.model.Queue$Item)<br/>
+hudson.model.User.getDynamic(String) Object;<br/>
+hudson.model.User.getDescriptorByName(String) hudson.model.Descriptor;<br/>
+hudson.model.User.canDelete()Z<br/>
+hudson.model.ViewPropertyDescriptor.newInstance(hudson.model.View) hudson.model.ViewProperty;<br/>
+hudson.model.UpdateSite$Entry(String;net.sf.json.JSONObject)<br/>
+hudson.model.Result$2.convert(Class;Object) Object;<br/>
+hudson.model.LargeText$1.open() hudson.model.LargeText$Session;<br/>
+hudson.model.LargeText$1.exists()Z<br/>
+hudson.model.LargeText$1.length()J<br/>
+hudson.model.Label$ConverterImpl.canConvert(Class)Z<br/>
+hudson.model.DownloadService.generateFragment() String;<br/>
+hudson.model.DownloadService.getById(String) hudson.model.DownloadService$Downloadable;<br/>
+hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject;java.io.File)<br/>
+hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject)<br/>
+hudson.model.PeriodicWork.init()<br/>
+hudson.model.Job.getProperty(String) hudson.model.JobProperty;<br/>
+hudson.model.Job.getLastBuildsOverThreshold(ILhudson.model.Result) java.util.List;<br/>
+hudson.model.Job.getBuildForCLI(String) hudson.model.Run;<br/>
+hudson.model.View$2.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.model.Fingerprint$RangeSet.addAll([I)<br/>
+hudson.model.Fingerprint$RangeSet.max()I<br/>
+hudson.model.Queue$LockedHRCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+hudson.os.PosixAPI$2.unimplementedError(String)<br/>
+hudson.os.PosixAPI$2.warn(org.jruby.ext.posix.POSIXHandler$WARNING_ID;String;[LObject)<br/>
+hudson.os.PosixAPI$2.error(org.jruby.ext.posix.POSIX$ERRORS;String)<br/>
+hudson.os.PosixAPI$1.error(jnr.constants.platform.Errno;String;String)<br/>
+hudson.os.PosixAPI$1.error(jnr.constants.platform.Errno;String)<br/>
+hudson.os.solaris.ZFSInstaller.init() hudson.model.AdministrativeMonitor;<br/>
+hudson.os.solaris.ZFSProvisioner.snapshot(hudson.model.AbstractBuild;hudson.FilePath;String;hudson.model.TaskListener) hudson.WorkspaceSnapshot;<br/>
+hudson.os.solaris.ZFSProvisioner(hudson.model.Node)<br/>
+hudson.os.solaris.ZFSProvisioner$DescriptorImpl.discard(hudson.FilePath;hudson.model.TaskListener)Z<br/>
+hudson.PluginManager.discover(Class) java.util.Collection;<br/>
+hudson.Launcher.maskedPrintCommandLine([LString;[ZLhudson.FilePath)<br/>
+hudson.Launcher.decorateByPrefix([LString) hudson.Launcher;<br/>
+hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope.scope(com.google.inject.Key;com.google.inject.Provider) com.google.inject.Provider;<br/>
+hudson.scm.ChangeLogAnnotator.unregister()Z<br/>
+hudson.FileSystemProvisioner.all() hudson.DescriptorExtensionList;<br/>
+hudson.node_monitors.DiskSpaceMonitorDescriptor$DiskSpace.toHtml() String;<br/>
+hudson.node_monitors.TemporarySpaceMonitor.install() hudson.node_monitors.DiskSpaceMonitorDescriptor;<br/>
+hudson.node_monitors.ClockMonitor.getDifferenceFor(hudson.model.Computer) hudson.util.ClockDifference;<br/>
+hudson.node_monitors.DiskSpaceMonitor.install() hudson.node_monitors.DiskSpaceMonitorDescriptor;<br/>
+hudson.node_monitors.SwapSpaceMonitor.toMB(org.jvnet.hudson.MemoryUsage)J<br/>
+hudson.node_monitors.SwapSpaceMonitor.toHtml(org.jvnet.hudson.MemoryUsage) String;<br/>
+hudson.Proc$LocalProc(String;java.util.Map;java.io.OutputStream;java.io.File)<br/>
+hudson.FilePath$FileCallableWrapper.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+hudson.triggers.SCMTrigger$BuildAction.writePollingLogTo(JLorg.apache.commons.jelly.XMLOutput)<br/>
+hudson.triggers.SCMTrigger$BuildAction.onLoad(hudson.model.Run)<br/>
+hudson.triggers.SCMTrigger$BuildAction.onAttached(hudson.model.Run)<br/>
+hudson.triggers.SCMTrigger$Runner(hudson.triggers.SCMTrigger)<br/>
+hudson.triggers.SCMTrigger$SCMAction.writeLogTo(org.apache.commons.jelly.XMLOutput)<br/>
+hudson.triggers.Trigger$1.run(hudson.model.AbstractProject)<br/>
+hudson.PluginManager$PluginUpdateMonitor.addPluginToUpdate(String;String)<br/>
+hudson.MarkupText$SubText.surroundWithLiteral(String;String)<br/>
+hudson.MarkupText$SubText.end()I<br/>
+hudson.MarkupText$SubText.groupCount()I<br/>
+hudson.diagnosis.NullIdDescriptorMonitor.verifyId()<br/>
+hudson.diagnosis.HudsonHomeDiskUsageMonitor$Solution(String)<br/>
+hudson.diagnosis.HudsonHomeDiskUsageMonitor.getSolution(String) hudson.diagnosis.HudsonHomeDiskUsageMonitor$Solution;<br/>
+hudson.diagnosis.OldDataMonitor$VersionRange.isOld(I)Z<br/>
+hudson.diagnosis.ReverseProxySetupMonitor.getTestForReverseProxySetup(String)<br/>
+hudson.PluginManager$2$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.FileSystemProvisionerDescriptor.discard(hudson.FilePath;hudson.model.TaskListener)Z<br/>
+hudson.tasks.BuildStep$PublisherList.addNotifier(hudson.model.Descriptor)<br/>
+hudson.tasks.Fingerprinter$FingerprintAction.onLoad(hudson.model.Run)<br/>
+hudson.tasks.Fingerprinter$FingerprintAction.onAttached(hudson.model.Run)<br/>
+hudson.tasks.BuildTrigger$DescriptorImpl.showEvenIfUnstableOption(Class)Z<br/>
+hudson.tasks.UserNameResolver.resolve(hudson.model.User) String;<br/>
+hudson.tasks.BuildTrigger(java.util.List;hudson.model.Result)<br/>
+hudson.cli.CLICommand.shouldPerformAuthentication(org.acegisecurity.Authentication)Z<br/>
+hudson.cli.CLICommand.getClientSystemProperty(String) String;<br/>
+hudson.cli.declarative.MethodBinder$1.addValue(Object)<br/>
+hudson.cli.declarative.MethodBinder$1.asAnnotatedElement() reflect.AnnotatedElement;<br/>
+hudson.cli.declarative.MethodBinder$1.asFieldSetter() org.kohsuke.args4j.spi.FieldSetter;<br/>
+hudson.cli.declarative.MethodBinder$ArgumentImpl.metaVar() String;<br/>
+hudson.cli.declarative.MethodBinder$ArgumentImpl.multiValued()Z<br/>
+hudson.cli.declarative.MethodBinder$ArgumentImpl.usage() String;<br/>
+hudson.cli.declarative.MethodBinder$ArgumentImpl.index()I<br/>
+hudson.cli.declarative.MethodBinder$ArgumentImpl.hidden()Z<br/>
+hudson.cli.declarative.MethodBinder$ArgumentImpl.handler() Class;<br/>
+hudson.cli.declarative.MethodBinder$ArgumentImpl.required()Z<br/>
+hudson.cli.CliManagerImpl$1.call(java.util.concurrent.Callable) Object;<br/>
+hudson.cli.CliManagerImpl.authenticate(String;hudson.remoting.Pipe;hudson.remoting.Pipe)<br/>
+hudson.cli.CliManagerImpl.hasCommand(String)Z<br/>
+hudson.cli.CliManagerImpl.protocolVersion()I<br/>
+hudson.FilePath$11.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
+hudson.Indenter.getRelativeShift(hudson.model.Job) String;<br/>
+hudson.Indenter.getCss(hudson.model.Job) String;<br/>
+hudson.PluginManager$1$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.init.impl.InstallUncaughtExceptionHandler.init(jenkins.model.Jenkins)<br/>
+hudson.init.impl.InitialUserContent.init(jenkins.model.Jenkins)<br/>
+hudson.init.impl.GroovyInitScript.init(jenkins.model.Jenkins)<br/>
+hudson.init.impl.InstallUncaughtExceptionHandler$1.reportException(Throwable;javax.servlet.ServletContext;javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse)<br/>
+hudson.init.TaskMethodFinder$TaskImpl.requires() java.util.Collection;<br/>
+hudson.init.TaskMethodFinder$TaskImpl.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.init.TaskMethodFinder$TaskImpl.attains() java.util.Collection;<br/>
+hudson.init.TaskMethodFinder$TaskImpl.failureIsFatal()Z<br/>
+hudson.init.TermMilestone.ordering() org.jvnet.hudson.reactor.TaskBuilder;<br/>
+hudson.util.ConcurrentHashMapConverter.canConvert(Class)Z<br/>
+hudson.util.ConcurrentHashMapConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.TimeUnit2$1.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.ProcessTree$Remote$RemoteProcess.act(hudson.util.ProcessTree$ProcessCallable) Object;<br/>
+hudson.util.TableNestChecker$1.isAllowed(String)Z<br/>
+hudson.util.TimeUnit2$4.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.HeapSpaceStringConverter.canConvert(Class)Z<br/>
+hudson.util.ByteArrayOutputStream2(I)<br/>
+hudson.util.ByteArrayOutputStream2.readFrom(java.io.InputStream)<br/>
+hudson.util.IOUtils.absolutize(java.io.File;String) java.io.File;<br/>
+hudson.util.IOUtils.drain(java.io.InputStream)<br/>
+hudson.util.ProcessKillingVeto$VetoCause(String)<br/>
+hudson.util.DescribableList.toArray([Lhudson.model.Describable)[Lhudson.model.Describable;<br/>
+hudson.util.DescribableList.getDynamic(String) hudson.model.Describable;<br/>
+hudson.util.LoadMonitorImpl(java.io.File)<br/>
+hudson.util.AlternativeUiTextProvider$Message.cast(Object) Object;<br/>
+hudson.util.TimeUnit2$5.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.LoadMonitorImpl$_doRun_closure7.call(hudson.model.Queue$BuildableItem) Object;<br/>
+hudson.util.TimeUnit2$3.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.LoadMonitorImpl$_doRun_closure4.call(java.util.List;groovy.lang.Closure) Object;<br/>
+hudson.util.TimeUnit2$7.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.TimeUnit2$6.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.spring.DefaultBeanConfiguration.setDependsOn([LString) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultBeanConfiguration.setAutowire(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultBeanConfiguration.setDestroyMethod(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference$WrappedPropertyValue.leftShift(Object)<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addSingletonBean(String;Class;java.util.Collection) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.createSingletonBean(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addBeanDefinition(String;org.springframework.beans.factory.config.BeanDefinition)<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.getBeanConfig(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String;Class) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.createBeanDefinition(String) org.springframework.beans.factory.support.AbstractBeanDefinition;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addAbstractBean(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addBeanConfiguration(String;hudson.util.spring.BeanConfiguration)<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.registerPostProcessor(org.springframework.beans.factory.config.BeanFactoryPostProcessor)<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addSingletonBean(String;Class) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.createSingletonBean(Class;java.util.Collection) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.createSingletonBean(Class) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addSingletonBean(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.createPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference(hudson.util.spring.BeanBuilder;String;hudson.util.spring.BeanConfiguration)<br/>
+hudson.util.spring.BeanBuilder(org.springframework.context.ApplicationContext)<br/>
+hudson.util.spring.BeanBuilder.parse(java.io.InputStream)<br/>
+hudson.util.spring.BeanBuilder.parentRef(String) org.springframework.beans.factory.config.RuntimeBeanReference;<br/>
+hudson.util.spring.BeanBuilder.methodMissing(String;Object) Object;<br/>
+hudson.util.spring.BeanBuilder.getBeanDefinition(String) org.springframework.beans.factory.config.BeanDefinition;<br/>
+hudson.util.spring.BeanBuilder.ref(String) org.springframework.beans.factory.config.RuntimeBeanReference;<br/>
+hudson.util.spring.BeanBuilder.loadBeans(String)<br/>
+hudson.util.spring.BeanBuilder.loadBeans(org.springframework.core.io.Resource)<br/>
+hudson.util.spring.BeanBuilder.registerBeans(org.springframework.context.support.StaticApplicationContext)<br/>
+hudson.util.ReflectionUtils$Parameter.genericType() reflect.Type;<br/>
+hudson.util.DoubleLaunchChecker.init()<br/>
+hudson.util.ConsistentHash(I)<br/>
+hudson.util.ConsistentHash.addAll([LObject)<br/>
+hudson.util.ConsistentHash.remove(Object)<br/>
+hudson.util.ConsistentHash.lookup(String) Object;<br/>
+hudson.util.ConsistentHash.countAllPoints()I<br/>
+hudson.util.ConsistentHash.addAll(java.util.Collection)<br/>
+hudson.util.ConsistentHash.add(Object)<br/>
+hudson.util.Area.area()I<br/>
+hudson.util.CopyOnWriteMap$Hash$ConverterImpl.canConvert(Class)Z<br/>
+hudson.util.QuotedStringTokenizer(String;String;Z)<br/>
+hudson.util.LoadMonitorImpl$_doRun_closure3.call(Class) Object;<br/>
+hudson.util.FormValidation.warning(Throwable;String;[LObject) hudson.util.FormValidation;<br/>
+hudson.util.NoClientBindProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;ILorg.apache.commons.httpclient.params.HttpConnectionParams) java.net.Socket;<br/>
+hudson.util.NoClientBindProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;I) java.net.Socket;<br/>
+hudson.util.LoadMonitorImpl$_doRun_closure4_closure11.call(hudson.model.Queue$BuildableItem) Object;<br/>
+hudson.util.Secret$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
+hudson.util.Secret$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
+hudson.util.Secret$ConverterImpl.canConvert(Class)Z<br/>
+hudson.util.XStream2$AssociatedConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
+hudson.util.XStream2$AssociatedConverterImpl.canConvert(Class)Z<br/>
+hudson.util.XStream2$AssociatedConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
+hudson.util.CopyOnWriteMap$Tree$ConverterImpl.canConvert(Class)Z<br/>
+hudson.util.XStream2$PluginClassOwnership.ownerOf(Class) String;<br/>
+hudson.util.TimeUnit2$2.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.Iterators.removeDups(Iterable) Iterable;<br/>
+hudson.util.Iterators.cast(java.util.Iterator) java.util.Iterator;<br/>
+hudson.util.Iterators.wrap(Iterable) Iterable;<br/>
+hudson.util.Iterators.subType(java.util.Iterator;Class) java.util.Iterator;<br/>
+hudson.util.NoClientBindSSLProtocolSocketFactory.createSocket(java.net.Socket;String;IZ) java.net.Socket;<br/>
+hudson.util.NoClientBindSSLProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;I) java.net.Socket;<br/>
+hudson.util.NoClientBindSSLProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;ILorg.apache.commons.httpclient.params.HttpConnectionParams) java.net.Socket;<br/>
+hudson.util.RobustReflectionConverter$1.visit(String;Class;Class;Object)<br/>
+hudson.util.CopyOnWriteMap.replaceBy(java.util.Map)<br/>
+hudson.util.io.ReopenableRotatingFileOutputStream.deleteAll()<br/>
+hudson.util.RobustReflectionConverter.canConvert(Class)Z<br/>
+hudson.util.KeyedDataStorage.resetPerformanceStats()<br/>
+hudson.util.TableNestChecker.applyTo(org.apache.commons.jelly.XMLOutput)<br/>
+hudson.util.SubClassGenerator.generate(Class;String) Class;<br/>
+hudson.util.SubClassGenerator(ClassLoader)<br/>
+hudson.util.TableNestChecker$InList.isAllowed(String)Z<br/>
+hudson.util.HexBinaryConverter.canConvert(Class)Z<br/>
+hudson.util.HexBinaryConverter.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
+hudson.util.HexBinaryConverter.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
+hudson.util.TimeUnit2.timedWait(Object;J)<br/>
+hudson.util.TimeUnit2.timedJoin(Thread;J)<br/>
+hudson.util.TimeUnit2.convert(JLjava.util.concurrent.TimeUnit)J<br/>
+hudson.util.OneShotEvent(Object)<br/>
+hudson.util.OneShotEvent.block()<br/>
+hudson.util.OneShotEvent.block(J)<br/>
+hudson.util.CompoundEnumeration([Ljava.util.Enumeration)<br/>
+hudson.util.Futures$1.cancel(Z)Z<br/>
+hudson.util.Futures$1.get(JLjava.util.concurrent.TimeUnit) Object;<br/>
+hudson.util.EnumConverter.convert(Class;Object) Object;<br/>
+hudson.util.LRUStringConverter.canConvert(Class)Z<br/>
+hudson.util.ConsistentHash$1.hash(Object) String;<br/>
+hudson.util.jna.WinIOException(String;Throwable)<br/>
+hudson.util.jna.WinIOException(Throwable)<br/>
+hudson.util.jna.RegistryKey.getIntValue(String)I<br/>
+hudson.util.jna.RegistryKey.valueExists(String)Z<br/>
+hudson.util.jna.RegistryKey.deleteValue(String)<br/>
+hudson.util.jna.RegistryKey.setValue(String;I)<br/>
+hudson.util.jna.RegistryKey.delete()<br/>
+hudson.util.jna.RegistryKey.setValue(String;String)<br/>
+hudson.util.jna.RegistryKey.open(String) hudson.util.jna.RegistryKey;<br/>
+hudson.util.ComboBoxModel.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.util.PackedMap$ConverterImpl.canConvert(Class)Z<br/>
+hudson.util.XStream2$PassthruConverter.canConvert(Class)Z<br/>
+hudson.util.QueryParameterMap.getAll(String) java.util.List;<br/>
+hudson.util.RobustReflectionConverter$2.visit(String;Class;Class;Object)<br/>
+hudson.util.JVMBuilder.pwd(java.io.File) hudson.util.JVMBuilder;<br/>
+hudson.util.JVMBuilder.debug(I) hudson.util.JVMBuilder;<br/>
+hudson.util.JVMBuilder.systemProperties() java.util.Map;<br/>
+hudson.util.JVMBuilder.vmopts() hudson.util.ArgumentListBuilder;<br/>
+hudson.util.JVMBuilder.systemProperty(String;String) hudson.util.JVMBuilder;<br/>
+hudson.util.XStream2$1.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
+hudson.util.ProcessTree$OSProcess.act(hudson.util.ProcessTree$ProcessCallable) Object;<br/>
+hudson.util.ListBoxModel.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.util.CompressedFile.compress()<br/>
+hudson.util.CompressedFile.loadAsString() String;<br/>
+hudson.util.CompressedFile.write() java.io.OutputStream;<br/>
+hudson.util.CompressedFile(java.io.File)<br/>
+hudson.util.ReflectionUtils.getPublicProperty(Object;String) Object;<br/>
+hudson.util.XStream2(hudson.util.XStream2$ClassOwnership)<br/>
+hudson.util.ClockDifference.toHtml(hudson.util.ClockDifference) String;<br/>
+hudson.util.ClockDifference.toHtml(hudson.model.Node) String;<br/>
+hudson.util.ClockDifference.abs()J<br/>
+hudson.util.DescriptorList.load(Class)<br/>
+hudson.util.DescriptorList.newInstanceFromRadioList(net.sf.json.JSONObject;String) hudson.model.Describable;<br/>
+hudson.util.DescriptorList.findByName(String) hudson.model.Descriptor;<br/>
+hudson.util.xstream.ImmutableListConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.xstream.ImmutableSetConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.xstream.ImmutableSortedSetConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.xstream.ImmutableMapConverter.canConvert(Class)Z<br/>
+hudson.util.xstream.ImmutableMapConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.xstream.MapperDelegate.getItemTypeForItemFieldName(Class;String) Class;<br/>
+hudson.util.xstream.MapperDelegate.getImplicitCollectionDefForFieldName(Class;String) com.thoughtworks.xstream.mapper.Mapper$ImplicitCollectionMapping;<br/>
+hudson.util.xstream.MapperDelegate.getFieldNameForItemTypeAndName(Class;Class;String) String;<br/>
+hudson.util.LoadMonitorImpl$_doRun_closure4_closure10.call(hudson.model.Computer) Object;<br/>
+hudson.util.ArgumentListBuilder.hasMaskedArguments()Z<br/>
+hudson.util.ArgumentListBuilder.add(Object;Z) hudson.util.ArgumentListBuilder;<br/>
+hudson.util.VariableResolver$1.resolve(String) Object;<br/>
+hudson.util.RunList(hudson.model.Job)<br/>
+hudson.PluginManager$1$2.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.PluginManager$2$1$3.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.PluginManager$2$1$2.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.ClassicPluginStrategy.load(hudson.PluginWrapper)<br/>
+hudson.ClassicPluginStrategy.createPluginWrapper(java.io.File) hudson.PluginWrapper;<br/>
+hudson.ClassicPluginStrategy.findComponents(Class;hudson.model.Hudson) java.util.List;<br/>
+hudson.ClassicPluginStrategy.updateDependency(hudson.PluginWrapper;hudson.PluginWrapper)<br/>
+hudson.ClassicPluginStrategy.initializeComponents(hudson.PluginWrapper)<br/>
+hudson.ClassicPluginStrategy.getShortName(java.io.File) String;<br/>
+hudson.security.SecurityRealm$None$2.loadUserByUsername(String) org.acegisecurity.userdetails.UserDetails;<br/>
+hudson.security.TokenBasedRememberMeServices2.loginSuccess(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse;org.acegisecurity.Authentication)<br/>
+hudson.security.SecurityRealm.canLogOut()Z<br/>
+hudson.security.SecurityRealm.loadGroupByGroupname(String;Z) hudson.security.GroupDetails;<br/>
+hudson.security.FederatedLoginService$UnclaimedIdentityException.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.security.UserDetailsServiceProxy.loadUserByUsername(String) org.acegisecurity.userdetails.UserDetails;<br/>
+hudson.security.SecurityRealm$None$1.authenticate(org.acegisecurity.Authentication) org.acegisecurity.Authentication;<br/>
+hudson.security.AuthenticationManagerProxy.authenticate(org.acegisecurity.Authentication) org.acegisecurity.Authentication;<br/>
+hudson.security.HudsonPrivateSecurityRealm.getUser(String) hudson.model.User;<br/>
+hudson.security.HudsonPrivateSecurityRealm$3.isPasswordValid(String;String;Object)Z<br/>
+hudson.security.HudsonPrivateSecurityRealm$3.encodePassword(String;Object) String;<br/>
+hudson.security.HudsonPrivateSecurityRealm$4.isPasswordValid(String;String;Object)Z<br/>
+hudson.security.HudsonPrivateSecurityRealm$4.encodePassword(String;Object) String;<br/>
+hudson.security.RememberMeServicesProxy.loginFail(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse)<br/>
+hudson.security.RememberMeServicesProxy.autoLogin(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse) org.acegisecurity.Authentication;<br/>
+hudson.security.RememberMeServicesProxy.loginSuccess(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse;org.acegisecurity.Authentication)<br/>
+hudson.security.HudsonPrivateSecurityRealm$2.encodePassword(String;Object) String;<br/>
+hudson.security.HudsonPrivateSecurityRealm$2.isPasswordValid(String;String;Object)Z<br/>
+hudson.security.csrf.DefaultCrumbIssuer(Z)<br/>
+hudson.security.csrf.CrumbFilter.isMultipart(javax.servlet.http.HttpServletRequest)Z<br/>
+hudson.security.csrf.CrumbIssuer.validateCrumb(javax.servlet.ServletRequest)Z<br/>
+hudson.security.csrf.CrumbIssuer.initStaplerCrumbIssuer()<br/>
+hudson.security.AccessDeniedHandlerImpl.handle(javax.servlet.ServletRequest;javax.servlet.ServletResponse;org.acegisecurity.AccessDeniedException)<br/>
+hudson.security.HudsonAuthenticationEntryPoint.commence(javax.servlet.ServletRequest;javax.servlet.ServletResponse;org.acegisecurity.AuthenticationException)<br/>
+hudson.Util.min(I[I)I<br/>
+hudson.Util.touch(java.io.File)<br/>
+hudson.Util.resolveSymlinkToFile(java.io.File) java.io.File;<br/>
+hudson.Util.copyStreamAndClose(java.io.Reader;java.io.Writer)<br/>
+hudson.scheduler.CrontabParser(antlr.TokenBuffer)<br/>
+hudson.Launcher$ProcStarter.quiet()Z<br/>
+hudson.ExpressionFactory2.createExpression(String) org.apache.commons.jelly.expression.Expression;<br/>
+hudson.PluginManager$1$3$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.FileSystemProvisioner$Default$DescriptorImpl.discard(hudson.FilePath;hudson.model.TaskListener)Z<br/>
+hudson.PluginManager$1$3.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.FilePath.tar(java.io.OutputStream;java.io.FileFilter)I<br/>
+hudson.FilePath.readFromOffset(J) java.io.InputStream;<br/>
+hudson.FilePath.zip(java.io.OutputStream;String)<br/>
+hudson.FilePath.tar(java.io.OutputStream;String)I<br/>
+hudson.lifecycle.WindowsInstallerLink.registerIfApplicable() hudson.lifecycle.WindowsInstallerLink;<br/>
+hudson.lifecycle.WindowsInstallerLink.sendError(Exception;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse)<br/>
+hudson.slaves.NodeProvisioner.suggestReviewNow()<br/>
+hudson.slaves.SlaveComputer.setChannel(java.io.InputStream;java.io.OutputStream;hudson.model.TaskListener;hudson.remoting.Channel$Listener)<br/>
+hudson.slaves.EnvironmentVariablesNodeProperty$Entry(String;String)<br/>
+hudson.slaves.Channels$2.build(hudson.remoting.CommandTransport) hudson.remoting.Channel;<br/>
+hudson.slaves.WorkspaceList.record(hudson.FilePath) hudson.slaves.WorkspaceList$Lease;<br/>
+hudson.slaves.NodeDescriptor.newInstanceDetailPage() String;<br/>
+hudson.slaves.NodeDescriptor.allInstantiable() java.util.List;<br/>
+hudson.slaves.NodeProvisioner$StrategyState.recordPendingLaunches([Lhudson.slaves.NodeProvisioner$PlannedNode)<br/>
+hudson.slaves.Channels$1.build(hudson.remoting.CommandTransport) hudson.remoting.Channel;<br/>
+hudson.slaves.NodeList([Lhudson.model.Node)<br/>
+hudson.slaves.NodeList.getNode(String) hudson.model.Node;<br/>
+hudson.ExtensionComponent.isDescriptorOf(Class)Z<br/>
+hudson.tools.DownloadFromUrlInstaller$NodeSpecificInstallable(hudson.tools.DownloadFromUrlInstaller;hudson.tools.DownloadFromUrlInstaller$Installable)<br/>
+hudson.tools.ToolInstallerDescriptor.for_(Class) java.util.List;<br/>
+hudson.tools.ToolLocationNodeProperty$ToolLocation(String;String)<br/>
+hudson.tools.JDKInstaller$FilePathFileSystem.read(String) java.io.InputStream;<br/>
+hudson.tools.JDKInstaller$FilePathFileSystem.chmod(String;I)<br/>
+hudson.tools.JDKInstaller$FilePathFileSystem.delete(String)<br/>
+hudson.tools.JDKInstaller$FilePathFileSystem.listSubDirectories(String) java.util.List;<br/>
+hudson.tools.JDKInstaller$FilePathFileSystem.pullUp(String;String)<br/>
+hudson.tools.ToolLocationNodeProperty([Lhudson.tools.ToolLocationNodeProperty$ToolLocation)<br/>
+hudson.tools.ToolLocationNodeProperty$DescriptorImpl.getKey(hudson.tools.ToolInstallation) String;<br/>
+hudson.PluginManager$1$3$2.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.WebAppMain.joinInit()<br/>
+hudson.PluginWrapper.hasLicensesXml()Z<br/>
+hudson.PluginWrapper.hasDependants()Z<br/>
+hudson.PluginWrapper.hasDependencies()Z<br/>
+hudson.widgets.RenderOnDemandClosure.render() org.kohsuke.stapler.HttpResponse;<br/>
+hudson.widgets.RenderOnDemandClosure$1.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
+hudson.BulkChange$1.save()<br/>
+hudson.logging.LogRecorderManager.init(jenkins.model.Jenkins)<br/>
+hudson.logging.LogRecorderManager.getDynamic(String) hudson.logging.LogRecorder;<br/>
+hudson.logging.LogRecorder$Target(String;String)<br/>
+hudson.Launcher$RemoteLaunchCallable$1.join()I<br/>
+hudson.Launcher$RemoteLaunchCallable$1.kill()<br/>
+hudson.PluginManager$2$1$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
+hudson.ProxyConfiguration(String;I)<br/>
+<br/>
+<h3 id=summary>Summary</h3><br/>
+1114 published plugins<br/>
+614 unused methods in Jenkins, except api used in jelly and groovy files, except getters, setters, except deprecated classes and methods<br/>
+Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/ws/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a><br/>
+duration : 263474 ms at 12 déc. 2015 20:42:42<br/>
+</body></html>
