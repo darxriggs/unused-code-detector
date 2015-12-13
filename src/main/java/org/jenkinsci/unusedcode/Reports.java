@@ -2,6 +2,7 @@ package org.jenkinsci.unusedcode;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class Reports {
     private final UpdateCenter updateCenter;
@@ -18,7 +19,7 @@ public class Reports {
         log("");
 
         log("Unused methods in Jenkins :");
-        final Set<String> methods = filterOnJenkins(indexer.getMethods());
+        final Set<String> methods = new TreeSet<>(filterOnJenkins(indexer.getMethods()));
         for (final String method : methods) {
             log(formatMethod(method));
         }
