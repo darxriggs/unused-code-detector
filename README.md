@@ -4,7 +4,7 @@ Current results in summary:
 * 1114 plugins
 * 190 public, protected or package Jenkins methods are detected as not used in the latest published plugins and in core
 
-See details in this [example of output](../blob/master/Output_example.html).
+See details in this [example of output](../../blob/master/Output_example.html).
 
 There are false positives and there are unused methods missing in the report.
 To be sure that a method is never used, you can [grep all sources](https://wiki.jenkins-ci.org/display/JENKINS/Grepping+all+sources) or [search in github](https://github.com/search?type=Code&q=user%3Ajenkinsci+SomeClass.staticMethod) directly.
@@ -16,6 +16,6 @@ See also:
 To run the tool yourself : Checkout and run with "mvn clean compile exec:java".
 Note: it is quite long to download all the plugins the first time (1.8 GB).
 
-[License MIT](../blob/master/LICENSE.txt)
+[License MIT](../../blob/master/LICENSE.txt)
 
 Author Emeric Vernat
