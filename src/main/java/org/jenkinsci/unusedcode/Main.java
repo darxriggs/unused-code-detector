@@ -38,8 +38,6 @@ public class Main {
         Log.log("Analyzing usage in core and plugins");
         analyze(updateCenter.getCore(), updateCenter.getPlugins(), indexer);
 
-        // TODO false positives, try to remove methods having @Initializer from result
-        // using ASM visitAnnotation
         new Reports(updateCenter, indexer).report();
 
         log("duration : " + (System.currentTimeMillis() - start) + " ms at "

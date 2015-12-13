@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -24,7 +25,6 @@ public class Analyzer {
     private final Set<String> methods;
     private final Hierarchy coreHierarchy;
     private final Hierarchy pluginHierarchy;
-    private final ClassVisitor classVisitor = new CallersClassVisitor();
 
     public Analyzer(Indexer indexer) {
         super();
@@ -129,6 +129,7 @@ public class Analyzer {
 
     private void analyzeClass(InputStream input) throws IOException {
         final ClassReader classReader = new ClassReader(input);
+        final ClassVisitor classVisitor = new CallersClassVisitor(classReader.getClassName());
         classReader.accept(classVisitor, ClassReader.SKIP_DEBUG | ClassReader.SKIP_FRAMES);
     }
 
@@ -140,15 +141,18 @@ public class Analyzer {
     }
 
     private class CallersClassVisitor extends ClassVisitor {
-        CallersClassVisitor() {
+        private final String className;
+
+        CallersClassVisitor(String className) {
             super(Opcodes.ASM5);
+            this.className = className;
         }
 
         @Override
         public MethodVisitor visitMethod(int access, String name, String desc, String signature,
                 String[] exceptions) {
             // asm javadoc says to return a new instance each time
-            return new CallersMethodVisitor();
+            return new CallersMethodVisitor(className, name, desc);
         }
     }
 
@@ -156,8 +160,24 @@ public class Analyzer {
      * Implementation of ASM Method Visitor.
      */
     private class CallersMethodVisitor extends MethodVisitor {
-        CallersMethodVisitor() {
+        private final String className;
+        private final String methodName;
+        private final String methodDesc;
+
+        CallersMethodVisitor(String className, String methodName, String methodDesc) {
             super(Opcodes.ASM5);
+            this.className = className;
+            this.methodName = methodName;
+            this.methodDesc = methodDesc;
+        }
+
+        @Override
+        public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
+            // method with an annotation @Initializer are not called in code but are not unused code
+            if ("Lhudson/init/Initializer;".equals(desc)) {
+                methodCalled(className, methodName, methodDesc);
+            }
+            return null;
         }
 
         @Override
