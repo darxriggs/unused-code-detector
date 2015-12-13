@@ -6,7 +6,7 @@ Current results in summary:
 
 See details in this [example of output](../blob/master/Output_example.html).
 
-There are false positives and there are unused methods missings in the report.
+There are false positives and there are unused methods missing in the report.
 To be sure that a method is never used, you can [grep all sources](https://wiki.jenkins-ci.org/display/JENKINS/Grepping+all+sources) or [search in github](https://github.com/search?type=Code&q=user%3Ajenkinsci+SomeClass.staticMethod) directly.
 
 See also:
