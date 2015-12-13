@@ -1,12 +1,11 @@
 <html><head><title>Unused code in Jenkins api</title><style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style></head><body><h2> Finds and reports unused methods in Jenkins api </h2> (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)<br/>
 Downloaded update-center.json<br/>
-Downloaded accelerated-build-now-plugin.hpi, 155 Kb<br/>
 All files are up to date (1114 plugins)<br/>
 Indexing api in Jenkins<br/>
 Analyzing usage in core and plugins<br/>
-analyzing accurev.hpi<br/>
-analyzing accelerated-build-now-plugin.hpi<br/>
 analyzing ace-editor.hpi<br/>
+analyzing accelerated-build-now-plugin.hpi<br/>
+analyzing accurev.hpi<br/>
 analyzing active-directory.hpi<br/>
 analyzing adaptive-disconnector.hpi<br/>
 analyzing AdaptivePlugin.hpi<br/>
@@ -1122,200 +1121,194 @@ analyzing zos-connector.hpi<br/>
 ignored plugins : [python-wrapper.hpi]<br/>
 <br/>
 Unused methods in Jenkins :<br/>
-jenkins.model.Jenkins.getRepositoryBrowser(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins.putItem(hudson.model.TopLevelItem)<br/>
-jenkins.model.Jenkins.getDynamic(String) Object;<br/>
-jenkins.model.Jenkins.getSecurityRealms(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins$DescriptorImpl.getDynamic(String) Object;<br/>
-jenkins.model.lazy.SortedList(java.util.List)<br/>
-jenkins.model.lazy.SortedList.isInRange(I)Z<br/>
-jenkins.model.lazy.AbstractLazyLoadRunMap.purgeCache()<br/>
-jenkins.model.lazy.SortedIntList.copyInto([I)<br/>
-jenkins.model.BuildDiscarder$ConverterImpl(com.thoughtworks.xstream.mapper.Mapper)<br/>
-jenkins.model.Jenkins$MasterComputer.isUnix() Boolean;<br/>
-jenkins.model.ModelObjectWithContextMenu$MenuItem.withDisplayName(hudson.model.ModelObject) jenkins.model.ModelObjectWithContextMenu$MenuItem;<br/>
-jenkins.ExtensionRefreshException(String;Throwable)<br/>
-jenkins.triggers.ReverseBuildTrigger(String;hudson.model.Result)<br/>
-jenkins.YesNoMaybe.toBoolean(jenkins.YesNoMaybe) Boolean;<br/>
-jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.ThreadFactory;java.util.concurrent.RejectedExecutionHandler)<br/>
-jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.RejectedExecutionHandler)<br/>
-jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(I)<br/>
-jenkins.util.AntClassLoader.newAntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z) jenkins.util.AntClassLoader;<br/>
-jenkins.util.AntClassLoader.forceLoadClass(String) Class;<br/>
-jenkins.util.AntClassLoader.addLoaderPackageRoot(String)<br/>
-jenkins.util.AntClassLoader.forceLoadSystemClass(String) Class;<br/>
-jenkins.util.AntClassLoader.setThreadContextLoader()<br/>
-jenkins.util.AntClassLoader.resetThreadContextLoader()<br/>
-jenkins.util.AntClassLoader(org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z)<br/>
-jenkins.util.AntClassLoader.addPathComponent(java.io.File)<br/>
-jenkins.util.AntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path)<br/>
-jenkins.util.AntClassLoader.getNamedResources(String) java.util.Enumeration;<br/>
-jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String;Object) Object;<br/>
-jenkins.util.groovy.AbstractGroovyViewModule.methodMissing(String;Object) Object;<br/>
-jenkins.util.groovy.AbstractGroovyViewModule(org.kohsuke.stapler.jelly.groovy.JellyBuilder)<br/>
-jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String) Object;<br/>
-jenkins.util.io.FileBoolean(Class;String)<br/>
-jenkins.util.io.FileBoolean.fastGet()Z<br/>
-jenkins.util.TreeString$ConverterImpl(com.thoughtworks.xstream.XStream)<br/>
-jenkins.util.ServerTcpPort(ILString)<br/>
-jenkins.util.xstream.XStreamDOM(String;java.util.Map;java.util.List)<br/>
-jenkins.util.xstream.XStreamDOM.writeTo(java.io.Writer)<br/>
-jenkins.security.HMACConfidentialKey.checkMac([B[B)Z<br/>
-jenkins.security.HMACConfidentialKey.checkMac(String;String)Z<br/>
-jenkins.security.RekeySecretAdminMonitor.setNeeded()<br/>
-jenkins.security.RekeySecretAdminMonitor.scanOnReboot()<br/>
-jenkins.RestartRequiredException(org.jvnet.localizer.Localizable;Throwable)<br/>
-jenkins.FilePathFilter.uninstallFrom(hudson.remoting.Channel)<br/>
-jenkins.FilePathFilter.installTo(hudson.remoting.ChannelBuilder)<br/>
-hudson.search.FixedSet([Lhudson.search.SearchItem)<br/>
+hudson.ClassicPluginStrategy.initializeComponents(hudson.PluginWrapper)<br/>
+hudson.ExtensionComponent.isDescriptorOf(Class)Z<br/>
+hudson.FilePath.readFromOffset(J) java.io.InputStream;<br/>
+hudson.Launcher.decorateByPrefix([LString) hudson.Launcher;<br/>
+hudson.Launcher.maskedPrintCommandLine([LString;[ZLhudson.FilePath)<br/>
+hudson.MarkupText$SubText.groupCount()I<br/>
+hudson.MarkupText$SubText.surroundWithLiteral(String;String)<br/>
+hudson.PluginManager$PluginUpdateMonitor.addPluginToUpdate(String;String)<br/>
+hudson.Proc$LocalProc(String;java.util.Map;java.io.OutputStream;java.io.File)<br/>
+hudson.ProxyConfiguration(String;I)<br/>
+hudson.Util.copyStreamAndClose(java.io.Reader;java.io.Writer)<br/>
+hudson.Util.resolveSymlinkToFile(java.io.File) java.io.File;<br/>
+hudson.WebAppMain.joinInit()<br/>
+hudson.cli.CLICommand.getClientSystemProperty(String) String;<br/>
+hudson.cli.CLICommand.shouldPerformAuthentication(org.acegisecurity.Authentication)Z<br/>
 hudson.console.ConsoleNote.encodeTo(java.io.Writer)<br/>
 hudson.console.ExpandableDetailsNote.encodeTo(String;String) String;<br/>
-hudson.model.AbstractItem.resolveForCLI(String) hudson.model.AbstractItem;<br/>
-hudson.model.UsageStatistics$CombinedCipherInputStream(java.io.InputStream;java.security.interfaces.RSAKey;String)<br/>
-hudson.model.TaskThread.createListener() hudson.model.TaskThread$ListenerAndText;<br/>
-hudson.model.RunMap.oldestValue() hudson.model.Run;<br/>
-hudson.model.RunMap.newestValue() hudson.model.Run;<br/>
-hudson.model.View.getDynamic(String) Object;<br/>
-hudson.model.OverallLoadStatistics.createOverallTrendChart(hudson.model.MultiStageTimeSeries$TimeScale) hudson.model.MultiStageTimeSeries$TrendChart;<br/>
-hudson.model.Fingerprint._getUsages() java.util.List;<br/>
-hudson.model.ResourceController.getMissingResource(hudson.model.ResourceList) hudson.model.Resource;<br/>
-hudson.model.Queue.clearLeftItems()<br/>
-hudson.model.Queue.wrapWithLock(java.util.concurrent.Callable) java.util.concurrent.Callable;<br/>
-hudson.model.Queue.wrapWithLock(hudson.remoting.Callable) hudson.remoting.Callable;<br/>
-hudson.model.listeners.SaveableListener.unregister()<br/>
-hudson.model.LoadStatistics.createChart(org.jfree.data.category.CategoryDataset) org.jfree.chart.JFreeChart;<br/>
-hudson.model.StockStatusIcon(String;org.jvnet.localizer.Localizable)<br/>
-hudson.model.queue.QueueSorter.installDefaultQueueSorter()<br/>
-hudson.model.queue.QueueTaskFilter(hudson.model.Queue$Task)<br/>
-hudson.model.ComputerSet.getDynamic(String;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse) hudson.model.Computer;<br/>
-hudson.model.DependencyGraph.addDependencyDeclarers(hudson.model.AbstractProject;java.util.Collection)<br/>
-hudson.model.FingerprintMap.getOrCreate(hudson.model.AbstractBuild;String;[B) hudson.model.Fingerprint;<br/>
-hudson.model.Computer.cliOffline(String)<br/>
-hudson.model.Computer.cliDisconnect(String)<br/>
-hudson.model.Computer.cliConnect(Z)<br/>
-hudson.model.Computer.relocateOldLogs()<br/>
-hudson.model.Computer.cliOnline()<br/>
-hudson.model.Computer.resolveForCLI(String) hudson.model.Computer;<br/>
-hudson.model.DownloadService$DownloadableListener.installListener()<br/>
-hudson.model.AbstractProject.resolveForCLI(String) hudson.model.AbstractProject;<br/>
-hudson.model.labels.LabelExpressionParser(antlr.TokenBuffer)<br/>
-hudson.model.Executor.killHard()<br/>
-hudson.model.User.getDynamic(String) Object;<br/>
-hudson.model.UpdateSite$Entry(String;net.sf.json.JSONObject)<br/>
-hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject;java.io.File)<br/>
-hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject)<br/>
-hudson.model.Job.getLastBuildsOverThreshold(ILhudson.model.Result) java.util.List;<br/>
-hudson.model.Job.getBuildForCLI(String) hudson.model.Run;<br/>
-hudson.model.Fingerprint$RangeSet.addAll([I)<br/>
-hudson.os.solaris.ZFSProvisioner(hudson.model.Node)<br/>
-hudson.Launcher.maskedPrintCommandLine([LString;[ZLhudson.FilePath)<br/>
-hudson.Launcher.decorateByPrefix([LString) hudson.Launcher;<br/>
-hudson.scm.ChangeLogAnnotator.unregister()Z<br/>
-hudson.node_monitors.ClockMonitor.getDifferenceFor(hudson.model.Computer) hudson.util.ClockDifference;<br/>
-hudson.Proc$LocalProc(String;java.util.Map;java.io.OutputStream;java.io.File)<br/>
-hudson.triggers.SCMTrigger$Runner(hudson.triggers.SCMTrigger)<br/>
-hudson.PluginManager$PluginUpdateMonitor.addPluginToUpdate(String;String)<br/>
-hudson.MarkupText$SubText.surroundWithLiteral(String;String)<br/>
-hudson.MarkupText$SubText.groupCount()I<br/>
-hudson.diagnosis.NullIdDescriptorMonitor.verifyId()<br/>
 hudson.diagnosis.HudsonHomeDiskUsageMonitor$Solution(String)<br/>
 hudson.diagnosis.HudsonHomeDiskUsageMonitor.getSolution(String) hudson.diagnosis.HudsonHomeDiskUsageMonitor$Solution;<br/>
 hudson.diagnosis.ReverseProxySetupMonitor.getTestForReverseProxySetup(String)<br/>
-hudson.tasks.BuildStep$PublisherList.addNotifier(hudson.model.Descriptor)<br/>
-hudson.tasks.BuildTrigger(java.util.List;hudson.model.Result)<br/>
-hudson.cli.CLICommand.shouldPerformAuthentication(org.acegisecurity.Authentication)Z<br/>
-hudson.cli.CLICommand.getClientSystemProperty(String) String;<br/>
 hudson.init.TermMilestone.ordering() org.jvnet.hudson.reactor.TaskBuilder;<br/>
-hudson.util.ConcurrentHashMapConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.ByteArrayOutputStream2(I)<br/>
-hudson.util.ByteArrayOutputStream2.readFrom(java.io.InputStream)<br/>
-hudson.util.IOUtils.absolutize(java.io.File;String) java.io.File;<br/>
-hudson.util.ProcessKillingVeto$VetoCause(String)<br/>
-hudson.util.DescribableList.toArray([Lhudson.model.Describable)[Lhudson.model.Describable;<br/>
-hudson.util.DescribableList.getDynamic(String) hudson.model.Describable;<br/>
-hudson.util.LoadMonitorImpl(java.io.File)<br/>
-hudson.util.spring.DefaultBeanConfiguration.setDependsOn([LString) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultBeanConfiguration.setAutowire(String) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultBeanConfiguration.setDestroyMethod(String) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference$WrappedPropertyValue.leftShift(Object)<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addBeanDefinition(String;org.springframework.beans.factory.config.BeanDefinition)<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String;Class) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.createBeanDefinition(String) org.springframework.beans.factory.support.AbstractBeanDefinition;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.registerPostProcessor(org.springframework.beans.factory.config.BeanFactoryPostProcessor)<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.createPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference(hudson.util.spring.BeanBuilder;String;hudson.util.spring.BeanConfiguration)<br/>
-hudson.util.spring.BeanBuilder(org.springframework.context.ApplicationContext)<br/>
-hudson.util.spring.BeanBuilder.parentRef(String) org.springframework.beans.factory.config.RuntimeBeanReference;<br/>
-hudson.util.spring.BeanBuilder.methodMissing(String;Object) Object;<br/>
-hudson.util.spring.BeanBuilder.getBeanDefinition(String) org.springframework.beans.factory.config.BeanDefinition;<br/>
-hudson.util.spring.BeanBuilder.loadBeans(String)<br/>
-hudson.util.spring.BeanBuilder.loadBeans(org.springframework.core.io.Resource)<br/>
-hudson.util.spring.BeanBuilder.registerBeans(org.springframework.context.support.StaticApplicationContext)<br/>
-hudson.util.ReflectionUtils$Parameter.genericType() reflect.Type;<br/>
-hudson.util.ConsistentHash(I)<br/>
-hudson.util.ConsistentHash.addAll([LObject)<br/>
-hudson.util.ConsistentHash.countAllPoints()I<br/>
-hudson.util.ConsistentHash.addAll(java.util.Collection)<br/>
-hudson.util.QuotedStringTokenizer(String;String;Z)<br/>
-hudson.util.Iterators.removeDups(Iterable) Iterable;<br/>
-hudson.util.CopyOnWriteMap.replaceBy(java.util.Map)<br/>
-hudson.util.KeyedDataStorage.resetPerformanceStats()<br/>
-hudson.util.SubClassGenerator(ClassLoader)<br/>
-hudson.util.TimeUnit2.timedWait(Object;J)<br/>
-hudson.util.TimeUnit2.timedJoin(Thread;J)<br/>
-hudson.util.OneShotEvent(Object)<br/>
-hudson.util.CompoundEnumeration([Ljava.util.Enumeration)<br/>
-hudson.util.jna.WinIOException(String;Throwable)<br/>
-hudson.util.jna.WinIOException(Throwable)<br/>
-hudson.util.jna.RegistryKey.getIntValue(String)I<br/>
-hudson.util.jna.RegistryKey.valueExists(String)Z<br/>
-hudson.util.jna.RegistryKey.deleteValue(String)<br/>
-hudson.util.jna.RegistryKey.setValue(String;I)<br/>
-hudson.util.jna.RegistryKey.setValue(String;String)<br/>
-hudson.util.JVMBuilder.systemProperty(String;String) hudson.util.JVMBuilder;<br/>
-hudson.util.CompressedFile.loadAsString() String;<br/>
-hudson.util.CompressedFile(java.io.File)<br/>
-hudson.util.ReflectionUtils.getPublicProperty(Object;String) Object;<br/>
-hudson.util.XStream2(hudson.util.XStream2$ClassOwnership)<br/>
-hudson.util.DescriptorList.newInstanceFromRadioList(net.sf.json.JSONObject;String) hudson.model.Describable;<br/>
-hudson.util.DescriptorList.findByName(String) hudson.model.Descriptor;<br/>
-hudson.util.xstream.ImmutableListConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.xstream.ImmutableSetConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.xstream.ImmutableSortedSetConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.xstream.ImmutableMapConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.ArgumentListBuilder.hasMaskedArguments()Z<br/>
-hudson.util.RunList(hudson.model.Job)<br/>
-hudson.ClassicPluginStrategy.initializeComponents(hudson.PluginWrapper)<br/>
-hudson.security.SecurityRealm.loadGroupByGroupname(String;Z) hudson.security.GroupDetails;<br/>
-hudson.security.csrf.DefaultCrumbIssuer(Z)<br/>
-hudson.security.csrf.CrumbFilter.isMultipart(javax.servlet.http.HttpServletRequest)Z<br/>
-hudson.security.csrf.CrumbIssuer.validateCrumb(javax.servlet.ServletRequest)Z<br/>
-hudson.security.csrf.CrumbIssuer.initStaplerCrumbIssuer()<br/>
-hudson.Util.resolveSymlinkToFile(java.io.File) java.io.File;<br/>
-hudson.Util.copyStreamAndClose(java.io.Reader;java.io.Writer)<br/>
-hudson.scheduler.CrontabParser(antlr.TokenBuffer)<br/>
-hudson.FilePath.readFromOffset(J) java.io.InputStream;<br/>
 hudson.lifecycle.WindowsInstallerLink.registerIfApplicable() hudson.lifecycle.WindowsInstallerLink;<br/>
 hudson.lifecycle.WindowsInstallerLink.sendError(Exception;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse)<br/>
-hudson.slaves.NodeProvisioner.suggestReviewNow()<br/>
-hudson.slaves.SlaveComputer.setChannel(java.io.InputStream;java.io.OutputStream;hudson.model.TaskListener;hudson.remoting.Channel$Listener)<br/>
+hudson.logging.LogRecorder$Target(String;String)<br/>
+hudson.logging.LogRecorderManager.getDynamic(String) hudson.logging.LogRecorder;<br/>
+hudson.model.AbstractItem.resolveForCLI(String) hudson.model.AbstractItem;<br/>
+hudson.model.AbstractProject.resolveForCLI(String) hudson.model.AbstractProject;<br/>
+hudson.model.Computer.cliConnect(Z)<br/>
+hudson.model.Computer.cliDisconnect(String)<br/>
+hudson.model.Computer.cliOffline(String)<br/>
+hudson.model.Computer.cliOnline()<br/>
+hudson.model.Computer.resolveForCLI(String) hudson.model.Computer;<br/>
+hudson.model.ComputerSet.getDynamic(String;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse) hudson.model.Computer;<br/>
+hudson.model.DependencyGraph.addDependencyDeclarers(hudson.model.AbstractProject;java.util.Collection)<br/>
+hudson.model.Executor.killHard()<br/>
+hudson.model.Fingerprint$RangeSet.addAll([I)<br/>
+hudson.model.Fingerprint._getUsages() java.util.List;<br/>
+hudson.model.FingerprintMap.getOrCreate(hudson.model.AbstractBuild;String;[B) hudson.model.Fingerprint;<br/>
+hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject)<br/>
+hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject;java.io.File)<br/>
+hudson.model.Job.getBuildForCLI(String) hudson.model.Run;<br/>
+hudson.model.Job.getLastBuildsOverThreshold(ILhudson.model.Result) java.util.List;<br/>
+hudson.model.LoadStatistics.createChart(org.jfree.data.category.CategoryDataset) org.jfree.chart.JFreeChart;<br/>
+hudson.model.OverallLoadStatistics.createOverallTrendChart(hudson.model.MultiStageTimeSeries$TimeScale) hudson.model.MultiStageTimeSeries$TrendChart;<br/>
+hudson.model.Queue.clearLeftItems()<br/>
+hudson.model.Queue.wrapWithLock(hudson.remoting.Callable) hudson.remoting.Callable;<br/>
+hudson.model.Queue.wrapWithLock(java.util.concurrent.Callable) java.util.concurrent.Callable;<br/>
+hudson.model.ResourceController.getMissingResource(hudson.model.ResourceList) hudson.model.Resource;<br/>
+hudson.model.RunMap.newestValue() hudson.model.Run;<br/>
+hudson.model.RunMap.oldestValue() hudson.model.Run;<br/>
+hudson.model.StockStatusIcon(String;org.jvnet.localizer.Localizable)<br/>
+hudson.model.TaskThread.createListener() hudson.model.TaskThread$ListenerAndText;<br/>
+hudson.model.UpdateSite$Entry(String;net.sf.json.JSONObject)<br/>
+hudson.model.UsageStatistics$CombinedCipherInputStream(java.io.InputStream;java.security.interfaces.RSAKey;String)<br/>
+hudson.model.User.getDynamic(String) Object;<br/>
+hudson.model.View.getDynamic(String) Object;<br/>
+hudson.model.labels.LabelExpressionParser(antlr.TokenBuffer)<br/>
+hudson.model.listeners.SaveableListener.unregister()<br/>
+hudson.model.queue.QueueTaskFilter(hudson.model.Queue$Task)<br/>
+hudson.node_monitors.ClockMonitor.getDifferenceFor(hudson.model.Computer) hudson.util.ClockDifference;<br/>
+hudson.os.solaris.ZFSProvisioner(hudson.model.Node)<br/>
+hudson.scheduler.CrontabParser(antlr.TokenBuffer)<br/>
+hudson.scm.ChangeLogAnnotator.unregister()Z<br/>
+hudson.search.FixedSet([Lhudson.search.SearchItem)<br/>
+hudson.security.SecurityRealm.loadGroupByGroupname(String;Z) hudson.security.GroupDetails;<br/>
+hudson.security.csrf.CrumbFilter.isMultipart(javax.servlet.http.HttpServletRequest)Z<br/>
+hudson.security.csrf.CrumbIssuer.validateCrumb(javax.servlet.ServletRequest)Z<br/>
+hudson.security.csrf.DefaultCrumbIssuer(Z)<br/>
 hudson.slaves.EnvironmentVariablesNodeProperty$Entry(String;String)<br/>
 hudson.slaves.NodeDescriptor.newInstanceDetailPage() String;<br/>
-hudson.slaves.NodeProvisioner$StrategyState.recordPendingLaunches([Lhudson.slaves.NodeProvisioner$PlannedNode)<br/>
 hudson.slaves.NodeList([Lhudson.model.Node)<br/>
-hudson.ExtensionComponent.isDescriptorOf(Class)Z<br/>
+hudson.slaves.NodeProvisioner$StrategyState.recordPendingLaunches([Lhudson.slaves.NodeProvisioner$PlannedNode)<br/>
+hudson.slaves.NodeProvisioner.suggestReviewNow()<br/>
+hudson.slaves.SlaveComputer.setChannel(java.io.InputStream;java.io.OutputStream;hudson.model.TaskListener;hudson.remoting.Channel$Listener)<br/>
+hudson.tasks.BuildStep$PublisherList.addNotifier(hudson.model.Descriptor)<br/>
+hudson.tasks.BuildTrigger(java.util.List;hudson.model.Result)<br/>
 hudson.tools.DownloadFromUrlInstaller$NodeSpecificInstallable(hudson.tools.DownloadFromUrlInstaller;hudson.tools.DownloadFromUrlInstaller$Installable)<br/>
 hudson.tools.ToolLocationNodeProperty$ToolLocation(String;String)<br/>
 hudson.tools.ToolLocationNodeProperty([Lhudson.tools.ToolLocationNodeProperty$ToolLocation)<br/>
-hudson.WebAppMain.joinInit()<br/>
-hudson.logging.LogRecorderManager.getDynamic(String) hudson.logging.LogRecorder;<br/>
-hudson.logging.LogRecorder$Target(String;String)<br/>
-hudson.ProxyConfiguration(String;I)<br/>
+hudson.triggers.SCMTrigger$Runner(hudson.triggers.SCMTrigger)<br/>
+hudson.util.ArgumentListBuilder.hasMaskedArguments()Z<br/>
+hudson.util.ByteArrayOutputStream2(I)<br/>
+hudson.util.ByteArrayOutputStream2.readFrom(java.io.InputStream)<br/>
+hudson.util.CompoundEnumeration([Ljava.util.Enumeration)<br/>
+hudson.util.CompressedFile(java.io.File)<br/>
+hudson.util.CompressedFile.loadAsString() String;<br/>
+hudson.util.ConcurrentHashMapConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.ConsistentHash(I)<br/>
+hudson.util.ConsistentHash.addAll(java.util.Collection)<br/>
+hudson.util.ConsistentHash.addAll([LObject)<br/>
+hudson.util.ConsistentHash.countAllPoints()I<br/>
+hudson.util.CopyOnWriteMap.replaceBy(java.util.Map)<br/>
+hudson.util.DescribableList.getDynamic(String) hudson.model.Describable;<br/>
+hudson.util.DescribableList.toArray([Lhudson.model.Describable)[Lhudson.model.Describable;<br/>
+hudson.util.DescriptorList.findByName(String) hudson.model.Descriptor;<br/>
+hudson.util.DescriptorList.newInstanceFromRadioList(net.sf.json.JSONObject;String) hudson.model.Describable;<br/>
+hudson.util.IOUtils.absolutize(java.io.File;String) java.io.File;<br/>
+hudson.util.Iterators.removeDups(Iterable) Iterable;<br/>
+hudson.util.JVMBuilder.systemProperty(String;String) hudson.util.JVMBuilder;<br/>
+hudson.util.KeyedDataStorage.resetPerformanceStats()<br/>
+hudson.util.LoadMonitorImpl(java.io.File)<br/>
+hudson.util.OneShotEvent(Object)<br/>
+hudson.util.ProcessKillingVeto$VetoCause(String)<br/>
+hudson.util.QuotedStringTokenizer(String;String;Z)<br/>
+hudson.util.ReflectionUtils$Parameter.genericType() reflect.Type;<br/>
+hudson.util.ReflectionUtils.getPublicProperty(Object;String) Object;<br/>
+hudson.util.RunList(hudson.model.Job)<br/>
+hudson.util.SubClassGenerator(ClassLoader)<br/>
+hudson.util.TimeUnit2.timedJoin(Thread;J)<br/>
+hudson.util.TimeUnit2.timedWait(Object;J)<br/>
+hudson.util.XStream2(hudson.util.XStream2$ClassOwnership)<br/>
+hudson.util.jna.RegistryKey.deleteValue(String)<br/>
+hudson.util.jna.RegistryKey.getIntValue(String)I<br/>
+hudson.util.jna.RegistryKey.setValue(String;I)<br/>
+hudson.util.jna.RegistryKey.setValue(String;String)<br/>
+hudson.util.jna.RegistryKey.valueExists(String)Z<br/>
+hudson.util.jna.WinIOException(String;Throwable)<br/>
+hudson.util.jna.WinIOException(Throwable)<br/>
+hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference$WrappedPropertyValue.leftShift(Object)<br/>
+hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference(hudson.util.spring.BeanBuilder;String;hudson.util.spring.BeanConfiguration)<br/>
+hudson.util.spring.BeanBuilder(org.springframework.context.ApplicationContext)<br/>
+hudson.util.spring.BeanBuilder.getBeanDefinition(String) org.springframework.beans.factory.config.BeanDefinition;<br/>
+hudson.util.spring.BeanBuilder.loadBeans(String)<br/>
+hudson.util.spring.BeanBuilder.loadBeans(org.springframework.core.io.Resource)<br/>
+hudson.util.spring.BeanBuilder.methodMissing(String;Object) Object;<br/>
+hudson.util.spring.BeanBuilder.parentRef(String) org.springframework.beans.factory.config.RuntimeBeanReference;<br/>
+hudson.util.spring.BeanBuilder.registerBeans(org.springframework.context.support.StaticApplicationContext)<br/>
+hudson.util.spring.DefaultBeanConfiguration.setAutowire(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultBeanConfiguration.setDependsOn([LString) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultBeanConfiguration.setDestroyMethod(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addBeanDefinition(String;org.springframework.beans.factory.config.BeanDefinition)<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String;Class) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.createBeanDefinition(String) org.springframework.beans.factory.support.AbstractBeanDefinition;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.createPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
+hudson.util.spring.DefaultRuntimeSpringConfiguration.registerPostProcessor(org.springframework.beans.factory.config.BeanFactoryPostProcessor)<br/>
+hudson.util.xstream.ImmutableListConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.xstream.ImmutableMapConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.xstream.ImmutableSetConverter(com.thoughtworks.xstream.XStream)<br/>
+hudson.util.xstream.ImmutableSortedSetConverter(com.thoughtworks.xstream.XStream)<br/>
+jenkins.ExtensionRefreshException(String;Throwable)<br/>
+jenkins.FilePathFilter.installTo(hudson.remoting.ChannelBuilder)<br/>
+jenkins.FilePathFilter.uninstallFrom(hudson.remoting.Channel)<br/>
+jenkins.RestartRequiredException(org.jvnet.localizer.Localizable;Throwable)<br/>
+jenkins.YesNoMaybe.toBoolean(jenkins.YesNoMaybe) Boolean;<br/>
+jenkins.model.BuildDiscarder$ConverterImpl(com.thoughtworks.xstream.mapper.Mapper)<br/>
+jenkins.model.Jenkins$DescriptorImpl.getDynamic(String) Object;<br/>
+jenkins.model.Jenkins$MasterComputer.isUnix() Boolean;<br/>
+jenkins.model.Jenkins.getDynamic(String) Object;<br/>
+jenkins.model.Jenkins.getRepositoryBrowser(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.getSecurityRealms(String) hudson.model.Descriptor;<br/>
+jenkins.model.Jenkins.putItem(hudson.model.TopLevelItem)<br/>
+jenkins.model.ModelObjectWithContextMenu$MenuItem.withDisplayName(hudson.model.ModelObject) jenkins.model.ModelObjectWithContextMenu$MenuItem;<br/>
+jenkins.model.lazy.AbstractLazyLoadRunMap.purgeCache()<br/>
+jenkins.model.lazy.SortedIntList.copyInto([I)<br/>
+jenkins.model.lazy.SortedList(java.util.List)<br/>
+jenkins.model.lazy.SortedList.isInRange(I)Z<br/>
+jenkins.security.HMACConfidentialKey.checkMac(String;String)Z<br/>
+jenkins.security.HMACConfidentialKey.checkMac([B[B)Z<br/>
+jenkins.security.RekeySecretAdminMonitor.setNeeded()<br/>
+jenkins.triggers.ReverseBuildTrigger(String;hudson.model.Result)<br/>
+jenkins.util.AntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path)<br/>
+jenkins.util.AntClassLoader(org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z)<br/>
+jenkins.util.AntClassLoader.addLoaderPackageRoot(String)<br/>
+jenkins.util.AntClassLoader.addPathComponent(java.io.File)<br/>
+jenkins.util.AntClassLoader.forceLoadClass(String) Class;<br/>
+jenkins.util.AntClassLoader.forceLoadSystemClass(String) Class;<br/>
+jenkins.util.AntClassLoader.getNamedResources(String) java.util.Enumeration;<br/>
+jenkins.util.AntClassLoader.newAntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z) jenkins.util.AntClassLoader;<br/>
+jenkins.util.AntClassLoader.resetThreadContextLoader()<br/>
+jenkins.util.AntClassLoader.setThreadContextLoader()<br/>
+jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(I)<br/>
+jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.RejectedExecutionHandler)<br/>
+jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.ThreadFactory;java.util.concurrent.RejectedExecutionHandler)<br/>
+jenkins.util.ServerTcpPort(ILString)<br/>
+jenkins.util.TreeString$ConverterImpl(com.thoughtworks.xstream.XStream)<br/>
+jenkins.util.groovy.AbstractGroovyViewModule(org.kohsuke.stapler.jelly.groovy.JellyBuilder)<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.methodMissing(String;Object) Object;<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String) Object;<br/>
+jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String;Object) Object;<br/>
+jenkins.util.io.FileBoolean(Class;String)<br/>
+jenkins.util.io.FileBoolean.fastGet()Z<br/>
+jenkins.util.xstream.XStreamDOM(String;java.util.Map;java.util.List)<br/>
+jenkins.util.xstream.XStreamDOM.writeTo(java.io.Writer)<br/>
 <br/>
 <h3 id=summary>Summary</h3><br/>
 1114 published plugins<br/>
-190 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
+184 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
 Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/ws/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a><br/>
-duration : 360054 ms at 13 dec. 2015 20:51:44<br/>
+duration : 360054 ms at 13 déc. 2015 23:05:29<br/>
 </body></html>
