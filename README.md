@@ -1,4 +1,4 @@
-**Finds and reports unused code in Jenkins api** (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except api used in WEB-INF/lib/*.jar, except unit tests)
+**Finds and reports unused code in Jenkins api** (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)
 
 Current results in summary:
 * 1114 plugins
