@@ -1,11 +1,12 @@
-<html><head><title>Unused code in Jenkins api</title><style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style></head><body><h2> Finds and reports unused methods in Jenkins api </h2> (including in latest published plugins, except api used in jelly and groovy files, except getters, setters and fields, except deprecated classes and methods, except unit tests)<br/>
+<html><head><title>Unused code in Jenkins api</title><style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style></head><body><h2> Finds and reports unused methods in Jenkins api </h2> (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)<br/>
 Downloaded update-center.json<br/>
+Downloaded accelerated-build-now-plugin.hpi, 155 Kb<br/>
 All files are up to date (1114 plugins)<br/>
 Indexing api in Jenkins<br/>
 Analyzing usage in core and plugins<br/>
-analyzing ace-editor.hpi<br/>
 analyzing accurev.hpi<br/>
 analyzing accelerated-build-now-plugin.hpi<br/>
+analyzing ace-editor.hpi<br/>
 analyzing active-directory.hpi<br/>
 analyzing adaptive-disconnector.hpi<br/>
 analyzing AdaptivePlugin.hpi<br/>
@@ -1121,247 +1122,74 @@ analyzing zos-connector.hpi<br/>
 ignored plugins : [python-wrapper.hpi]<br/>
 <br/>
 Unused methods in Jenkins :<br/>
-jenkins.MasterToSlaveFileCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
 jenkins.model.Jenkins.getRepositoryBrowser(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins.getTrigger(String) hudson.triggers.TriggerDescriptor;<br/>
 jenkins.model.Jenkins.putItem(hudson.model.TopLevelItem)<br/>
-jenkins.model.Jenkins.getBuildWrapper(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins.getJobProperty(String) hudson.model.JobPropertyDescriptor;<br/>
 jenkins.model.Jenkins.getDynamic(String) Object;<br/>
 jenkins.model.Jenkins.getSecurityRealms(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins.getPublisher(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins.getRetentionStrategy(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins.getBuilder(String) hudson.model.Descriptor;<br/>
-jenkins.model.Jenkins.getAdjuncts(String) org.kohsuke.stapler.framework.adjunct.AdjunctManager;<br/>
-jenkins.model.Jenkins$18.run(org.jvnet.hudson.reactor.Reactor)<br/>
-jenkins.model.Jenkins$7.run(org.jvnet.hudson.reactor.Reactor)<br/>
 jenkins.model.Jenkins$DescriptorImpl.getDynamic(String) Object;<br/>
-jenkins.model.ModelObjectWithContextMenu$ContextMenu.add(String;String;String;Z) jenkins.model.ModelObjectWithContextMenu$ContextMenu;<br/>
-jenkins.model.ModelObjectWithContextMenu$ContextMenu.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-jenkins.model.ModelObjectWithContextMenu$ContextMenu.add(String;String;String;ZZ) jenkins.model.ModelObjectWithContextMenu$ContextMenu;<br/>
-jenkins.model.Jenkins$17.run(org.jvnet.hudson.reactor.Reactor)<br/>
-jenkins.model.lazy.SortedList.ceil(Comparable)I<br/>
-jenkins.model.lazy.SortedList.floor(Comparable)I<br/>
 jenkins.model.lazy.SortedList(java.util.List)<br/>
 jenkins.model.lazy.SortedList.isInRange(I)Z<br/>
-jenkins.model.lazy.SortedList.higher(Comparable)I<br/>
-jenkins.model.lazy.SortedList.lower(Comparable)I<br/>
-jenkins.model.lazy.LazyBuildMixIn$1.create(java.io.File) hudson.model.Run;<br/>
-jenkins.model.lazy.AbstractLazyLoadRunMap.put(Object) Object;<br/>
 jenkins.model.lazy.AbstractLazyLoadRunMap.purgeCache()<br/>
-jenkins.model.lazy.SortedIntList.higher(I)I<br/>
 jenkins.model.lazy.SortedIntList.copyInto([I)<br/>
-jenkins.model.lazy.SortedIntList.lower(I)I<br/>
-jenkins.model.lazy.SortedIntList.floor(I)I<br/>
-jenkins.model.Uptime.init()<br/>
-jenkins.model.BuildDiscarder$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
 jenkins.model.BuildDiscarder$ConverterImpl(com.thoughtworks.xstream.mapper.Mapper)<br/>
-jenkins.model.BuildDiscarder$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
-jenkins.model.BuildDiscarder$ConverterImpl.canConvert(Class)Z<br/>
-jenkins.model.Jenkins$19.run(org.jvnet.hudson.reactor.Reactor)<br/>
-jenkins.model.ProjectNamingStrategy.all() hudson.DescriptorExtensionList;<br/>
-jenkins.model.ModelObjectWithContextMenu$ContextMenu$1.run(org.apache.commons.jelly.JellyContext;org.apache.commons.jelly.XMLOutput)<br/>
-jenkins.model.ModelObjectWithContextMenu$ContextMenu$1.compile() org.apache.commons.jelly.Script;<br/>
-jenkins.model.Jenkins$20.run(org.jvnet.hudson.reactor.Reactor)<br/>
 jenkins.model.Jenkins$MasterComputer.isUnix() Boolean;<br/>
 jenkins.model.ModelObjectWithContextMenu$MenuItem.withDisplayName(hudson.model.ModelObject) jenkins.model.ModelObjectWithContextMenu$MenuItem;<br/>
 jenkins.ExtensionRefreshException(String;Throwable)<br/>
-jenkins.triggers.SCMTriggerItem$SCMTriggerItems$Bridge.asItem() hudson.model.Item;<br/>
-jenkins.triggers.SCMTriggerItem$SCMTriggerItems$Bridge.scheduleBuild2(I[Lhudson.model.Action) hudson.model.queue.QueueTaskFuture;<br/>
-jenkins.triggers.SCMTriggerItem$SCMTriggerItems$Bridge.poll(hudson.model.TaskListener) hudson.scm.PollingResult;<br/>
 jenkins.triggers.ReverseBuildTrigger(String;hudson.model.Result)<br/>
 jenkins.YesNoMaybe.toBoolean(jenkins.YesNoMaybe) Boolean;<br/>
-jenkins.FilePathFilterAggregator.add(jenkins.FilePathFilter)<br/>
 jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.ThreadFactory;java.util.concurrent.RejectedExecutionHandler)<br/>
 jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.RejectedExecutionHandler)<br/>
 jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(I)<br/>
-jenkins.util.BuildListenerAdapter.finished(hudson.model.Result)<br/>
-jenkins.util.BuildListenerAdapter.fatalError(String;[LObject) java.io.PrintWriter;<br/>
-jenkins.util.BuildListenerAdapter.fatalError(String) java.io.PrintWriter;<br/>
-jenkins.util.BuildListenerAdapter.hyperlink(String;String)<br/>
-jenkins.util.BuildListenerAdapter.error(String;[LObject) java.io.PrintWriter;<br/>
-jenkins.util.BuildListenerAdapter.started(java.util.List)<br/>
-jenkins.util.BuildListenerAdapter.annotate(hudson.console.ConsoleNote)<br/>
-jenkins.util.BuildListenerAdapter.error(String) java.io.PrintWriter;<br/>
-jenkins.util.TreeStringBuilder.intern(jenkins.util.TreeString) jenkins.util.TreeString;<br/>
-jenkins.util.ProgressiveRendering.news() net.sf.json.JSONObject;<br/>
-jenkins.util.xml.FilteredFunctionContext.getFunction(String;String;String) org.jaxen.Function;<br/>
 jenkins.util.AntClassLoader.newAntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z) jenkins.util.AntClassLoader;<br/>
-jenkins.util.AntClassLoader.targetFinished(org.apache.tools.ant.BuildEvent)<br/>
-jenkins.util.AntClassLoader.subBuildStarted(org.apache.tools.ant.BuildEvent)<br/>
 jenkins.util.AntClassLoader.forceLoadClass(String) Class;<br/>
-jenkins.util.AntClassLoader.messageLogged(org.apache.tools.ant.BuildEvent)<br/>
-jenkins.util.AntClassLoader.taskFinished(org.apache.tools.ant.BuildEvent)<br/>
-jenkins.util.AntClassLoader.subBuildFinished(org.apache.tools.ant.BuildEvent)<br/>
-jenkins.util.AntClassLoader.buildFinished(org.apache.tools.ant.BuildEvent)<br/>
 jenkins.util.AntClassLoader.addLoaderPackageRoot(String)<br/>
 jenkins.util.AntClassLoader.forceLoadSystemClass(String) Class;<br/>
 jenkins.util.AntClassLoader.setThreadContextLoader()<br/>
-jenkins.util.AntClassLoader.buildStarted(org.apache.tools.ant.BuildEvent)<br/>
 jenkins.util.AntClassLoader.resetThreadContextLoader()<br/>
-jenkins.util.AntClassLoader.taskStarted(org.apache.tools.ant.BuildEvent)<br/>
 jenkins.util.AntClassLoader(org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z)<br/>
 jenkins.util.AntClassLoader.addPathComponent(java.io.File)<br/>
 jenkins.util.AntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path)<br/>
 jenkins.util.AntClassLoader.getNamedResources(String) java.util.Enumeration;<br/>
-jenkins.util.AntClassLoader.targetStarted(org.apache.tools.ant.BuildEvent)<br/>
-jenkins.util.TimeDuration$StaplerConverterImpl.convert(Class;Object) Object;<br/>
-jenkins.util.groovy.AbstractGroovyViewModule.getProperty(String) Object;<br/>
-jenkins.util.groovy.AbstractGroovyViewModule.invokeMethod(String;Object) Object;<br/>
-jenkins.util.groovy.AbstractGroovyViewModule.setProperty(String;Object)<br/>
 jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String;Object) Object;<br/>
 jenkins.util.groovy.AbstractGroovyViewModule.methodMissing(String;Object) Object;<br/>
 jenkins.util.groovy.AbstractGroovyViewModule(org.kohsuke.stapler.jelly.groovy.JellyBuilder)<br/>
 jenkins.util.groovy.AbstractGroovyViewModule.propertyMissing(String) Object;<br/>
-jenkins.util.TreeString.toString(jenkins.util.TreeString) String;<br/>
-jenkins.util.TreeString.of(String) jenkins.util.TreeString;<br/>
 jenkins.util.io.FileBoolean(Class;String)<br/>
 jenkins.util.io.FileBoolean.fastGet()Z<br/>
-jenkins.util.TreeString$ConverterImpl.canConvert(Class)Z<br/>
-jenkins.util.TreeString$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
 jenkins.util.TreeString$ConverterImpl(com.thoughtworks.xstream.XStream)<br/>
-jenkins.util.TreeString$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
 jenkins.util.ServerTcpPort(ILString)<br/>
-jenkins.util.xstream.XStreamDOM$ConverterImpl.canConvert(Class)Z<br/>
-jenkins.util.xstream.XStreamDOM.unmarshal(com.thoughtworks.xstream.XStream;Object) Object;<br/>
-jenkins.util.xstream.XStreamDOM.from(java.io.InputStream) jenkins.util.xstream.XStreamDOM;<br/>
-jenkins.util.xstream.XStreamDOM.unmarshal(com.thoughtworks.xstream.XStream) Object;<br/>
 jenkins.util.xstream.XStreamDOM(String;java.util.Map;java.util.List)<br/>
 jenkins.util.xstream.XStreamDOM.writeTo(java.io.Writer)<br/>
-jenkins.util.xstream.XStreamDOM.from(java.io.Reader) jenkins.util.xstream.XStreamDOM;<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.hasMoreChildren()Z<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.getAttribute(I) String;<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.getAttributeName(I) String;<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.peekNextChild() String;<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.getAttribute(String) String;<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.appendErrors(com.thoughtworks.xstream.converters.ErrorWriter)<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.underlyingReader() com.thoughtworks.xstream.io.HierarchicalStreamReader;<br/>
-jenkins.util.xstream.XStreamDOM$ReaderImpl.moveUp()<br/>
-jenkins.util.xstream.XStreamDOM$WriterImpl.endNode()<br/>
-jenkins.util.xstream.XStreamDOM$WriterImpl.addAttribute(String;String)<br/>
-jenkins.util.xstream.XStreamDOM$WriterImpl.underlyingWriter() com.thoughtworks.xstream.io.HierarchicalStreamWriter;<br/>
-jenkins.ProxyInjector.createChildInjector(Iterable) com.google.inject.Injector;<br/>
-jenkins.ProxyInjector.getProvider(Class) com.google.inject.Provider;<br/>
-jenkins.ProxyInjector.injectMembers(Object)<br/>
-jenkins.ProxyInjector.findBindingsByType(com.google.inject.TypeLiteral) java.util.List;<br/>
-jenkins.ProxyInjector.getInstance(com.google.inject.Key) Object;<br/>
-jenkins.ProxyInjector.getExistingBinding(com.google.inject.Key) com.google.inject.Binding;<br/>
-jenkins.ProxyInjector.getBinding(Class) com.google.inject.Binding;<br/>
-jenkins.ProxyInjector.getMembersInjector(com.google.inject.TypeLiteral) com.google.inject.MembersInjector;<br/>
-jenkins.ProxyInjector.createChildInjector([Lcom.google.inject.Module) com.google.inject.Injector;<br/>
-jenkins.ProxyInjector.getBinding(com.google.inject.Key) com.google.inject.Binding;<br/>
-jenkins.ProxyInjector.getInstance(Class) Object;<br/>
-jenkins.ProxyInjector.getProvider(com.google.inject.Key) com.google.inject.Provider;<br/>
-jenkins.ProxyInjector.getMembersInjector(Class) com.google.inject.MembersInjector;<br/>
-jenkins.security.SlaveToMasterCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
-jenkins.security.LastGrantedAuthoritiesProperty.invalidate()<br/>
 jenkins.security.HMACConfidentialKey.checkMac([B[B)Z<br/>
 jenkins.security.HMACConfidentialKey.checkMac(String;String)Z<br/>
 jenkins.security.RekeySecretAdminMonitor.setNeeded()<br/>
 jenkins.security.RekeySecretAdminMonitor.scanOnReboot()<br/>
-jenkins.security.NotReallyRoleSensitiveCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
-jenkins.security.ExceptionTranslationFilter.afterPropertiesSet()<br/>
-jenkins.security.RSADigitalSignatureConfidentialKey.sign(String) String;<br/>
-jenkins.security.s2m.OpMatcher$1.matches(String)Z<br/>
-jenkins.security.s2m.FilePathRuleConfig$1.matches(String)Z<br/>
-jenkins.security.SecureRequester$Default.permit(org.kohsuke.stapler.StaplerRequest;Object)Z<br/>
-jenkins.security.MasterToSlaveCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
 jenkins.RestartRequiredException(org.jvnet.localizer.Localizable;Throwable)<br/>
-jenkins.SlaveToMasterFileCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
-jenkins.slaves.restarter.JnlpSlaveRestarterInstaller$2$1.onReconnect()<br/>
-jenkins.slaves.EncryptedSlaveAgentJnlpFile.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-jenkins.InitReactorRunner$1.onTaskCompleted(org.jvnet.hudson.reactor.Task)<br/>
-jenkins.InitReactorRunner$1.onTaskStarted(org.jvnet.hudson.reactor.Task)<br/>
-jenkins.InitReactorRunner$1.onAttained(org.jvnet.hudson.reactor.Milestone)<br/>
-jenkins.InitReactorRunner$1.onTaskFailed(org.jvnet.hudson.reactor.Task;Throwable;Z)<br/>
 jenkins.FilePathFilter.uninstallFrom(hudson.remoting.Channel)<br/>
 jenkins.FilePathFilter.installTo(hudson.remoting.ChannelBuilder)<br/>
-hudson.search.SearchIndex$1.suggest(String;java.util.List)<br/>
-hudson.search.SearchIndex$1.find(String;java.util.List)<br/>
-hudson.search.SearchIndexBuilder.add(String;hudson.search.SearchableModelObject;[LString) hudson.search.SearchIndexBuilder;<br/>
-hudson.search.UnionSearchIndex.combine([Lhudson.search.SearchIndex) hudson.search.SearchIndex;<br/>
-hudson.search.UnionSearchIndex.find(String;java.util.List)<br/>
-hudson.search.UnionSearchIndex.suggest(String;java.util.List)<br/>
-hudson.search.Search$SearchResultImpl.hasMoreResults()Z<br/>
 hudson.search.FixedSet([Lhudson.search.SearchItem)<br/>
-hudson.search.FixedSet.suggest(String;java.util.List)<br/>
-hudson.search.FixedSet.find(String;java.util.List)<br/>
-hudson.search.CollectionSearchIndex.find(String;java.util.List)<br/>
-hudson.search.CollectionSearchIndex.suggest(String;java.util.List)<br/>
 hudson.console.ConsoleNote.encodeTo(java.io.Writer)<br/>
 hudson.console.ExpandableDetailsNote.encodeTo(String;String) String;<br/>
-hudson.model.AbstractItem.getRelativeNameFromGroup(hudson.model.ItemGroup) String;<br/>
-hudson.model.AbstractItem.getRelativeDisplayNameFrom(hudson.model.ItemGroup) String;<br/>
 hudson.model.AbstractItem.resolveForCLI(String) hudson.model.AbstractItem;<br/>
-hudson.model.Saveable$1.save()<br/>
 hudson.model.UsageStatistics$CombinedCipherInputStream(java.io.InputStream;java.security.interfaces.RSAKey;String)<br/>
-hudson.model.UpdateCenter.init(jenkins.model.Jenkins)<br/>
-hudson.model.UpdateCenter.getJob(I) hudson.model.UpdateCenter$UpdateCenterJob;<br/>
-hudson.model.HealthReport.max(hudson.model.HealthReport;hudson.model.HealthReport) hudson.model.HealthReport;<br/>
 hudson.model.TaskThread.createListener() hudson.model.TaskThread$ListenerAndText;<br/>
-hudson.model.TaskThread.readAll() java.io.Reader;<br/>
-hudson.model.Queue$Item.hasCancelPermission()Z<br/>
-hudson.model.MyViewsProperty.canDelete(hudson.model.View)Z<br/>
-hudson.model.MyViewsProperty.onViewRenamed(hudson.model.View;String;String)<br/>
-hudson.model.MyViewsProperty.deleteView(hudson.model.View)<br/>
-hudson.model.MyViewsProperty.hasPermission(hudson.security.Permission)Z<br/>
-hudson.model.Result$1.canConvert(Class)Z<br/>
 hudson.model.RunMap.oldestValue() hudson.model.Run;<br/>
 hudson.model.RunMap.newestValue() hudson.model.Run;<br/>
-hudson.model.Descriptor$FormException.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.model.View.allInstantiable() java.util.List;<br/>
 hudson.model.View.getDynamic(String) Object;<br/>
 hudson.model.OverallLoadStatistics.createOverallTrendChart(hudson.model.MultiStageTimeSeries$TimeScale) hudson.model.MultiStageTimeSeries$TrendChart;<br/>
 hudson.model.Fingerprint._getUsages() java.util.List;<br/>
 hudson.model.ResourceController.getMissingResource(hudson.model.ResourceList) hudson.model.Resource;<br/>
-hudson.model.LargeText$BufferSession.skip(J)<br/>
 hudson.model.Queue.clearLeftItems()<br/>
-hudson.model.Queue.init(jenkins.model.Jenkins)<br/>
 hudson.model.Queue.wrapWithLock(java.util.concurrent.Callable) java.util.concurrent.Callable;<br/>
 hudson.model.Queue.wrapWithLock(hudson.remoting.Callable) hudson.remoting.Callable;<br/>
 hudson.model.listeners.SaveableListener.unregister()<br/>
-hudson.model.ComputerSet$1.save()<br/>
 hudson.model.LoadStatistics.createChart(org.jfree.data.category.CategoryDataset) org.jfree.chart.JFreeChart;<br/>
-hudson.model.StockStatusIcon.getImageOf(String) String;<br/>
 hudson.model.StockStatusIcon(String;org.jvnet.localizer.Localizable)<br/>
-hudson.model.ListView.jobNamesContains(hudson.model.TopLevelItem)Z<br/>
-hudson.model.ListView.hasJobFilterExtensions()Z<br/>
-hudson.model.AbstractProject$AbstractProjectDescriptor.getApplicableSCMCheckoutStrategyDescriptors(hudson.model.AbstractProject) java.util.List;<br/>
-hudson.model.Job$3.suggest(String;java.util.List)<br/>
-hudson.model.Queue$4.canConvert(Class)Z<br/>
-hudson.model.queue.AbstractQueueTask.getDefaultAuthentication(hudson.model.Queue$Item) org.acegisecurity.Authentication;<br/>
-hudson.model.queue.BackFiller.newInstance() hudson.model.queue.BackFiller;<br/>
-hudson.model.queue.AbstractQueueSorterImpl.compare(II)I<br/>
-hudson.model.queue.MappingWorksheet.executors(I) hudson.model.queue.MappingWorksheet$ExecutorChunk;<br/>
 hudson.model.queue.QueueSorter.installDefaultQueueSorter()<br/>
-hudson.model.queue.QueueTaskFilter.hasAbortPermission()Z<br/>
-hudson.model.queue.QueueTaskFilter.checkAbortPermission()<br/>
-hudson.model.queue.QueueTaskFilter.createExecutable() hudson.model.Queue$Executable;<br/>
 hudson.model.queue.QueueTaskFilter(hudson.model.Queue$Task)<br/>
-hudson.model.UpdateSite$Data.canUpgrade()Z<br/>
-hudson.model.ResourceList.r(hudson.model.Resource) hudson.model.ResourceList;<br/>
-hudson.model.Run.writeLogTo(JLorg.apache.commons.jelly.XMLOutput)<br/>
-hudson.model.Run.hasCustomDisplayName()Z<br/>
-hudson.model.Run.canToggleLogKeep()Z<br/>
-hudson.model.Run.getDescriptorByName(String) hudson.model.Descriptor;<br/>
-hudson.model.FileParameterValue$FileItemImpl.write(java.io.File)<br/>
-hudson.model.FileParameterValue$FileItemImpl.getString(String) String;<br/>
-hudson.model.FileParameterValue$FileItemImpl.delete()<br/>
-hudson.model.MultiStageTimeSeries$TrendChart.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.model.Items.all(hudson.model.ItemGroup) java.util.List;<br/>
-hudson.model.LargeText$2.open() hudson.model.LargeText$Session;<br/>
-hudson.model.LargeText$2.exists()Z<br/>
-hudson.model.LargeText$2.length()J<br/>
-hudson.model.ComputerSet.init()<br/>
 hudson.model.ComputerSet.getDynamic(String;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse) hudson.model.Computer;<br/>
-hudson.model.JobProperty.getProjectActions(hudson.model.AbstractProject) java.util.Collection;<br/>
-hudson.model.JobProperty.perform(hudson.model.AbstractBuild;hudson.Launcher;hudson.model.BuildListener)Z<br/>
 hudson.model.DependencyGraph.addDependencyDeclarers(hudson.model.AbstractProject;java.util.Collection)<br/>
-hudson.model.Fingerprint$RangeSet$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
-hudson.model.Fingerprint$RangeSet$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
-hudson.model.Fingerprint$RangeSet$ConverterImpl.canConvert(Class)Z<br/>
 hudson.model.FingerprintMap.getOrCreate(hudson.model.AbstractBuild;String;[B) hudson.model.Fingerprint;<br/>
-hudson.model.Job$4.getNextKey(String) String;<br/>
 hudson.model.Computer.cliOffline(String)<br/>
 hudson.model.Computer.cliDisconnect(String)<br/>
 hudson.model.Computer.cliConnect(Z)<br/>
@@ -1369,376 +1197,125 @@ hudson.model.Computer.relocateOldLogs()<br/>
 hudson.model.Computer.cliOnline()<br/>
 hudson.model.Computer.resolveForCLI(String) hudson.model.Computer;<br/>
 hudson.model.DownloadService$DownloadableListener.installListener()<br/>
-hudson.model.Descriptor.toList([LObject) java.util.List;<br/>
-hudson.model.BuildAuthorizationToken$ConverterImpl.canConvert(Class)Z<br/>
-hudson.model.LargeText$FileSession.skip(J)<br/>
-hudson.model.AbstractProject.loadBuild(java.io.File) hudson.model.AbstractBuild;<br/>
-hudson.model.AbstractProject.getRelationship(hudson.model.AbstractProject) java.util.SortedMap;<br/>
 hudson.model.AbstractProject.resolveForCLI(String) hudson.model.AbstractProject;<br/>
-hudson.model.AbstractProject.getDefaultAuthentication(hudson.model.Queue$Item) org.acegisecurity.Authentication;<br/>
 hudson.model.labels.LabelExpressionParser(antlr.TokenBuffer)<br/>
-hudson.model.labels.LabelAtom$LabelAtomConverter.canConvert(Class)Z<br/>
-hudson.model.TreeView.createFixedIndenter(String) hudson.Indenter;<br/>
-hudson.model.TreeView.register() hudson.model.ViewDescriptor;<br/>
-hudson.model.AutoCompletionCandidates.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.model.UpdateCenter$UpdateCenterConfiguration.upgrade(hudson.model.UpdateCenter$DownloadJob;java.io.File;java.io.File)<br/>
 hudson.model.Executor.killHard()<br/>
-hudson.model.Executor.hasStopPermission()Z<br/>
-hudson.model.Queue$5.canConvert(Class)Z<br/>
-hudson.model.Result.init()<br/>
-hudson.model.Queue$6.canConvert(Class)Z<br/>
-hudson.model.ParametersAction.getAssignedLabel(hudson.model.queue.SubTask) hudson.model.Label;<br/>
-hudson.model.ParametersAction.merge(hudson.model.ParametersAction) hudson.model.ParametersAction;<br/>
-hudson.model.ParametersAction.shouldSchedule(java.util.List)Z<br/>
-hudson.model.CauseAction.onAttached(hudson.model.Run)<br/>
-hudson.model.CauseAction.foldIntoExisting(hudson.model.Queue$Item;hudson.model.Queue$Task;java.util.List)<br/>
-hudson.model.CauseAction.onLoad(hudson.model.Run)<br/>
-hudson.model.Slave$JnlpJar.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.model.AperiodicWork.init()<br/>
-hudson.model.Queue$ItemList.remove(hudson.model.Queue$Task) hudson.model.Queue$Item;<br/>
-hudson.model.Queue$ItemList.put(hudson.model.Queue$Task;hudson.model.Queue$Item)<br/>
 hudson.model.User.getDynamic(String) Object;<br/>
-hudson.model.User.getDescriptorByName(String) hudson.model.Descriptor;<br/>
-hudson.model.User.canDelete()Z<br/>
-hudson.model.ViewPropertyDescriptor.newInstance(hudson.model.View) hudson.model.ViewProperty;<br/>
 hudson.model.UpdateSite$Entry(String;net.sf.json.JSONObject)<br/>
-hudson.model.Result$2.convert(Class;Object) Object;<br/>
-hudson.model.LargeText$1.open() hudson.model.LargeText$Session;<br/>
-hudson.model.LargeText$1.exists()Z<br/>
-hudson.model.LargeText$1.length()J<br/>
-hudson.model.Label$ConverterImpl.canConvert(Class)Z<br/>
-hudson.model.DownloadService.generateFragment() String;<br/>
-hudson.model.DownloadService.getById(String) hudson.model.DownloadService$Downloadable;<br/>
 hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject;java.io.File)<br/>
 hudson.model.FreeStyleBuild(hudson.model.FreeStyleProject)<br/>
-hudson.model.PeriodicWork.init()<br/>
-hudson.model.Job.getProperty(String) hudson.model.JobProperty;<br/>
 hudson.model.Job.getLastBuildsOverThreshold(ILhudson.model.Result) java.util.List;<br/>
 hudson.model.Job.getBuildForCLI(String) hudson.model.Run;<br/>
-hudson.model.View$2.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
 hudson.model.Fingerprint$RangeSet.addAll([I)<br/>
-hudson.model.Fingerprint$RangeSet.max()I<br/>
-hudson.model.Queue$LockedHRCallable.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
-hudson.os.PosixAPI$2.unimplementedError(String)<br/>
-hudson.os.PosixAPI$2.warn(org.jruby.ext.posix.POSIXHandler$WARNING_ID;String;[LObject)<br/>
-hudson.os.PosixAPI$2.error(org.jruby.ext.posix.POSIX$ERRORS;String)<br/>
-hudson.os.PosixAPI$1.error(jnr.constants.platform.Errno;String;String)<br/>
-hudson.os.PosixAPI$1.error(jnr.constants.platform.Errno;String)<br/>
-hudson.os.solaris.ZFSInstaller.init() hudson.model.AdministrativeMonitor;<br/>
-hudson.os.solaris.ZFSProvisioner.snapshot(hudson.model.AbstractBuild;hudson.FilePath;String;hudson.model.TaskListener) hudson.WorkspaceSnapshot;<br/>
 hudson.os.solaris.ZFSProvisioner(hudson.model.Node)<br/>
-hudson.os.solaris.ZFSProvisioner$DescriptorImpl.discard(hudson.FilePath;hudson.model.TaskListener)Z<br/>
-hudson.PluginManager.discover(Class) java.util.Collection;<br/>
 hudson.Launcher.maskedPrintCommandLine([LString;[ZLhudson.FilePath)<br/>
 hudson.Launcher.decorateByPrefix([LString) hudson.Launcher;<br/>
-hudson.ExtensionFinder$GuiceFinder$FaultTolerantScope.scope(com.google.inject.Key;com.google.inject.Provider) com.google.inject.Provider;<br/>
 hudson.scm.ChangeLogAnnotator.unregister()Z<br/>
-hudson.FileSystemProvisioner.all() hudson.DescriptorExtensionList;<br/>
-hudson.node_monitors.DiskSpaceMonitorDescriptor$DiskSpace.toHtml() String;<br/>
-hudson.node_monitors.TemporarySpaceMonitor.install() hudson.node_monitors.DiskSpaceMonitorDescriptor;<br/>
 hudson.node_monitors.ClockMonitor.getDifferenceFor(hudson.model.Computer) hudson.util.ClockDifference;<br/>
-hudson.node_monitors.DiskSpaceMonitor.install() hudson.node_monitors.DiskSpaceMonitorDescriptor;<br/>
-hudson.node_monitors.SwapSpaceMonitor.toMB(org.jvnet.hudson.MemoryUsage)J<br/>
-hudson.node_monitors.SwapSpaceMonitor.toHtml(org.jvnet.hudson.MemoryUsage) String;<br/>
 hudson.Proc$LocalProc(String;java.util.Map;java.io.OutputStream;java.io.File)<br/>
-hudson.FilePath$FileCallableWrapper.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
-hudson.triggers.SCMTrigger$BuildAction.writePollingLogTo(JLorg.apache.commons.jelly.XMLOutput)<br/>
-hudson.triggers.SCMTrigger$BuildAction.onLoad(hudson.model.Run)<br/>
-hudson.triggers.SCMTrigger$BuildAction.onAttached(hudson.model.Run)<br/>
 hudson.triggers.SCMTrigger$Runner(hudson.triggers.SCMTrigger)<br/>
-hudson.triggers.SCMTrigger$SCMAction.writeLogTo(org.apache.commons.jelly.XMLOutput)<br/>
-hudson.triggers.Trigger$1.run(hudson.model.AbstractProject)<br/>
 hudson.PluginManager$PluginUpdateMonitor.addPluginToUpdate(String;String)<br/>
 hudson.MarkupText$SubText.surroundWithLiteral(String;String)<br/>
-hudson.MarkupText$SubText.end()I<br/>
 hudson.MarkupText$SubText.groupCount()I<br/>
 hudson.diagnosis.NullIdDescriptorMonitor.verifyId()<br/>
 hudson.diagnosis.HudsonHomeDiskUsageMonitor$Solution(String)<br/>
 hudson.diagnosis.HudsonHomeDiskUsageMonitor.getSolution(String) hudson.diagnosis.HudsonHomeDiskUsageMonitor$Solution;<br/>
-hudson.diagnosis.OldDataMonitor$VersionRange.isOld(I)Z<br/>
 hudson.diagnosis.ReverseProxySetupMonitor.getTestForReverseProxySetup(String)<br/>
-hudson.PluginManager$2$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.FileSystemProvisionerDescriptor.discard(hudson.FilePath;hudson.model.TaskListener)Z<br/>
 hudson.tasks.BuildStep$PublisherList.addNotifier(hudson.model.Descriptor)<br/>
-hudson.tasks.Fingerprinter$FingerprintAction.onLoad(hudson.model.Run)<br/>
-hudson.tasks.Fingerprinter$FingerprintAction.onAttached(hudson.model.Run)<br/>
-hudson.tasks.BuildTrigger$DescriptorImpl.showEvenIfUnstableOption(Class)Z<br/>
-hudson.tasks.UserNameResolver.resolve(hudson.model.User) String;<br/>
 hudson.tasks.BuildTrigger(java.util.List;hudson.model.Result)<br/>
 hudson.cli.CLICommand.shouldPerformAuthentication(org.acegisecurity.Authentication)Z<br/>
 hudson.cli.CLICommand.getClientSystemProperty(String) String;<br/>
-hudson.cli.declarative.MethodBinder$1.addValue(Object)<br/>
-hudson.cli.declarative.MethodBinder$1.asAnnotatedElement() reflect.AnnotatedElement;<br/>
-hudson.cli.declarative.MethodBinder$1.asFieldSetter() org.kohsuke.args4j.spi.FieldSetter;<br/>
-hudson.cli.declarative.MethodBinder$ArgumentImpl.metaVar() String;<br/>
-hudson.cli.declarative.MethodBinder$ArgumentImpl.multiValued()Z<br/>
-hudson.cli.declarative.MethodBinder$ArgumentImpl.usage() String;<br/>
-hudson.cli.declarative.MethodBinder$ArgumentImpl.index()I<br/>
-hudson.cli.declarative.MethodBinder$ArgumentImpl.hidden()Z<br/>
-hudson.cli.declarative.MethodBinder$ArgumentImpl.handler() Class;<br/>
-hudson.cli.declarative.MethodBinder$ArgumentImpl.required()Z<br/>
-hudson.cli.CliManagerImpl$1.call(java.util.concurrent.Callable) Object;<br/>
-hudson.cli.CliManagerImpl.authenticate(String;hudson.remoting.Pipe;hudson.remoting.Pipe)<br/>
-hudson.cli.CliManagerImpl.hasCommand(String)Z<br/>
-hudson.cli.CliManagerImpl.protocolVersion()I<br/>
-hudson.FilePath$11.checkRoles(org.jenkinsci.remoting.RoleChecker)<br/>
-hudson.Indenter.getRelativeShift(hudson.model.Job) String;<br/>
-hudson.Indenter.getCss(hudson.model.Job) String;<br/>
-hudson.PluginManager$1$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.init.impl.InstallUncaughtExceptionHandler.init(jenkins.model.Jenkins)<br/>
-hudson.init.impl.InitialUserContent.init(jenkins.model.Jenkins)<br/>
-hudson.init.impl.GroovyInitScript.init(jenkins.model.Jenkins)<br/>
-hudson.init.impl.InstallUncaughtExceptionHandler$1.reportException(Throwable;javax.servlet.ServletContext;javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse)<br/>
-hudson.init.TaskMethodFinder$TaskImpl.requires() java.util.Collection;<br/>
-hudson.init.TaskMethodFinder$TaskImpl.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.init.TaskMethodFinder$TaskImpl.attains() java.util.Collection;<br/>
-hudson.init.TaskMethodFinder$TaskImpl.failureIsFatal()Z<br/>
 hudson.init.TermMilestone.ordering() org.jvnet.hudson.reactor.TaskBuilder;<br/>
-hudson.util.ConcurrentHashMapConverter.canConvert(Class)Z<br/>
 hudson.util.ConcurrentHashMapConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.TimeUnit2$1.convert(JLjava.util.concurrent.TimeUnit)J<br/>
-hudson.util.ProcessTree$Remote$RemoteProcess.act(hudson.util.ProcessTree$ProcessCallable) Object;<br/>
-hudson.util.TableNestChecker$1.isAllowed(String)Z<br/>
-hudson.util.TimeUnit2$4.convert(JLjava.util.concurrent.TimeUnit)J<br/>
-hudson.util.HeapSpaceStringConverter.canConvert(Class)Z<br/>
 hudson.util.ByteArrayOutputStream2(I)<br/>
 hudson.util.ByteArrayOutputStream2.readFrom(java.io.InputStream)<br/>
 hudson.util.IOUtils.absolutize(java.io.File;String) java.io.File;<br/>
-hudson.util.IOUtils.drain(java.io.InputStream)<br/>
 hudson.util.ProcessKillingVeto$VetoCause(String)<br/>
 hudson.util.DescribableList.toArray([Lhudson.model.Describable)[Lhudson.model.Describable;<br/>
 hudson.util.DescribableList.getDynamic(String) hudson.model.Describable;<br/>
 hudson.util.LoadMonitorImpl(java.io.File)<br/>
-hudson.util.AlternativeUiTextProvider$Message.cast(Object) Object;<br/>
-hudson.util.TimeUnit2$5.convert(JLjava.util.concurrent.TimeUnit)J<br/>
-hudson.util.LoadMonitorImpl$_doRun_closure7.call(hudson.model.Queue$BuildableItem) Object;<br/>
-hudson.util.TimeUnit2$3.convert(JLjava.util.concurrent.TimeUnit)J<br/>
-hudson.util.LoadMonitorImpl$_doRun_closure4.call(java.util.List;groovy.lang.Closure) Object;<br/>
-hudson.util.TimeUnit2$7.convert(JLjava.util.concurrent.TimeUnit)J<br/>
-hudson.util.TimeUnit2$6.convert(JLjava.util.concurrent.TimeUnit)J<br/>
 hudson.util.spring.DefaultBeanConfiguration.setDependsOn([LString) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.DefaultBeanConfiguration.setAutowire(String) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.DefaultBeanConfiguration.setDestroyMethod(String) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference$WrappedPropertyValue.leftShift(Object)<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addSingletonBean(String;Class;java.util.Collection) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.createSingletonBean(String) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.DefaultRuntimeSpringConfiguration.addBeanDefinition(String;org.springframework.beans.factory.config.BeanDefinition)<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.getBeanConfig(String) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String;Class) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.DefaultRuntimeSpringConfiguration.createBeanDefinition(String) org.springframework.beans.factory.support.AbstractBeanDefinition;<br/>
 hudson.util.spring.DefaultRuntimeSpringConfiguration.addPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addAbstractBean(String) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addBeanConfiguration(String;hudson.util.spring.BeanConfiguration)<br/>
 hudson.util.spring.DefaultRuntimeSpringConfiguration.registerPostProcessor(org.springframework.beans.factory.config.BeanFactoryPostProcessor)<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addSingletonBean(String;Class) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.createSingletonBean(Class;java.util.Collection) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.createSingletonBean(Class) hudson.util.spring.BeanConfiguration;<br/>
-hudson.util.spring.DefaultRuntimeSpringConfiguration.addSingletonBean(String) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.DefaultRuntimeSpringConfiguration.createPrototypeBean(String) hudson.util.spring.BeanConfiguration;<br/>
 hudson.util.spring.BeanBuilder$ConfigurableRuntimeBeanReference(hudson.util.spring.BeanBuilder;String;hudson.util.spring.BeanConfiguration)<br/>
 hudson.util.spring.BeanBuilder(org.springframework.context.ApplicationContext)<br/>
-hudson.util.spring.BeanBuilder.parse(java.io.InputStream)<br/>
 hudson.util.spring.BeanBuilder.parentRef(String) org.springframework.beans.factory.config.RuntimeBeanReference;<br/>
 hudson.util.spring.BeanBuilder.methodMissing(String;Object) Object;<br/>
 hudson.util.spring.BeanBuilder.getBeanDefinition(String) org.springframework.beans.factory.config.BeanDefinition;<br/>
-hudson.util.spring.BeanBuilder.ref(String) org.springframework.beans.factory.config.RuntimeBeanReference;<br/>
 hudson.util.spring.BeanBuilder.loadBeans(String)<br/>
 hudson.util.spring.BeanBuilder.loadBeans(org.springframework.core.io.Resource)<br/>
 hudson.util.spring.BeanBuilder.registerBeans(org.springframework.context.support.StaticApplicationContext)<br/>
 hudson.util.ReflectionUtils$Parameter.genericType() reflect.Type;<br/>
-hudson.util.DoubleLaunchChecker.init()<br/>
 hudson.util.ConsistentHash(I)<br/>
 hudson.util.ConsistentHash.addAll([LObject)<br/>
-hudson.util.ConsistentHash.remove(Object)<br/>
-hudson.util.ConsistentHash.lookup(String) Object;<br/>
 hudson.util.ConsistentHash.countAllPoints()I<br/>
 hudson.util.ConsistentHash.addAll(java.util.Collection)<br/>
-hudson.util.ConsistentHash.add(Object)<br/>
-hudson.util.Area.area()I<br/>
-hudson.util.CopyOnWriteMap$Hash$ConverterImpl.canConvert(Class)Z<br/>
 hudson.util.QuotedStringTokenizer(String;String;Z)<br/>
-hudson.util.LoadMonitorImpl$_doRun_closure3.call(Class) Object;<br/>
-hudson.util.FormValidation.warning(Throwable;String;[LObject) hudson.util.FormValidation;<br/>
-hudson.util.NoClientBindProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;ILorg.apache.commons.httpclient.params.HttpConnectionParams) java.net.Socket;<br/>
-hudson.util.NoClientBindProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;I) java.net.Socket;<br/>
-hudson.util.LoadMonitorImpl$_doRun_closure4_closure11.call(hudson.model.Queue$BuildableItem) Object;<br/>
-hudson.util.Secret$ConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
-hudson.util.Secret$ConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
-hudson.util.Secret$ConverterImpl.canConvert(Class)Z<br/>
-hudson.util.XStream2$AssociatedConverterImpl.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
-hudson.util.XStream2$AssociatedConverterImpl.canConvert(Class)Z<br/>
-hudson.util.XStream2$AssociatedConverterImpl.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
-hudson.util.CopyOnWriteMap$Tree$ConverterImpl.canConvert(Class)Z<br/>
-hudson.util.XStream2$PluginClassOwnership.ownerOf(Class) String;<br/>
-hudson.util.TimeUnit2$2.convert(JLjava.util.concurrent.TimeUnit)J<br/>
 hudson.util.Iterators.removeDups(Iterable) Iterable;<br/>
-hudson.util.Iterators.cast(java.util.Iterator) java.util.Iterator;<br/>
-hudson.util.Iterators.wrap(Iterable) Iterable;<br/>
-hudson.util.Iterators.subType(java.util.Iterator;Class) java.util.Iterator;<br/>
-hudson.util.NoClientBindSSLProtocolSocketFactory.createSocket(java.net.Socket;String;IZ) java.net.Socket;<br/>
-hudson.util.NoClientBindSSLProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;I) java.net.Socket;<br/>
-hudson.util.NoClientBindSSLProtocolSocketFactory.createSocket(String;ILjava.net.InetAddress;ILorg.apache.commons.httpclient.params.HttpConnectionParams) java.net.Socket;<br/>
-hudson.util.RobustReflectionConverter$1.visit(String;Class;Class;Object)<br/>
 hudson.util.CopyOnWriteMap.replaceBy(java.util.Map)<br/>
-hudson.util.io.ReopenableRotatingFileOutputStream.deleteAll()<br/>
-hudson.util.RobustReflectionConverter.canConvert(Class)Z<br/>
 hudson.util.KeyedDataStorage.resetPerformanceStats()<br/>
-hudson.util.TableNestChecker.applyTo(org.apache.commons.jelly.XMLOutput)<br/>
-hudson.util.SubClassGenerator.generate(Class;String) Class;<br/>
 hudson.util.SubClassGenerator(ClassLoader)<br/>
-hudson.util.TableNestChecker$InList.isAllowed(String)Z<br/>
-hudson.util.HexBinaryConverter.canConvert(Class)Z<br/>
-hudson.util.HexBinaryConverter.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
-hudson.util.HexBinaryConverter.marshal(Object;com.thoughtworks.xstream.io.HierarchicalStreamWriter;com.thoughtworks.xstream.converters.MarshallingContext)<br/>
 hudson.util.TimeUnit2.timedWait(Object;J)<br/>
 hudson.util.TimeUnit2.timedJoin(Thread;J)<br/>
-hudson.util.TimeUnit2.convert(JLjava.util.concurrent.TimeUnit)J<br/>
 hudson.util.OneShotEvent(Object)<br/>
-hudson.util.OneShotEvent.block()<br/>
-hudson.util.OneShotEvent.block(J)<br/>
 hudson.util.CompoundEnumeration([Ljava.util.Enumeration)<br/>
-hudson.util.Futures$1.cancel(Z)Z<br/>
-hudson.util.Futures$1.get(JLjava.util.concurrent.TimeUnit) Object;<br/>
-hudson.util.EnumConverter.convert(Class;Object) Object;<br/>
-hudson.util.LRUStringConverter.canConvert(Class)Z<br/>
-hudson.util.ConsistentHash$1.hash(Object) String;<br/>
 hudson.util.jna.WinIOException(String;Throwable)<br/>
 hudson.util.jna.WinIOException(Throwable)<br/>
 hudson.util.jna.RegistryKey.getIntValue(String)I<br/>
 hudson.util.jna.RegistryKey.valueExists(String)Z<br/>
 hudson.util.jna.RegistryKey.deleteValue(String)<br/>
 hudson.util.jna.RegistryKey.setValue(String;I)<br/>
-hudson.util.jna.RegistryKey.delete()<br/>
 hudson.util.jna.RegistryKey.setValue(String;String)<br/>
-hudson.util.jna.RegistryKey.open(String) hudson.util.jna.RegistryKey;<br/>
-hudson.util.ComboBoxModel.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.util.PackedMap$ConverterImpl.canConvert(Class)Z<br/>
-hudson.util.XStream2$PassthruConverter.canConvert(Class)Z<br/>
-hudson.util.QueryParameterMap.getAll(String) java.util.List;<br/>
-hudson.util.RobustReflectionConverter$2.visit(String;Class;Class;Object)<br/>
-hudson.util.JVMBuilder.pwd(java.io.File) hudson.util.JVMBuilder;<br/>
-hudson.util.JVMBuilder.debug(I) hudson.util.JVMBuilder;<br/>
-hudson.util.JVMBuilder.systemProperties() java.util.Map;<br/>
-hudson.util.JVMBuilder.vmopts() hudson.util.ArgumentListBuilder;<br/>
 hudson.util.JVMBuilder.systemProperty(String;String) hudson.util.JVMBuilder;<br/>
-hudson.util.XStream2$1.unmarshal(com.thoughtworks.xstream.io.HierarchicalStreamReader;com.thoughtworks.xstream.converters.UnmarshallingContext) Object;<br/>
-hudson.util.ProcessTree$OSProcess.act(hudson.util.ProcessTree$ProcessCallable) Object;<br/>
-hudson.util.ListBoxModel.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.util.CompressedFile.compress()<br/>
 hudson.util.CompressedFile.loadAsString() String;<br/>
-hudson.util.CompressedFile.write() java.io.OutputStream;<br/>
 hudson.util.CompressedFile(java.io.File)<br/>
 hudson.util.ReflectionUtils.getPublicProperty(Object;String) Object;<br/>
 hudson.util.XStream2(hudson.util.XStream2$ClassOwnership)<br/>
-hudson.util.ClockDifference.toHtml(hudson.util.ClockDifference) String;<br/>
-hudson.util.ClockDifference.toHtml(hudson.model.Node) String;<br/>
-hudson.util.ClockDifference.abs()J<br/>
-hudson.util.DescriptorList.load(Class)<br/>
 hudson.util.DescriptorList.newInstanceFromRadioList(net.sf.json.JSONObject;String) hudson.model.Describable;<br/>
 hudson.util.DescriptorList.findByName(String) hudson.model.Descriptor;<br/>
 hudson.util.xstream.ImmutableListConverter(com.thoughtworks.xstream.XStream)<br/>
 hudson.util.xstream.ImmutableSetConverter(com.thoughtworks.xstream.XStream)<br/>
 hudson.util.xstream.ImmutableSortedSetConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.xstream.ImmutableMapConverter.canConvert(Class)Z<br/>
 hudson.util.xstream.ImmutableMapConverter(com.thoughtworks.xstream.XStream)<br/>
-hudson.util.xstream.MapperDelegate.getItemTypeForItemFieldName(Class;String) Class;<br/>
-hudson.util.xstream.MapperDelegate.getImplicitCollectionDefForFieldName(Class;String) com.thoughtworks.xstream.mapper.Mapper$ImplicitCollectionMapping;<br/>
-hudson.util.xstream.MapperDelegate.getFieldNameForItemTypeAndName(Class;Class;String) String;<br/>
-hudson.util.LoadMonitorImpl$_doRun_closure4_closure10.call(hudson.model.Computer) Object;<br/>
 hudson.util.ArgumentListBuilder.hasMaskedArguments()Z<br/>
-hudson.util.ArgumentListBuilder.add(Object;Z) hudson.util.ArgumentListBuilder;<br/>
-hudson.util.VariableResolver$1.resolve(String) Object;<br/>
 hudson.util.RunList(hudson.model.Job)<br/>
-hudson.PluginManager$1$2.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.PluginManager$2$1$3.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.PluginManager$2$1$2.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.ClassicPluginStrategy.load(hudson.PluginWrapper)<br/>
-hudson.ClassicPluginStrategy.createPluginWrapper(java.io.File) hudson.PluginWrapper;<br/>
-hudson.ClassicPluginStrategy.findComponents(Class;hudson.model.Hudson) java.util.List;<br/>
-hudson.ClassicPluginStrategy.updateDependency(hudson.PluginWrapper;hudson.PluginWrapper)<br/>
 hudson.ClassicPluginStrategy.initializeComponents(hudson.PluginWrapper)<br/>
-hudson.ClassicPluginStrategy.getShortName(java.io.File) String;<br/>
-hudson.security.SecurityRealm$None$2.loadUserByUsername(String) org.acegisecurity.userdetails.UserDetails;<br/>
-hudson.security.TokenBasedRememberMeServices2.loginSuccess(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse;org.acegisecurity.Authentication)<br/>
-hudson.security.SecurityRealm.canLogOut()Z<br/>
 hudson.security.SecurityRealm.loadGroupByGroupname(String;Z) hudson.security.GroupDetails;<br/>
-hudson.security.FederatedLoginService$UnclaimedIdentityException.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.security.UserDetailsServiceProxy.loadUserByUsername(String) org.acegisecurity.userdetails.UserDetails;<br/>
-hudson.security.SecurityRealm$None$1.authenticate(org.acegisecurity.Authentication) org.acegisecurity.Authentication;<br/>
-hudson.security.AuthenticationManagerProxy.authenticate(org.acegisecurity.Authentication) org.acegisecurity.Authentication;<br/>
-hudson.security.HudsonPrivateSecurityRealm.getUser(String) hudson.model.User;<br/>
-hudson.security.HudsonPrivateSecurityRealm$3.isPasswordValid(String;String;Object)Z<br/>
-hudson.security.HudsonPrivateSecurityRealm$3.encodePassword(String;Object) String;<br/>
-hudson.security.HudsonPrivateSecurityRealm$4.isPasswordValid(String;String;Object)Z<br/>
-hudson.security.HudsonPrivateSecurityRealm$4.encodePassword(String;Object) String;<br/>
-hudson.security.RememberMeServicesProxy.loginFail(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse)<br/>
-hudson.security.RememberMeServicesProxy.autoLogin(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse) org.acegisecurity.Authentication;<br/>
-hudson.security.RememberMeServicesProxy.loginSuccess(javax.servlet.http.HttpServletRequest;javax.servlet.http.HttpServletResponse;org.acegisecurity.Authentication)<br/>
-hudson.security.HudsonPrivateSecurityRealm$2.encodePassword(String;Object) String;<br/>
-hudson.security.HudsonPrivateSecurityRealm$2.isPasswordValid(String;String;Object)Z<br/>
 hudson.security.csrf.DefaultCrumbIssuer(Z)<br/>
 hudson.security.csrf.CrumbFilter.isMultipart(javax.servlet.http.HttpServletRequest)Z<br/>
 hudson.security.csrf.CrumbIssuer.validateCrumb(javax.servlet.ServletRequest)Z<br/>
 hudson.security.csrf.CrumbIssuer.initStaplerCrumbIssuer()<br/>
-hudson.security.AccessDeniedHandlerImpl.handle(javax.servlet.ServletRequest;javax.servlet.ServletResponse;org.acegisecurity.AccessDeniedException)<br/>
-hudson.security.HudsonAuthenticationEntryPoint.commence(javax.servlet.ServletRequest;javax.servlet.ServletResponse;org.acegisecurity.AuthenticationException)<br/>
-hudson.Util.min(I[I)I<br/>
-hudson.Util.touch(java.io.File)<br/>
 hudson.Util.resolveSymlinkToFile(java.io.File) java.io.File;<br/>
 hudson.Util.copyStreamAndClose(java.io.Reader;java.io.Writer)<br/>
 hudson.scheduler.CrontabParser(antlr.TokenBuffer)<br/>
-hudson.Launcher$ProcStarter.quiet()Z<br/>
-hudson.ExpressionFactory2.createExpression(String) org.apache.commons.jelly.expression.Expression;<br/>
-hudson.PluginManager$1$3$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.FileSystemProvisioner$Default$DescriptorImpl.discard(hudson.FilePath;hudson.model.TaskListener)Z<br/>
-hudson.PluginManager$1$3.run(org.jvnet.hudson.reactor.Reactor)<br/>
-hudson.FilePath.tar(java.io.OutputStream;java.io.FileFilter)I<br/>
 hudson.FilePath.readFromOffset(J) java.io.InputStream;<br/>
-hudson.FilePath.zip(java.io.OutputStream;String)<br/>
-hudson.FilePath.tar(java.io.OutputStream;String)I<br/>
 hudson.lifecycle.WindowsInstallerLink.registerIfApplicable() hudson.lifecycle.WindowsInstallerLink;<br/>
 hudson.lifecycle.WindowsInstallerLink.sendError(Exception;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse)<br/>
 hudson.slaves.NodeProvisioner.suggestReviewNow()<br/>
 hudson.slaves.SlaveComputer.setChannel(java.io.InputStream;java.io.OutputStream;hudson.model.TaskListener;hudson.remoting.Channel$Listener)<br/>
 hudson.slaves.EnvironmentVariablesNodeProperty$Entry(String;String)<br/>
-hudson.slaves.Channels$2.build(hudson.remoting.CommandTransport) hudson.remoting.Channel;<br/>
-hudson.slaves.WorkspaceList.record(hudson.FilePath) hudson.slaves.WorkspaceList$Lease;<br/>
 hudson.slaves.NodeDescriptor.newInstanceDetailPage() String;<br/>
-hudson.slaves.NodeDescriptor.allInstantiable() java.util.List;<br/>
 hudson.slaves.NodeProvisioner$StrategyState.recordPendingLaunches([Lhudson.slaves.NodeProvisioner$PlannedNode)<br/>
-hudson.slaves.Channels$1.build(hudson.remoting.CommandTransport) hudson.remoting.Channel;<br/>
 hudson.slaves.NodeList([Lhudson.model.Node)<br/>
-hudson.slaves.NodeList.getNode(String) hudson.model.Node;<br/>
 hudson.ExtensionComponent.isDescriptorOf(Class)Z<br/>
 hudson.tools.DownloadFromUrlInstaller$NodeSpecificInstallable(hudson.tools.DownloadFromUrlInstaller;hudson.tools.DownloadFromUrlInstaller$Installable)<br/>
-hudson.tools.ToolInstallerDescriptor.for_(Class) java.util.List;<br/>
 hudson.tools.ToolLocationNodeProperty$ToolLocation(String;String)<br/>
-hudson.tools.JDKInstaller$FilePathFileSystem.read(String) java.io.InputStream;<br/>
-hudson.tools.JDKInstaller$FilePathFileSystem.chmod(String;I)<br/>
-hudson.tools.JDKInstaller$FilePathFileSystem.delete(String)<br/>
-hudson.tools.JDKInstaller$FilePathFileSystem.listSubDirectories(String) java.util.List;<br/>
-hudson.tools.JDKInstaller$FilePathFileSystem.pullUp(String;String)<br/>
 hudson.tools.ToolLocationNodeProperty([Lhudson.tools.ToolLocationNodeProperty$ToolLocation)<br/>
-hudson.tools.ToolLocationNodeProperty$DescriptorImpl.getKey(hudson.tools.ToolInstallation) String;<br/>
-hudson.PluginManager$1$3$2.run(org.jvnet.hudson.reactor.Reactor)<br/>
 hudson.WebAppMain.joinInit()<br/>
-hudson.PluginWrapper.hasLicensesXml()Z<br/>
-hudson.PluginWrapper.hasDependants()Z<br/>
-hudson.PluginWrapper.hasDependencies()Z<br/>
-hudson.widgets.RenderOnDemandClosure.render() org.kohsuke.stapler.HttpResponse;<br/>
-hudson.widgets.RenderOnDemandClosure$1.generateResponse(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object)<br/>
-hudson.BulkChange$1.save()<br/>
-hudson.logging.LogRecorderManager.init(jenkins.model.Jenkins)<br/>
 hudson.logging.LogRecorderManager.getDynamic(String) hudson.logging.LogRecorder;<br/>
 hudson.logging.LogRecorder$Target(String;String)<br/>
-hudson.Launcher$RemoteLaunchCallable$1.join()I<br/>
-hudson.Launcher$RemoteLaunchCallable$1.kill()<br/>
-hudson.PluginManager$2$1$1.run(org.jvnet.hudson.reactor.Reactor)<br/>
 hudson.ProxyConfiguration(String;I)<br/>
 <br/>
 <h3 id=summary>Summary</h3><br/>
 1114 published plugins<br/>
-614 unused methods in Jenkins, except api used in jelly and groovy files, except getters, setters, except deprecated classes and methods<br/>
+190 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
 Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/ws/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a><br/>
-duration : 263474 ms at 12 déc. 2015 20:42:42<br/>
+duration : 360054 ms at 13 dec. 2015 20:51:44<br/>
 </body></html>
