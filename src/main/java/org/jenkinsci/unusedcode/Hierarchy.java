@@ -72,12 +72,8 @@ public class Hierarchy {
 
     public Set<String> getPolymorphicMethods(String className, String name, String desc) {
         final Set<String> polymorphicMethods = new HashSet<>(1);
-        if (superHierarchy != null) {
-            polymorphicMethods.addAll(superHierarchy.getPolymorphicMethods(className, name, desc));
-        } else {
-            // method directly on class
-            polymorphicMethods.add(getMethodKey(className, name, desc));
-        }
+        // method directly on class
+        addSuperMethodsOrItself(className, name, desc, polymorphicMethods);
 
         // Management of dynamic call on an object
         // (the class is only known at runtime given inheritance and polymorphism).
@@ -87,38 +83,32 @@ public class Hierarchy {
         // or a method of a super-class is called via an instance of a sub-class)
         String superClass = superClassByClassMap.get(className);
         while (superClass != null && !JavaHelper.isJavaClass(superClass)) {
-            if (superHierarchy != null) {
-                polymorphicMethods.addAll(superHierarchy.getPolymorphicMethods(superClass, name,
-                        desc));
-            } else {
-                polymorphicMethods.add(getMethodKey(superClass, name, desc));
-            }
+            addSuperMethodsOrItself(superClass, name, desc, polymorphicMethods);
             superClass = superClassByClassMap.get(superClass);
         }
-        // sub-classes et sub-sub-classes
+        // sub-classes and sub-sub-classes
         // (sometimes a method defined and called on a super-class is overrided in a sub-class)
         for (final String subClass : getAllSubClasses(className)) {
-            if (superHierarchy != null) {
-                polymorphicMethods.addAll(superHierarchy
-                        .getPolymorphicMethods(subClass, name, desc));
-            } else {
-                polymorphicMethods.add(getMethodKey(subClass, name, desc));
-            }
+            addSuperMethodsOrItself(subClass, name, desc, polymorphicMethods);
 
             // sometimes a method of a super-class is called via an interface of a sub-class
             String superClass2 = superClassByClassMap.get(subClass);
             while (superClass2 != null && !superClass2.equals(className)
                     && !JavaHelper.isJavaClass(superClass2)) {
-                if (superHierarchy != null) {
-                    polymorphicMethods.addAll(superHierarchy.getPolymorphicMethods(superClass2,
-                            name, desc));
-                } else {
-                    polymorphicMethods.add(getMethodKey(superClass2, name, desc));
-                }
+                addSuperMethodsOrItself(superClass2, name, desc, polymorphicMethods);
                 superClass2 = superClassByClassMap.get(superClass2);
             }
         }
         return polymorphicMethods;
+    }
+
+    private void addSuperMethodsOrItself(String className, String name, String desc,
+            Set<String> output) {
+        if (superHierarchy != null) {
+            output.addAll(superHierarchy.getPolymorphicMethods(className, name, desc));
+        } else {
+            output.add(getMethodKey(className, name, desc));
+        }
     }
 
     private static String getMethodKey(String className, String name, String desc) {
