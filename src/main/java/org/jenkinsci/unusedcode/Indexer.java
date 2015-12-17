@@ -34,8 +34,12 @@ public class Indexer {
                     // xstream AbstractSingleValueConverter:
                     "fromString", "canConvert", "marshal", "unmarshal")));
 
-    private static final Set<String> IGNORED_CLASSES = Collections
-            .unmodifiableSet(new HashSet<String>(Arrays.asList("hudson/Functions")));
+    private static final Set<String> IGNORED_CLASSES = Collections.emptySet();
+    // Collections.unmodifiableSet(new HashSet<String>(Arrays.asList(
+    // // no longer ignored because jelly files are read: "hudson/Functions",
+    // // could be ignored but used only in ui-samples-plugin:
+    // // "jenkins/util/groovy/AbstractGroovyViewModule"
+    // )));
 
     private final Set<String> methods = new LinkedHashSet<>();
     private final Set<String> synchronizedMethods = Collections.synchronizedSet(methods);
