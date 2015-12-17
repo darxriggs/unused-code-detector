@@ -1,10 +1,10 @@
 <html><head><title>Unused code in Jenkins api</title><style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style></head><body><h2> Finds and reports unused methods in Jenkins api </h2> (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)<br/>
 Downloaded update-center.json<br/>
-All files are up to date (1114 plugins)<br/>
+All files are up to date (1121 plugins)<br/>
 Indexing api in Jenkins<br/>
 Analyzing usage in core and plugins<br/>
-analyzing ace-editor.hpi<br/>
 analyzing accelerated-build-now-plugin.hpi<br/>
+analyzing ace-editor.hpi<br/>
 analyzing accurev.hpi<br/>
 analyzing active-directory.hpi<br/>
 analyzing adaptive-disconnector.hpi<br/>
@@ -81,6 +81,7 @@ analyzing BlazeMeterJenkinsPlugin.hpi<br/>
 analyzing blink1.hpi<br/>
 analyzing blitz_io-jenkins.hpi<br/>
 analyzing block-queued-job.hpi<br/>
+analyzing bootstrap.hpi<br/>
 analyzing bootstraped-multi-test-results-report.hpi<br/>
 analyzing brakeman.hpi<br/>
 analyzing branch-api.hpi<br/>
@@ -229,6 +230,7 @@ analyzing crx-content-package-deployer.hpi<br/>
 analyzing cucumber.hpi<br/>
 analyzing cucumber-perf.hpi<br/>
 analyzing cucumber-reports.hpi<br/>
+analyzing cucumber-slack-notifier.hpi<br/>
 analyzing cucumber-testresult-plugin.hpi<br/>
 analyzing curseforge-publisher.hpi<br/>
 analyzing custom-job-icon.hpi<br/>
@@ -323,6 +325,7 @@ analyzing ecutest.hpi<br/>
 analyzing eggplant-plugin.hpi<br/>
 analyzing elastic-axis.hpi<br/>
 analyzing elasticbox.hpi<br/>
+analyzing elasticsearch-query.hpi<br/>
 analyzing elOyente.hpi<br/>
 analyzing email-ext.hpi<br/>
 analyzing email-ext-recipients-column.hpi<br/>
@@ -444,6 +447,7 @@ analyzing groovy-remote.hpi<br/>
 analyzing groovyaxis.hpi<br/>
 analyzing growl.hpi<br/>
 analyzing hadoop.hpi<br/>
+analyzing handlebars.hpi<br/>
 analyzing harvest.hpi<br/>
 analyzing hckrnews.hpi<br/>
 analyzing heavy-job.hpi<br/>
@@ -650,6 +654,7 @@ analyzing mock-load-builder.hpi<br/>
 analyzing mock-security-realm.hpi<br/>
 analyzing mock-slave.hpi<br/>
 analyzing modernstatus.hpi<br/>
+analyzing momentjs.hpi<br/>
 analyzing mongodb.hpi<br/>
 analyzing mongodb-document-upload.hpi<br/>
 analyzing monitor-remote-job.hpi<br/>
@@ -692,6 +697,7 @@ analyzing notification.hpi<br/>
 analyzing nouvola-divecloud.hpi<br/>
 analyzing nsiqcollector.hpi<br/>
 analyzing nuget.hpi<br/>
+analyzing numeraljs.hpi<br/>
 analyzing nunit.hpi<br/>
 analyzing oauth-credentials.hpi<br/>
 analyzing octopusdeploy.hpi<br/>
@@ -1086,6 +1092,7 @@ analyzing workflow-cps-global-lib.hpi<br/>
 analyzing workflow-durable-task-step.hpi<br/>
 analyzing workflow-job.hpi<br/>
 analyzing workflow-multibranch.hpi<br/>
+analyzing workflow-remote-loader.hpi<br/>
 analyzing workflow-scm-step.hpi<br/>
 analyzing workflow-step-api.hpi<br/>
 analyzing workflow-support.hpi<br/>
@@ -1124,6 +1131,11 @@ Unused methods in Jenkins :<br/>
 hudson.ClassicPluginStrategy.initializeComponents(hudson.PluginWrapper)<br/>
 hudson.ExtensionComponent.isDescriptorOf(Class)Z<br/>
 hudson.FilePath.readFromOffset(J) java.io.InputStream;<br/>
+hudson.Functions.addSuffix(ILString;String) String;<br/>
+hudson.Functions.adminCheck(org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse;Object;hudson.security.Permission)<br/>
+hudson.Functions.getProjectListString(java.util.List) String;<br/>
+hudson.Functions.getViewResource(Object;String) String;<br/>
+hudson.Functions.getWin32ErrorMessage(java.io.IOException) String;<br/>
 hudson.Launcher.decorateByPrefix([LString) hudson.Launcher;<br/>
 hudson.Launcher.maskedPrintCommandLine([LString;[ZLhudson.FilePath)<br/>
 hudson.MarkupText$SubText.groupCount()I<br/>
@@ -1151,7 +1163,6 @@ hudson.model.AbstractProject.resolveForCLI(String) hudson.model.AbstractProject;
 hudson.model.Computer.cliConnect(Z)<br/>
 hudson.model.Computer.cliDisconnect(String)<br/>
 hudson.model.Computer.cliOffline(String)<br/>
-hudson.model.Computer.cliOnline()<br/>
 hudson.model.Computer.resolveForCLI(String) hudson.model.Computer;<br/>
 hudson.model.ComputerSet.getDynamic(String;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse) hudson.model.Computer;<br/>
 hudson.model.DependencyGraph.addDependencyDeclarers(hudson.model.AbstractProject;java.util.Collection)<br/>
@@ -1307,8 +1318,8 @@ jenkins.util.xstream.XStreamDOM(String;java.util.Map;java.util.List)<br/>
 jenkins.util.xstream.XStreamDOM.writeTo(java.io.Writer)<br/>
 <br/>
 <h3 id=summary>Summary</h3><br/>
-1114 published plugins<br/>
-184 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
+1121 published plugins<br/>
+188 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
 Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/ws/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a><br/>
-duration : 360054 ms at 13 déc. 2015 23:05:29<br/>
+duration : 387258 ms at 17 déc. 2015 01:18:08<br/>
 </body></html>
