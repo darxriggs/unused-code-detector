@@ -115,8 +115,9 @@ public class Indexer {
     private static class CalledClassVisitor extends ClassVisitor {
         private static final int OPCODE_CLASS_FILTERED = Opcodes.ACC_INTERFACE
                 | Opcodes.ACC_ANNOTATION | Opcodes.ACC_DEPRECATED;
-        private static final int OPCODE_METHOD_FILTERED = Opcodes.ACC_PRIVATE
-                | Opcodes.ACC_SYNTHETIC | Opcodes.ACC_DEPRECATED;
+        private static final int OPCODE_METHOD_FILTERED = Opcodes.ACC_SYNTHETIC
+                | Opcodes.ACC_DEPRECATED;
+        // do not ignore private methods (currently 3 of them): | Opcodes.ACC_PRIVATE
 
         private final Set<String> methods = new HashSet<>();
         private String currentClass;

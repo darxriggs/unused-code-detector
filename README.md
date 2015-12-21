@@ -1,8 +1,8 @@
 **Finds and reports unused code in Jenkins api** (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)
 
 Current results in summary:
-* 1121 plugins
-* 188 public, protected or package Jenkins methods are detected as not used in the latest published plugins and in core
+* 1122 plugins
+* 191 Jenkins methods are detected as not used in the latest published plugins and in core
 
 See details in this [example of output](../../blob/master/Output_example.html).
 
