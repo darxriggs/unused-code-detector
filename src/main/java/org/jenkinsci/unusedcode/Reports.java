@@ -18,7 +18,7 @@ public class Reports {
         log("ignored plugins : " + Analyzer.IGNORED_PLUGINS);
         log("");
 
-        log("Unused methods in Jenkins :");
+        log("<h3 id=unusedMethods>Unused methods in Jenkins</h3>");
         final Set<String> methods = new TreeSet<>(filterOnJenkins(indexer.getMethods()));
         for (final String method : methods) {
             log(formatMethod(method));
