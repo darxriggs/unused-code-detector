@@ -4,7 +4,8 @@ Current results in summary:
 * 1122 plugins
 * 191 Jenkins methods are detected as not used in the latest published plugins and in core
 
-See details in this [example of output](../../blob/master/Output_example.html).
+See details in the [continuous integration](https://javamelody.ci.cloudbees.com/job/unused-code-detector/lastSuccessfulBuild/artifact/target/output.html)
+or in this [example of output](../../blob/master/Output_example.html).
 
 There are certainly false positives and there are unused methods missing in the report.
 To be sure that a method is never used, you can [grep all sources](https://wiki.jenkins-ci.org/display/JENKINS/Grepping+all+sources) or [search in github](https://github.com/search?type=Code&q=user%3Ajenkinsci+SomeClass.staticMethod) directly.
