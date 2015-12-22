@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.nio.file.AtomicMoveNotSupportedException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
 import java.util.concurrent.Callable;
@@ -90,7 +91,11 @@ public class JenkinsFile {
                     deleteRecursive(versionsRootDirectory);
                     file.getParentFile().mkdirs();
                     // write target file only if complete
-                    Files.move(tempFile.toPath(), file.toPath(), StandardCopyOption.ATOMIC_MOVE);
+                    try {
+                        Files.move(tempFile.toPath(), file.toPath(), StandardCopyOption.ATOMIC_MOVE);
+                    } catch (final AtomicMoveNotSupportedException e) {
+                        Files.move(tempFile.toPath(), file.toPath());
+                    }
                     Log.log("Downloaded " + file.getName() + ", " + file.length() / 1024 + " Kb");
                 } finally {
                     tempFile.delete();
