@@ -1,11 +1,11 @@
 <html><head><title>Unused code in Jenkins api</title><style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style></head><body><h2> Finds and reports unused methods in Jenkins api </h2> (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)<br/>
 Downloaded update-center.json<br/>
-All files are up to date (1122 plugins)<br/>
+All files are up to date (1125 plugins)<br/>
 Indexing api in Jenkins<br/>
 Analyzing usage in core and plugins<br/>
-analyzing ace-editor.hpi<br/>
-analyzing accurev.hpi<br/>
 analyzing accelerated-build-now-plugin.hpi<br/>
+analyzing accurev.hpi<br/>
+analyzing ace-editor.hpi<br/>
 analyzing active-directory.hpi<br/>
 analyzing adaptive-disconnector.hpi<br/>
 analyzing AdaptivePlugin.hpi<br/>
@@ -109,6 +109,7 @@ analyzing build-name-setter.hpi<br/>
 analyzing build-pipeline-plugin.hpi<br/>
 analyzing build-publisher.hpi<br/>
 analyzing build-timeout.hpi<br/>
+analyzing build-timestamp.hpi<br/>
 analyzing build-token-root.hpi<br/>
 analyzing build-user-vars-plugin.hpi<br/>
 analyzing build-view-column.hpi<br/>
@@ -122,8 +123,8 @@ analyzing bulk-builder.hpi<br/>
 analyzing bumblebee.hpi<br/>
 analyzing caliper-ci.hpi<br/>
 analyzing call-remote-job-plugin.hpi<br/>
-analyzing campfire.hpi<br/>
 analyzing capitomcat.hpi<br/>
+analyzing campfire.hpi<br/>
 analyzing cas-plugin.hpi<br/>
 analyzing cas1.hpi<br/>
 analyzing categorized-view.hpi<br/>
@@ -236,8 +237,8 @@ analyzing curseforge-publisher.hpi<br/>
 analyzing custom-job-icon.hpi<br/>
 analyzing custom-tools-plugin.hpi<br/>
 analyzing custom-view-tabs.hpi<br/>
-analyzing customize-build-now.hpi<br/>
 analyzing CustomHistory.hpi<br/>
+analyzing customize-build-now.hpi<br/>
 analyzing cvs.hpi<br/>
 analyzing cvs-tag.hpi<br/>
 analyzing cygpath.hpi<br/>
@@ -296,6 +297,7 @@ analyzing doclinks.hpi<br/>
 analyzing dos-trigger.hpi<br/>
 analyzing DotCi.hpi<br/>
 analyzing DotCi-Fig-template.hpi<br/>
+analyzing DotCi-InstallPackages.hpi<br/>
 analyzing DotCi-Plugins-Starter-Pack.hpi<br/>
 analyzing downstream-buildview.hpi<br/>
 analyzing downstream-ext.hpi<br/>
@@ -315,7 +317,6 @@ analyzing dynamic-search-view.hpi<br/>
 analyzing dynamic_extended_choice_parameter.hpi<br/>
 analyzing dynamicparameter.hpi<br/>
 analyzing dynatrace-dashboard.hpi<br/>
-analyzing ease-plugin.hpi<br/>
 analyzing easyant.hpi<br/>
 analyzing ec2.hpi<br/>
 analyzing ec2-cloud-axis.hpi<br/>
@@ -604,8 +605,8 @@ analyzing log-parser.hpi<br/>
 analyzing logaction-plugin.hpi<br/>
 analyzing logentries.hpi<br/>
 analyzing logfilesizechecker.hpi<br/>
-analyzing logging.hpi<br/>analyzing logstash.hpi<br/>
-
+analyzing logging.hpi<br/>
+analyzing logstash.hpi<br/>
 analyzing lotus-connections-plugin.hpi<br/>
 analyzing lsf-cloud.hpi<br/>
 analyzing lucene-search.hpi<br/>
@@ -800,6 +801,7 @@ analyzing pyenv.hpi<br/>
 analyzing python.hpi<br/>
 analyzing qc.hpi<br/>
 analyzing qftest.hpi<br/>
+analyzing qtest.hpi<br/>
 analyzing queue-cleanup.hpi<br/>
 analyzing r.hpi<br/>
 analyzing rabbitmq-build-trigger.hpi<br/>
@@ -906,6 +908,7 @@ analyzing sicci_for_xcode.hpi<br/>
 analyzing sidebar-link.hpi<br/>
 analyzing sidebar-update-notification.hpi<br/>
 analyzing signal-killer.hpi<br/>
+analyzing silk-performer-plugin.hpi<br/>
 analyzing simple-parameterized-builds-report.hpi<br/>
 analyzing simple-theme-plugin.hpi<br/>
 analyzing simpleclearcase.hpi<br/>
@@ -1128,7 +1131,7 @@ analyzing zos-connector.hpi<br/>
 <br/>
 ignored plugins : [python-wrapper.hpi]<br/>
 <br/>
-Unused methods in Jenkins :<br/>
+<h3 id=unusedMethods>Unused methods in Jenkins</h3><br/>
 hudson.ClassicPluginStrategy.initializeComponents(hudson.PluginWrapper)<br/>
 hudson.ExtensionComponent.isDescriptorOf(Class)Z<br/>
 hudson.FilePath._syncIO()<br/>
@@ -1322,8 +1325,8 @@ jenkins.util.xstream.XStreamDOM(String;java.util.Map;java.util.List)<br/>
 jenkins.util.xstream.XStreamDOM.writeTo(java.io.Writer)<br/>
 <br/>
 <h3 id=summary>Summary</h3><br/>
-1122 published plugins<br/>
+1125 published plugins<br/>
 191 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
 Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/ws/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a><br/>
-duration : 376688 ms at 22 déc. 2015 00:26:29<br/>
+duration : 192994 ms at 28 déc. 2015 00:48:45<br/>
 </body></html>

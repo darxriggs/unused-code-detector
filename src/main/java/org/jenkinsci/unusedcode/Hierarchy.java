@@ -3,6 +3,7 @@ package org.jenkinsci.unusedcode;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -12,6 +13,7 @@ public class Hierarchy {
     private final Hierarchy superHierarchy;
     private final Map<String, String> superClassByClassMap = new HashMap<String, String>();
     private final Map<String, Set<String>> subClassListByClassMap = new HashMap<String, Set<String>>();
+    private final Set<String> packages = new LinkedHashSet<>();
 
     public Hierarchy() {
         this(null);
@@ -35,6 +37,23 @@ public class Hierarchy {
                 registerSubClass(asmInterfaceName, asmClassName);
             }
         }
+    }
+
+    public void registerPackage(ClassReader classReader) {
+        final String asmClassName = classReader.getClassName();
+        for (final String packageName : packages) {
+            if (asmClassName.startsWith(packageName)) {
+                return;
+            }
+        }
+        final String newPackageName = asmClassName.substring(0, asmClassName.lastIndexOf('/'));
+        for (final String packageName : packages) {
+            if (packageName.startsWith(newPackageName)) {
+                packages.remove(packageName);
+                break;
+            }
+        }
+        packages.add(newPackageName);
     }
 
     private void registerSuperClass(String asmSuperClassName, String asmClassName) {
@@ -106,9 +125,20 @@ public class Hierarchy {
             Set<String> output) {
         if (superHierarchy != null) {
             output.addAll(superHierarchy.getPolymorphicMethods(className, name, desc));
-        } else {
+        } else if (isClassIncludedInPackages(className)) {
             output.add(getMethodKey(className, name, desc));
         }
+    }
+
+    private boolean isClassIncludedInPackages(String className) {
+        // this method is called and packages is not empty only for jenkins core hierarchy
+        // (that is when superHierarchy == null)
+        for (final String packageName : packages) {
+            if (className.startsWith(packageName)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     private static String getMethodKey(String className, String name, String desc) {

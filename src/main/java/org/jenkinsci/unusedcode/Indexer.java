@@ -99,6 +99,7 @@ public class Indexer {
     private void indexClass(InputStream input) throws IOException {
         final ClassReader classReader = new ClassReader(input);
         hierarchy.registerHierarchyOfClass(classReader);
+        hierarchy.registerPackage(classReader);
         if (IGNORED_CLASSES.contains(classReader.getClassName())) {
             return;
         }
