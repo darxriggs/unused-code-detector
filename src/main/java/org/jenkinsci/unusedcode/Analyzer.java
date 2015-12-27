@@ -120,7 +120,7 @@ public class Analyzer {
         }
         for (final String method : methods2) {
             String methodName = method.substring(0, method.lastIndexOf('('));
-            methodName = methodName.substring(methodName.lastIndexOf('.') + 1);
+            methodName = methodName.substring(methodName.lastIndexOf(Indexer.SEPARATOR) + 1);
             if (string.contains(methodName)) {
                 methods.remove(method);
             }

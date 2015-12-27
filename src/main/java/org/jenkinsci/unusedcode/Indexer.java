@@ -21,7 +21,7 @@ import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
 
 public class Indexer {
-    private static final char SEPARATOR = '.';
+    public static final char SEPARATOR = '.';
 
     // see http://java.sun.com/javase/6/docs/platform/serialization/spec/serialTOC.html for
     // read/write*,
