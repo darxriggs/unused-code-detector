@@ -1,0 +1,17 @@
+node {
+   // Get the maven tool.
+   // ** NOTE: This 'maven' maven tool must be configured
+   // **       in the global configuration.           
+   def mvnHome = tool 'maven'
+
+   env.JAVA_HOME = tool 'jdk 1.7'
+
+   // Mark the code build 'stage'....
+   stage 'Build'
+   // Run the maven build
+   bat "${mvnHome}/bin/mvn clean package exec:java"
+
+   // Mark the archive 'stage'....
+   stage 'Archive'
+   archive 'target/*.html'
+}
