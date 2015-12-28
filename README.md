@@ -1,17 +1,19 @@
 **Finds and reports unused code in Jenkins api** (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)
 
+[![Build Status](https://ci.jenkins-ci.org/buildStatus/icon?job=infra_unused-code-detector)](https://ci.jenkins-ci.org/view/Infrastructure/job/infra_unused-code-detector/)
+
 Current results in summary:
 * 1122 plugins
 * 191 Jenkins methods are detected as not used in the latest published plugins and in core
 
-See details in the [continuous integration](https://javamelody.ci.cloudbees.com/job/unused-code-detector/lastSuccessfulBuild/artifact/target/output.html)
+See details in the [continuous integration](https://ci.jenkins-ci.org/view/Infrastructure/job/infra_unused-code-detector/branch/master/lastSuccessfulBuild/artifact/target/output.html)
 or in this [example of output](../../blob/master/Output_example.html).
 
 There are certainly false positives and there are unused methods missing in the report.
 To be sure that a method is never used, you can [grep all sources](https://wiki.jenkins-ci.org/display/JENKINS/Grepping+all+sources) or [search in github](https://github.com/search?type=Code&q=user%3Ajenkinsci+SomeClass.staticMethod) directly.
 
 See also:
-* Unused deprecated classes, methods and fields are listed in the [deprecated-usage-in-plugins job](https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/ws/target/output.html#deprecatedApiNotUsed) using [this tool](https://github.com/jenkins-infra/deprecated-usage-in-plugins)
+* Unused deprecated classes, methods and fields are listed in the [deprecated-usage-in-plugins job](https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/branch/master/lastSuccessfulBuild/artifact/target/output.html#deprecatedApiNotUsed) using [this tool](https://github.com/jenkins-infra/deprecated-usage-in-plugins)
 * [Jenkins policy for API deprecation](https://issues.jenkins-ci.org/browse/JENKINS-31035)
 
 To run the tool yourself : Checkout and run with "mvn clean compile exec:java".
