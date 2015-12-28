@@ -10,6 +10,10 @@ node('cabbage') {
    // **       in the global configuration.           
    env.JAVA_HOME = tool 'jdk7_80'
 
+   // Mark the checkout 'stage'....
+   stage 'Checkout'
+   checkout scm
+
    // Mark the code build 'stage'....
    stage 'Build'
    // Run the maven build
