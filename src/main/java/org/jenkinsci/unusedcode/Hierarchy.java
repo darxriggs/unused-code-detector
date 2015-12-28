@@ -1,9 +1,11 @@
 package org.jenkinsci.unusedcode;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashSet;
+import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -11,9 +13,9 @@ import org.objectweb.asm.ClassReader;
 
 public class Hierarchy {
     private final Hierarchy superHierarchy;
-    private final Map<String, String> superClassByClassMap = new HashMap<String, String>();
-    private final Map<String, Set<String>> subClassListByClassMap = new HashMap<String, Set<String>>();
-    private final Set<String> packages = new LinkedHashSet<>();
+    private final Map<String, String> superClassByClassMap = new HashMap<>();
+    private final Map<String, Set<String>> subClassListByClassMap = new HashMap<>();
+    private final List<String> packages = new ArrayList<>();
 
     public Hierarchy() {
         this(null);
@@ -22,6 +24,24 @@ public class Hierarchy {
     public Hierarchy(Hierarchy superHierarchy) {
         super();
         this.superHierarchy = superHierarchy;
+    }
+
+    public void registerPackage(ClassReader classReader) {
+        final String asmClassName = classReader.getClassName();
+        for (final String packageName : packages) {
+            if (asmClassName.startsWith(packageName)) {
+                return;
+            }
+        }
+        final String newPackageName = asmClassName.substring(0, asmClassName.lastIndexOf('/'));
+        final Iterator<String> iterator = packages.iterator();
+        while (iterator.hasNext()) {
+            final String packageName = iterator.next();
+            if (packageName.startsWith(newPackageName)) {
+                iterator.remove();
+            }
+        }
+        packages.add(newPackageName);
     }
 
     public void registerHierarchyOfClass(ClassReader classReader) {
@@ -39,23 +59,6 @@ public class Hierarchy {
         }
     }
 
-    public void registerPackage(ClassReader classReader) {
-        final String asmClassName = classReader.getClassName();
-        for (final String packageName : packages) {
-            if (asmClassName.startsWith(packageName)) {
-                return;
-            }
-        }
-        final String newPackageName = asmClassName.substring(0, asmClassName.lastIndexOf('/'));
-        for (final String packageName : packages) {
-            if (packageName.startsWith(newPackageName)) {
-                packages.remove(packageName);
-                break;
-            }
-        }
-        packages.add(newPackageName);
-    }
-
     private void registerSuperClass(String asmSuperClassName, String asmClassName) {
         this.superClassByClassMap.put(asmClassName, asmSuperClassName);
     }
@@ -63,7 +66,7 @@ public class Hierarchy {
     private void registerSubClass(String asmSuperClassName, String asmClassName) {
         Set<String> subClassList = this.subClassListByClassMap.get(asmSuperClassName);
         if (subClassList == null) {
-            subClassList = new HashSet<String>(1);
+            subClassList = new HashSet<>(1);
             this.subClassListByClassMap.put(asmSuperClassName, subClassList);
         }
         subClassList.add(asmClassName);
@@ -74,9 +77,9 @@ public class Hierarchy {
         if (subClassList == null) {
             return Collections.emptySet();
         }
-        final Set<String> allSubClasses = new HashSet<String>(subClassList);
+        final Set<String> allSubClasses = new HashSet<>(subClassList);
         while (!subClassList.isEmpty()) {
-            final Set<String> subClasses = new HashSet<String>();
+            final Set<String> subClasses = new HashSet<>();
             for (final String subClass : subClassList) {
                 final Set<String> subSubClassList = subClassListByClassMap.get(subClass);
                 if (subSubClassList != null) {
@@ -101,7 +104,7 @@ public class Hierarchy {
         // (sometimes a method of a super-class is called by a method of its sub-class
         // or a method of a super-class is called via an instance of a sub-class)
         String superClass = superClassByClassMap.get(className);
-        while (superClass != null && !JavaHelper.isJavaClass(superClass)) {
+        while (superClass != null) {
             addSuperMethodsOrItself(superClass, name, desc, polymorphicMethods);
             superClass = superClassByClassMap.get(superClass);
         }
@@ -112,8 +115,7 @@ public class Hierarchy {
 
             // sometimes a method of a super-class is called via an interface of a sub-class
             String superClass2 = superClassByClassMap.get(subClass);
-            while (superClass2 != null && !superClass2.equals(className)
-                    && !JavaHelper.isJavaClass(superClass2)) {
+            while (superClass2 != null && !superClass2.equals(className)) {
                 addSuperMethodsOrItself(superClass2, name, desc, polymorphicMethods);
                 superClass2 = superClassByClassMap.get(superClass2);
             }
@@ -126,22 +128,20 @@ public class Hierarchy {
         if (superHierarchy != null) {
             output.addAll(superHierarchy.getPolymorphicMethods(className, name, desc));
         } else if (isClassIncludedInPackages(className)) {
-            output.add(getMethodKey(className, name, desc));
+            output.add(Indexer.getMethodKey(className, name, desc));
         }
     }
 
     private boolean isClassIncludedInPackages(String className) {
         // this method is called and packages is not empty only for jenkins core hierarchy
         // (that is when superHierarchy == null)
-        for (final String packageName : packages) {
-            if (className.startsWith(packageName)) {
-                return true;
+        if (!packages.isEmpty()) {
+            for (final String packageName : packages) {
+                if (className.startsWith(packageName)) {
+                    return true;
+                }
             }
         }
         return false;
-    }
-
-    private static String getMethodKey(String className, String name, String desc) {
-        return Indexer.getMethodKey(className, name, desc);
     }
 }

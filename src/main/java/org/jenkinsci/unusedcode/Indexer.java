@@ -27,15 +27,14 @@ public class Indexer {
     // read/write*,
     // values() and valueOf(String) for enum
     // (non synthetics methods as said in spec),
-    private static final Set<String> IGNORED_METHODS = Collections
-            .unmodifiableSet(new HashSet<String>(Arrays.asList("<clinit>", "main", "readResolve",
-                    "readObject", "readExternal", "writeObject", "writeExternal", "writeReplace",
-                    "values", "valueOf",
+    private static final Set<String> IGNORED_METHODS = Collections.unmodifiableSet(new HashSet<>(
+            Arrays.asList("<clinit>", "main", "readResolve", "readObject", "readExternal",
+                    "writeObject", "writeExternal", "writeReplace", "values", "valueOf",
                     // xstream AbstractSingleValueConverter:
                     "fromString", "canConvert", "marshal", "unmarshal")));
 
     private static final Set<String> IGNORED_CLASSES = Collections.emptySet();
-    // Collections.unmodifiableSet(new HashSet<String>(Arrays.asList(
+    // Collections.unmodifiableSet(new HashSet<>(Arrays.asList(
     // // no longer ignored because jelly files are read: "hudson/Functions",
     // // could be ignored but used only in ui-samples-plugin:
     // // "jenkins/util/groovy/AbstractGroovyViewModule"

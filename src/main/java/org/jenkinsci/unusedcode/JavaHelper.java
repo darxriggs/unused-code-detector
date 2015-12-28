@@ -15,7 +15,7 @@ import org.objectweb.asm.Type;
 
 public final class JavaHelper {
     private static final int VISIBILITY_PUBLIC_OR_PROTECTED = Modifier.PUBLIC | Modifier.PROTECTED;
-    private static final Map<String, Set<String>> javaMethodListByClassMap = new HashMap<String, Set<String>>();
+    private static final Map<String, Set<String>> javaMethodListByClassMap = new HashMap<>();
     private static final Set<String> javaLangObjectMethods = getJavaMethods(Type
             .getInternalName(Object.class));
 
@@ -75,7 +75,7 @@ public final class JavaHelper {
             Log.log(msg);
             return Collections.emptySet();
         }
-        final Set<Class<?>> classes = new HashSet<Class<?>>();
+        final Set<Class<?>> classes = new HashSet<>();
         while (clazz != null) {
             classes.add(clazz);
             if ((clazz.getModifiers() & Modifier.ABSTRACT) != 0) {
@@ -86,7 +86,7 @@ public final class JavaHelper {
             }
             clazz = clazz.getSuperclass();
         }
-        final Set<String> methods = new HashSet<String>();
+        final Set<String> methods = new HashSet<>();
         for (final Class<?> clazz2 : classes) {
             for (final Method method : clazz2.getDeclaredMethods()) {
                 if ((method.getModifiers() & VISIBILITY_PUBLIC_OR_PROTECTED) != 0) {

@@ -114,7 +114,7 @@ public class Analyzer {
         }
         final String string = new String(output.toByteArray(), StandardCharsets.UTF_8);
 
-        final HashSet<String> methods2;
+        final Set<String> methods2;
         synchronized (methods) {
             methods2 = new HashSet<>(methods);
         }

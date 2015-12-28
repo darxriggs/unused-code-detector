@@ -59,6 +59,7 @@ public class Main {
                     analyzer.analyzeCore(core.getFile());
                 } catch (final Exception e) {
                     Log.log(e.toString() + " on " + core.getFile().getName());
+                    e.printStackTrace();
                 }
                 return null;
             }
@@ -77,6 +78,7 @@ public class Main {
                         plugin.getFile().delete();
                     } catch (final Exception e) {
                         Log.log(e.toString() + " on " + plugin.getFile().getName());
+                        e.printStackTrace();
                     }
                     return null;
                 }
