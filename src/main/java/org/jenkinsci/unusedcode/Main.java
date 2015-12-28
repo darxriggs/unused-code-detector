@@ -14,6 +14,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
+import java.util.zip.ZipException;
 
 public class Main {
     // experimental update center has more plugins but are often older
@@ -54,7 +55,11 @@ public class Main {
             @Override
             public Object call() throws IOException {
                 final Analyzer analyzer = new Analyzer(indexer);
-                analyzer.analyzeCore(core.getFile());
+                try {
+                    analyzer.analyzeCore(core.getFile());
+                } catch (final Exception e) {
+                    Log.log(e.toString() + " on " + core.getFile().getName());
+                }
                 return null;
             }
         };
@@ -66,10 +71,12 @@ public class Main {
                     final Analyzer analyzer = new Analyzer(indexer);
                     try {
                         analyzer.analyzePlugin(plugin.getFile());
-                    } catch (final EOFException e) {
+                    } catch (final EOFException | ZipException e) {
                         Log.log("deleting " + plugin.getFile().getName()
                                 + " and skipping, because " + e.toString());
                         plugin.getFile().delete();
+                    } catch (final Exception e) {
+                        Log.log(e.toString() + " on " + plugin.getFile().getName());
                     }
                     return null;
                 }
