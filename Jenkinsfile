@@ -1,11 +1,14 @@
 // Run on 'cabbage' node.
 node('cabbage') {
-   // java (jdk) and mvn are supposed to be in the path env of the node running the job
+   // Get the maven tool.
+   // ** NOTE: This 'maven3' maven tool must be configured
+   // **       in the global configuration.           
+   def mvnHome = tool 'maven3'
 
    // Mark the code build 'stage'....
    stage 'Build'
    // Run the maven build
-   sh "mvn clean package exec:java"
+   sh "${mvnHome}/bin/mvn clean package exec:java"
 
    // Mark the archive 'stage'....
    stage 'Archive'
