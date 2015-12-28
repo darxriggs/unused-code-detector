@@ -1,10 +1,12 @@
 <html><head><title>Unused code in Jenkins api</title><style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style></head><body><h2> Finds and reports unused methods in Jenkins api </h2> (including in latest published plugins and potential usage in jelly files, except getters, setters and fields, except deprecated classes and methods, except unit tests)<br/>
 Downloaded update-center.json<br/>
+Downloaded extended-choice-parameter.hpi, 1472 Kb<br/>
+Downloaded artifact-promotion.hpi, 3115 Kb<br/>
 All files are up to date (1125 plugins)<br/>
 Indexing api in Jenkins<br/>
 Analyzing usage in core and plugins<br/>
-analyzing accelerated-build-now-plugin.hpi<br/>
 analyzing accurev.hpi<br/>
+analyzing accelerated-build-now-plugin.hpi<br/>
 analyzing ace-editor.hpi<br/>
 analyzing active-directory.hpi<br/>
 analyzing adaptive-disconnector.hpi<br/>
@@ -123,8 +125,8 @@ analyzing bulk-builder.hpi<br/>
 analyzing bumblebee.hpi<br/>
 analyzing caliper-ci.hpi<br/>
 analyzing call-remote-job-plugin.hpi<br/>
-analyzing capitomcat.hpi<br/>
 analyzing campfire.hpi<br/>
+analyzing capitomcat.hpi<br/>
 analyzing cas-plugin.hpi<br/>
 analyzing cas1.hpi<br/>
 analyzing categorized-view.hpi<br/>
@@ -1147,7 +1149,6 @@ hudson.MarkupText$SubText.groupCount()I<br/>
 hudson.MarkupText$SubText.surroundWithLiteral(String;String)<br/>
 hudson.PluginManager$PluginUpdateMonitor.addPluginToUpdate(String;String)<br/>
 hudson.Proc$LocalProc(String;java.util.Map;java.io.OutputStream;java.io.File)<br/>
-hudson.ProxyConfiguration(String;I)<br/>
 hudson.Util.copyStreamAndClose(java.io.Reader;java.io.Writer)<br/>
 hudson.Util.resolveSymlinkToFile(java.io.File) java.io.File;<br/>
 hudson.WebAppMain.joinInit()<br/>
@@ -1161,7 +1162,6 @@ hudson.diagnosis.ReverseProxySetupMonitor.getTestForReverseProxySetup(String)<br
 hudson.init.TermMilestone.ordering() org.jvnet.hudson.reactor.TaskBuilder;<br/>
 hudson.lifecycle.WindowsInstallerLink.registerIfApplicable() hudson.lifecycle.WindowsInstallerLink;<br/>
 hudson.lifecycle.WindowsInstallerLink.sendError(Exception;org.kohsuke.stapler.StaplerRequest;org.kohsuke.stapler.StaplerResponse)<br/>
-hudson.logging.LogRecorder$Target(String;String)<br/>
 hudson.logging.LogRecorderManager.getDynamic(String) hudson.logging.LogRecorder;<br/>
 hudson.model.AbstractItem.resolveForCLI(String) hudson.model.AbstractItem;<br/>
 hudson.model.AbstractProject.resolveForCLI(String) hudson.model.AbstractProject;<br/>
@@ -1206,8 +1206,6 @@ hudson.security.Permission(hudson.security.PermissionGroup;String)<br/>
 hudson.security.SecurityRealm.loadGroupByGroupname(String;Z) hudson.security.GroupDetails;<br/>
 hudson.security.csrf.CrumbFilter.isMultipart(javax.servlet.http.HttpServletRequest)Z<br/>
 hudson.security.csrf.CrumbIssuer.validateCrumb(javax.servlet.ServletRequest)Z<br/>
-hudson.security.csrf.DefaultCrumbIssuer(Z)<br/>
-hudson.slaves.EnvironmentVariablesNodeProperty$Entry(String;String)<br/>
 hudson.slaves.NodeDescriptor.newInstanceDetailPage() String;<br/>
 hudson.slaves.NodeList([Lhudson.model.Node)<br/>
 hudson.slaves.NodeProvisioner$StrategyState.recordPendingLaunches([Lhudson.slaves.NodeProvisioner$PlannedNode)<br/>
@@ -1216,7 +1214,6 @@ hudson.slaves.SlaveComputer.setChannel(java.io.InputStream;java.io.OutputStream;
 hudson.tasks.BuildStep$PublisherList.addNotifier(hudson.model.Descriptor)<br/>
 hudson.tasks.BuildTrigger(java.util.List;hudson.model.Result)<br/>
 hudson.tools.DownloadFromUrlInstaller$NodeSpecificInstallable(hudson.tools.DownloadFromUrlInstaller;hudson.tools.DownloadFromUrlInstaller$Installable)<br/>
-hudson.tools.ToolLocationNodeProperty$ToolLocation(String;String)<br/>
 hudson.tools.ToolLocationNodeProperty([Lhudson.tools.ToolLocationNodeProperty$ToolLocation)<br/>
 hudson.triggers.SCMTrigger$Runner(hudson.triggers.SCMTrigger)<br/>
 hudson.util.ArgumentListBuilder.hasMaskedArguments()Z<br/>
@@ -1299,7 +1296,6 @@ jenkins.model.lazy.SortedList.isInRange(I)Z<br/>
 jenkins.security.HMACConfidentialKey.checkMac(String;String)Z<br/>
 jenkins.security.HMACConfidentialKey.checkMac([B[B)Z<br/>
 jenkins.security.RekeySecretAdminMonitor.setNeeded()<br/>
-jenkins.triggers.ReverseBuildTrigger(String;hudson.model.Result)<br/>
 jenkins.util.AntClassLoader(ClassLoader;org.apache.tools.ant.Project;org.apache.tools.ant.types.Path)<br/>
 jenkins.util.AntClassLoader(org.apache.tools.ant.Project;org.apache.tools.ant.types.Path;Z)<br/>
 jenkins.util.AntClassLoader.addLoaderPackageRoot(String)<br/>
@@ -1313,7 +1309,6 @@ jenkins.util.AntClassLoader.setThreadContextLoader()<br/>
 jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(I)<br/>
 jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.RejectedExecutionHandler)<br/>
 jenkins.util.ErrorLoggingScheduledThreadPoolExecutor(ILjava.util.concurrent.ThreadFactory;java.util.concurrent.RejectedExecutionHandler)<br/>
-jenkins.util.ServerTcpPort(ILString)<br/>
 jenkins.util.TreeString$ConverterImpl(com.thoughtworks.xstream.XStream)<br/>
 jenkins.util.groovy.AbstractGroovyViewModule(org.kohsuke.stapler.jelly.groovy.JellyBuilder)<br/>
 jenkins.util.groovy.AbstractGroovyViewModule.methodMissing(String;Object) Object;<br/>
@@ -1326,7 +1321,7 @@ jenkins.util.xstream.XStreamDOM.writeTo(java.io.Writer)<br/>
 <br/>
 <h3 id=summary>Summary</h3><br/>
 1125 published plugins<br/>
-191 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
-Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/ws/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a><br/>
-duration : 192994 ms at 28 déc. 2015 00:48:45<br/>
+184 unused methods in Jenkins, except getters, setters, except deprecated classes and methods<br/>
+Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/branch/master/lastSuccessfulBuild/artifact/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a><br/>
+duration : 161955 ms at 28 déc. 2015 21:43:52<br/>
 </body></html>

@@ -173,8 +173,10 @@ public class Analyzer {
 
         @Override
         public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
-            // method with an annotation @Initializer are not called in code but are not unused code
-            if ("Lhudson/init/Initializer;".equals(desc)) {
+            // methods with an annotation @Initializer are not called in code but are not unused code
+            // idem for methods with an annotation @DataBoundConstructor
+            if ("Lhudson/init/Initializer;".equals(desc)
+                    || "Lorg/kohsuke/stapler/DataBoundConstructor;".equals(desc)) {
                 methodCalled(className, methodName, methodDesc);
             }
             return null;
