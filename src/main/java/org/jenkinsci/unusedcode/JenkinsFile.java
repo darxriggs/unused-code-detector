@@ -109,8 +109,11 @@ public class JenkinsFile {
     private static boolean deleteRecursive(File path) {
         boolean ret = true;
         if (path.isDirectory()) {
-            for (final File f : path.listFiles()) {
-                ret = ret && deleteRecursive(f);
+            final File[] files = path.listFiles();
+            if (files != null) {
+                for (final File f : files) {
+                    ret = ret && deleteRecursive(f);
+                }
             }
         }
         return ret && path.delete();
