@@ -19,8 +19,8 @@ import org.objectweb.asm.Opcodes;
 public class Analyzer {
     // python-wrapper has wrappers for all extension points and descriptors,
     // they are just wrappers and not real usage
-    public static final Set<String> IGNORED_PLUGINS = Collections.unmodifiableSet(new HashSet<>(
-            Arrays.asList("python-wrapper.hpi")));
+    public static final Set<String> IGNORED_PLUGINS = Collections
+            .unmodifiableSet(new HashSet<>(Arrays.asList("python-wrapper.hpi")));
 
     private final Set<String> methods;
     private final Hierarchy coreHierarchy;
@@ -173,7 +173,8 @@ public class Analyzer {
 
         @Override
         public AnnotationVisitor visitAnnotation(String desc, boolean visible) {
-            // methods with an annotation @Initializer are not called in code but are not unused code
+            // methods with an annotation @Initializer are not called in code but are not unused
+            // code
             // idem for methods with an annotation @DataBoundConstructor
             if ("Lhudson/init/Initializer;".equals(desc)
                     || "Lorg/kohsuke/stapler/DataBoundConstructor;".equals(desc)) {
@@ -189,7 +190,8 @@ public class Analyzer {
         }
 
         @Override
-        public void visitMethodInsn(int opcode, String owner, String name, String desc, boolean itf) {
+        public void visitMethodInsn(int opcode, String owner, String name, String desc,
+                boolean itf) {
             // log("\t" + owner + " " + name + " " + desc);
             methodCalled(owner, name, desc);
         }

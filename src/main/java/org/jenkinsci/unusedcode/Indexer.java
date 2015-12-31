@@ -103,8 +103,8 @@ public class Indexer {
             return;
         }
         final CalledClassVisitor calledClassVisitor = new CalledClassVisitor();
-        classReader.accept(calledClassVisitor, ClassReader.SKIP_CODE | ClassReader.SKIP_DEBUG
-                | ClassReader.SKIP_FRAMES);
+        classReader.accept(calledClassVisitor,
+                ClassReader.SKIP_CODE | ClassReader.SKIP_DEBUG | ClassReader.SKIP_FRAMES);
         methods.addAll(calledClassVisitor.getMethods());
         JavaHelper.excludeJavaMethods(classReader, methods);
     }
@@ -149,8 +149,9 @@ public class Indexer {
 
         private boolean isGetter(String name, String desc) {
             return name.startsWith("get") && desc.startsWith("()")
-                    && Type.getReturnType(desc) != Type.VOID_TYPE || name.startsWith("is")
-                    && desc.startsWith("()") && Type.getReturnType(desc) == Type.BOOLEAN_TYPE;
+                    && Type.getReturnType(desc) != Type.VOID_TYPE
+                    || name.startsWith("is") && desc.startsWith("()")
+                            && Type.getReturnType(desc) == Type.BOOLEAN_TYPE;
         }
 
         private boolean isSetter(String name, String desc) {

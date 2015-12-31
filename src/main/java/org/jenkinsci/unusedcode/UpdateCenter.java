@@ -21,8 +21,8 @@ public class UpdateCenter {
     private final JenkinsFile core;
     private final List<JenkinsFile> plugins = new ArrayList<>();
 
-    public UpdateCenter(URL updateCenterUrl) throws IOException, ParserConfigurationException,
-            SAXException {
+    public UpdateCenter(URL updateCenterUrl)
+            throws IOException, ParserConfigurationException, SAXException {
         super();
         this.updateCenterUrl = updateCenterUrl;
         final String string = getUpdateCenterJson();
@@ -48,8 +48,8 @@ public class UpdateCenter {
 
     private String getUpdateCenterJson() throws IOException, MalformedURLException {
         final byte[] updateCenterData = new HttpGet(updateCenterUrl).read();
-        final String string = new String(updateCenterData, StandardCharsets.UTF_8).replace(
-                "updateCenter.post(", "");
+        final String string = new String(updateCenterData, StandardCharsets.UTF_8)
+                .replace("updateCenter.post(", "");
         return string;
     }
 

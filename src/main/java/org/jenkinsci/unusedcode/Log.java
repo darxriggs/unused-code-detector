@@ -19,7 +19,8 @@ public final class Log {
             final Writer writer = new FileWriter(HTML_FILE);
             writer.append("<html><head>");
             writer.append("<title>Unused code in Jenkins api</title>");
-            writer.append("<style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style>");
+            writer.append(
+                    "<style>body { font-family: Arial, Helvetica, sans-serif; font-size: 12px; }</style>");
             writer.append("</head><body>");
             return writer;
         } catch (final IOException e) {

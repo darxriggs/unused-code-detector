@@ -16,8 +16,8 @@ import org.objectweb.asm.Type;
 public final class JavaHelper {
     private static final int VISIBILITY_PUBLIC_OR_PROTECTED = Modifier.PUBLIC | Modifier.PROTECTED;
     private static final Map<String, Set<String>> javaMethodListByClassMap = new HashMap<>();
-    private static final Set<String> javaLangObjectMethods = getJavaMethods(Type
-            .getInternalName(Object.class));
+    private static final Set<String> javaLangObjectMethods = getJavaMethods(
+            Type.getInternalName(Object.class));
 
     private JavaHelper() {
         super();

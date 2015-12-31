@@ -48,8 +48,8 @@ public class Main {
 
     private static void analyze(final JenkinsFile core, List<JenkinsFile> plugins,
             final Indexer indexer) throws InterruptedException, ExecutionException {
-        final ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime()
-                .availableProcessors());
+        final ExecutorService executorService = Executors
+                .newFixedThreadPool(Runtime.getRuntime().availableProcessors());
         final List<Future<Object>> futures = new ArrayList<>(plugins.size() + 1);
         final Callable<Object> coreTask = new Callable<Object>() {
             @Override
@@ -73,8 +73,8 @@ public class Main {
                     try {
                         analyzer.analyzePlugin(plugin.getFile());
                     } catch (final EOFException | ZipException e) {
-                        Log.log("deleting " + plugin.getFile().getName()
-                                + " and skipping, because " + e.toString());
+                        Log.log("deleting " + plugin.getFile().getName() + " and skipping, because "
+                                + e.toString());
                         plugin.getFile().delete();
                     } catch (final Exception e) {
                         Log.log(e.toString() + " on " + plugin.getFile().getName());

@@ -79,8 +79,8 @@ public class JenkinsFile {
             public Object call() throws IOException {
                 final File tempFile = File.createTempFile(tmpPrefix, ".tmp");
                 try {
-                    final OutputStream output = new BufferedOutputStream(new FileOutputStream(
-                            tempFile));
+                    final OutputStream output = new BufferedOutputStream(
+                            new FileOutputStream(tempFile));
                     try {
                         new HttpGet(url).copy(output);
                     } finally {
@@ -92,7 +92,8 @@ public class JenkinsFile {
                     file.getParentFile().mkdirs();
                     // write target file only if complete
                     try {
-                        Files.move(tempFile.toPath(), file.toPath(), StandardCopyOption.ATOMIC_MOVE);
+                        Files.move(tempFile.toPath(), file.toPath(),
+                                StandardCopyOption.ATOMIC_MOVE);
                     } catch (final AtomicMoveNotSupportedException e) {
                         Files.move(tempFile.toPath(), file.toPath());
                     }

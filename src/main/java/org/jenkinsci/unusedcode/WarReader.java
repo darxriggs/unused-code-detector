@@ -46,9 +46,8 @@ public class WarReader implements Closeable {
             entry = entries.nextElement();
             final String fileName = entry.getName();
             if (fileName.startsWith("WEB-INF/lib/") && fileName.endsWith(".jar")) {
-                final boolean shouldScanJar = !scanOnlyJarOfPlugin
-                        || warFile.getName().equals(
-                                fileName.replace("WEB-INF/lib/", "").replace(".jar", ".hpi"));
+                final boolean shouldScanJar = !scanOnlyJarOfPlugin || warFile.getName()
+                        .equals(fileName.replace("WEB-INF/lib/", "").replace(".jar", ".hpi"));
                 if (shouldScanJar) {
                     jarReader = new JarReader(zipFile.getInputStream(entry));
                     return this.nextEntry(extension);
