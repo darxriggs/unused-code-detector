@@ -86,6 +86,9 @@ public class Hierarchy {
                     subClasses.addAll(subSubClassList);
                 }
             }
+            if (allSubClasses.containsAll(subClasses)) {
+                break; // avoid to run forever (on org/bouncycastle/asn1/DERInteger)
+            }
             allSubClasses.addAll(subClasses);
             subClassList = subClasses;
         }
@@ -106,7 +109,11 @@ public class Hierarchy {
         String superClass = superClassByClassMap.get(className);
         while (superClass != null) {
             addSuperMethodsOrItself(superClass, name, desc, polymorphicMethods);
-            superClass = superClassByClassMap.get(superClass);
+            final String next = superClassByClassMap.get(superClass);
+            if (next != null && superClass.equals(superClassByClassMap.get(next))) {
+                break; // avoid to run forever (on org/bouncycastle/asn1/ASN1EncodableVector)
+            }
+            superClass = next;
         }
         // sub-classes and sub-sub-classes
         // (sometimes a method defined and called on a super-class is overrided in a sub-class)
