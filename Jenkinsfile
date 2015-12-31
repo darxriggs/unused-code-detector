@@ -16,7 +16,7 @@ node('cabbage') {
 
       // Mark the checkout 'stage'....
       stage 'Checkout'
-      checkout scm
+      git branch: 'master', url: 'https://github.com/jenkins-infra/unused-code-detector.git'
 
       // Mark the code build 'stage'....
       stage 'Build'
