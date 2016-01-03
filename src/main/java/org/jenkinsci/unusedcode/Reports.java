@@ -27,7 +27,7 @@ public class Reports {
         log(updateCenter.getPlugins().size() + " published plugins");
         log(methods.size()
                 + " unused methods in Jenkins, except getters, setters, except deprecated classes and methods");
-        log("Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/branch/master/lastSuccessfulBuild/artifact/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a>");
+        log("Unused deprecated classes, methods and fields are listed in the <a href='https://ci.jenkins-ci.org/view/Infrastructure/job/infra_deprecated-usage-in-plugins/lastSuccessfulBuild/artifact/target/output.html#deprecatedApiNotUsed'> deprecated-usage-in-plugins job </a>");
     }
 
     private static String formatMethod(String method) {
