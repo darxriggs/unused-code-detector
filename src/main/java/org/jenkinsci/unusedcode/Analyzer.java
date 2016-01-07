@@ -9,6 +9,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.regex.Pattern;
 
 import org.objectweb.asm.AnnotationVisitor;
 import org.objectweb.asm.ClassReader;
@@ -120,8 +121,11 @@ public class Analyzer {
         }
         for (final String method : methods2) {
             String methodName = method.substring(0, method.lastIndexOf('('));
-            methodName = methodName.substring(methodName.lastIndexOf(Indexer.SEPARATOR) + 1);
-            if (string.contains(methodName)) {
+            // regex to search with word boundaries, for less false negatives in jelly files
+            final String regex = ".*\\b"
+                    + methodName.substring(methodName.lastIndexOf(Indexer.SEPARATOR) + 1) + "\\b.*";
+            final Pattern pattern = Pattern.compile(regex, Pattern.DOTALL);
+            if (pattern.matcher(string).matches()) {
                 methods.remove(method);
             }
         }
