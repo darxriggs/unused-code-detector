@@ -1,4 +1,4 @@
-// Jenkinsfile for Workflow plugin at https://ci.jenkins-ci.org/view/Infrastructure/job/infra_unused-code-detector/
+// Jenkinsfile for Workflow plugin at https://ci.jenkins-ci.org/view/All/job/Reporting/job/infra_unused-code-detector/
 
 // Run on 'cabbage' node.
 node('cabbage') {
