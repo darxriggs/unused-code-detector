@@ -1,7 +1,6 @@
 // Jenkinsfile for Workflow plugin at https://ci.jenkins-ci.org/view/All/job/Reporting/job/infra_unused-code-detector/
 
-// Run on 'cabbage' node.
-node('cabbage') {
+node('highcpu') {
    /* timeout 60 minutes */
    timeout(60) {
       // Get the maven tool.
