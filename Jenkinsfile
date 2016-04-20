@@ -1,17 +1,17 @@
 // Jenkinsfile for Workflow plugin at https://ci.jenkins-ci.org/view/All/job/Reporting/job/infra_unused-code-detector/
 
-node('highcpu') {
+node('java') {
    /* timeout 60 minutes */
    timeout(60) {
       // Get the maven tool.
-      // ** NOTE: This 'maven3' maven tool must be configured
+      // ** NOTE: This 'mvn' maven tool must be configured
       // **       in the global configuration.           
-      def mvnHome = tool 'maven3'
+      def mvnHome = tool 'mvn'
 
       // Get the jdk tool.
-      // ** NOTE: This 'jdk7_80' jdk tool must be configured
+      // ** NOTE: This 'jdk8' jdk tool must be configured
       // **       in the global configuration.           
-      env.JAVA_HOME = tool 'jdk7_80'
+      env.JAVA_HOME = tool 'jdk8'
 
       // Mark the checkout 'stage'....
       stage 'Checkout'
