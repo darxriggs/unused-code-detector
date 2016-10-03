@@ -120,7 +120,7 @@ public class Analyzer {
             methods2 = new HashSet<>(methods);
         }
         for (final String method : methods2) {
-            String methodName = method.substring(0, method.lastIndexOf('('));
+            final String methodName = method.substring(0, method.lastIndexOf('('));
             // regex to search with word boundaries, for less false negatives in jelly files
             final String regex = ".*\\b"
                     + methodName.substring(methodName.lastIndexOf(Indexer.SEPARATOR) + 1) + "\\b.*";
